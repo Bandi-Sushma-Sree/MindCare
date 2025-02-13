@@ -1,0 +1,2647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxiety Management - MindCare</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icons">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <title>Login Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Gabarito&family=Inclusive+Sans&family=Inter&family=Montserrat&family=Poppins&family=Raleway&family=Roboto&family=Space+Grotesk&family=Ubuntu&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    transition: all 0.5s linear;
+    font-family: 'Courgette', cursive;
+    font-family: 'Gabarito', sans-serif;
+    font-family: 'Inclusive Sans', sans-serif;
+}
+.background{
+    height: 100vh;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1474418397713-7ede21d49118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80');
+   
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.navbar img{
+    width: 80px;
+}
+.navbar-items{
+    flex: 1;
+    text-align: right;
+}
+.navbar{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.navbar ul li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    padding: 1% 2%;
+    font-weight: bold;
+    font-size: 18px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:black;
+}
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    background-color: #2e6476;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.burger{
+    display: none;
+}
+/* ___________main */
+.main{
+    height: 85vh;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    padding-right: 20%;
+}
+.text-box{
+    color: #fff;
+    width: 40%;
+}
+.text-box h1{
+    padding: 2px;
+    font-size: 60px;
+}
+.text-box p{
+    padding: 1% 0;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #2e6476;
+    height: 55%;
+    
+    border-radius: 10px;
+}
+.box input{
+    width: 70%;
+    border: none;
+    outline: none;
+    margin: 2% 3%;
+    padding: 3%;
+    border-radius: 5px;
+}
+.box h1{
+    margin-bottom: 3%;
+}
+.btn{
+    background-color: #2e6476;
+    color: #fff;
+    border: 2px solid transparent;
+    padding: 10px 8px;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn1:hover{
+    background-color: #fff;
+    color: #2e6476;
+}
+.btn2{
+    background-color: #fff;
+    color: #2e6476;
+    margin-top: 1%;
+}
+.btn2:hover{
+    color: #fff;
+    background-color: #6a8d9a;
+}
+/* _________services */
+.services{
+    width: 80%;
+    margin: auto;
+    padding: 2% 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box1{
+    flex-basis: 30%;
+    color: #fff;
+    padding: 2%;
+    margin-bottom: 2%;
+    background-color: #1a92bedb;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+.heading{
+    padding: 2% 0;
+    color: #2e6476;
+    font-size: 40px;
+}
+.box1 i{
+    padding:  5%;
+    background-color: #f8fdff6b;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.box1 h2{
+    padding: 2% 0;
+    font-size: 28px;
+}
+/* ____________quality  */
+.quality{
+    width: 80%;
+    margin: auto;
+}
+.box2,.box3{
+    flex-basis: 29%;
+    text-align: center;
+    padding: 2%;
+    margin: 3% 0;
+}
+.box2 h2{
+    padding: 2% 0;
+    font-size: 29px;
+}
+.box2 i{
+    font-size: 3em;
+    padding-bottom: 2%;
+}
+.quality div :nth-child(1) i{
+    color: #30e430;
+}
+.quality div :nth-child(2) i{
+color: red;
+}
+.quality div :nth-child(3) i{
+color: blue;
+}
+.box2:hover{
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    transition: all 0.5s ease-out;
+}
+/* ______________about */
+.about{
+    width: 80%;
+    margin: auto;
+}
+.row1{
+    padding: 2% 0;
+}
+.left{
+    width: 50%;
+}
+.left img{
+    max-width: 100%;
+    height: auto;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+.right{
+    width: 45%;
+}
+.right h1{
+    font-size: 40px;
+}
+.right p{
+    padding: 3% 0;
+}
+.btn3{
+    font-size: 20px;
+}
+.btn3:hover{
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.5s linear;
+}
+/* __________departments */
+.department{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 2%;
+}
+.box3{
+    flex-basis:22% ;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+.box3:hover{
+    transform: scale(1.1);
+    background-color: #6a8d9a;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+/* __________footer */
+footer{
+    background-color: #2e6476;
+    color: #fff;
+}
+.footer-sec{
+    padding: 3% 0;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+.sec{
+    display: flex;
+    flex-basis: 40%;
+}
+.f_box{
+    flex-basis: 50%;
+}
+.f_box h2{
+    padding-bottom: 2%;
+}
+.f_box p{
+    padding: 4px 0;
+}
+.f_box p i{
+    font-size: 23px;
+    padding: 5px 3px;
+    cursor: pointer;
+}
+.para{
+    text-align: center;
+    padding: 12px 0;
+    background-color: #333;
+}
+/* ____________responsiveness */
+@media only screen and (max-width:995px){
+    .box{
+        width: 40%;
+        height: 69%;
+    }
+    .row1{
+        flex-direction: column;
+    }
+    .left{
+        width: 60%;
+    }
+    .right{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:828px){
+    .text-box h1{
+        font-size: 40px;
+    }
+    .footer-sec {
+        width: 100%;
+    }
+}
+@media only screen and (max-width:766px){
+    .navbar ul li{
+        display: block;
+        padding: 2px 0 34px;
+    }
+    .navbar-items{
+        position: absolute;
+        background-color: #2e6476;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+        transition: all 1s ease-out;
+    }
+    .navbar-items ul{
+        padding: 98px 51px 8px 49px;
+    }
+    .burger{
+        display: block;
+        z-index: 3;
+        position: absolute;
+        top: 15px;
+        right: 5%;
+        cursor: pointer;
+        font-size: 33px;
+        color: #fff;
+    }
+    .h-class{
+        height: 100vh;
+        opacity: 0;
+    }
+    .v-class{
+        opacity: 0;
+    }
+    .main{
+        flex-direction: column-reverse;
+    }
+    .text-box{
+        width: 80%;
+    }
+    .box input{
+        width: 85%;
+    }
+    .row,.sec{
+        flex-direction: column;
+    }
+    .box3{
+        width: 90%;
+    }
+    .row,.box1{
+        margin-bottom: 7%;
+    }
+    .box1{
+        padding: 4%;
+    }
+}
+@media only screen and (max-width:570px){
+    .box{
+        width: 68%;
+    }
+    .text-box,.right,.left{
+        width: 95%;
+    }
+    .box h1{
+        padding: 0;
+    }
+    .text-box p{
+        font-size: 12px;
+    }
+    .right p{
+        font-size: 14px;
+    }
+}
+    </style>
+</head>
+<body>
+    <section class="background">
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="" alt=""></a>
+            <div class="navbar-items h-class">
+                <ul class="nav v-class">
+                    <li><a href="MindCare Home.html">HOME</a></li>
+                    <li><a href="MindCare About us.html">ABOUT</a></li>
+                    <li><a href="CONTACT US.html">CONTACT</a></li>
+                    <li><a href="sleep journal.html">Sleep Journal</a></li>
+                    <li><a href="MindCare Login_page.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="burger">&#9776</div>
+        </nav>
+        <!-- _________main-sec -->
+        <div class="main">
+            <div class="text-box">
+              <h1 style="color: darkblue; text-align: left;">Your Peace of Mind is Our Top Priority</h1>
+
+              <p style="color: blanchedalmond; text-align: left;">At MindCare, we understand that living with anxiety can be overwhelming and isolating. Our expert team is dedicated to providing compassionate and comprehensive support to help you manage your anxiety, regain control, and cultivate a calmer mindset. From personalized coping strategies and evidence-based therapies to stress reduction techniques and ongoing support, we're here to empower you on your journey towards anxiety relief and improved mental well-being. With our guidance, you can learn to transform anxiety from a barrier into a stepping stone for personal growth and resilience.</p>
+              
+              <a href="sign up.html" class="btn btn1" style="background-color: palevioletred; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; text-align: left;">Visit to know more</a>
+              
+
+            </div>
+           
+          </section> 
+          <section class="services">
+            <h1 class="heading">Our Anxiety Management Services</h1>
+            <div class="row">
+                <div class="box1">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h2>Cognitive Behavioral Therapy (CBT)</h2>
+                    <p>Expert therapy to reframe negative thought patterns and behaviors.</p>
+                    <img src="cbt.jpg" alt="CBT" class="service-img">
+                </div>
+                <div class="box1">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h2>Group Support Sessions</h2>
+                    <p>Supportive group sessions for shared experiences and coping strategies.</p>
+                    <img src="gs.jpg" alt="Group Support" class="service-img">
+                </div>
+                <div class="box1">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h2>Interactive Mental Health Quiz</h2>
+                    <p>Gain insights into your mental health with our personalized self-assessment.</p>
+                    <img src="mq.jpg" alt="Online Counseling" class="service-img">
+                </div>
+            </div>
+            <div class="row">
+                <div class="box1">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h2>Mindfulness & Relaxation</h2>
+                    <p>Guided techniques for managing stress, anxiety, and emotions.</p>
+                    <img src="img 49.jpg" alt="Mindfulness" class="service-img">
+                </div>
+                <div class="box1">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h2>Personalized Anxiety Treatment</h2>
+                    <p>Tailored care plans for individual anxiety management needs.</p>
+                    <img src="anxiety.jpg" alt="Personalized Treatment" class="service-img">
+                </div>
+                <div class="box1">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h2>Daily Tips for Mental Well-being</h2>
+                    <p>Practical advice and positive affirmations to help you navigate each day with calm and clarity.</p>
+                    <img src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Confidential Support" class="service-img">
+                </div>
+            </div>
+        </section>
+        
+        <style>
+          .services {
+              padding: 50px 0;
+              background-color: #f8f9fa;
+          }
+      
+          .heading {
+              text-align: center;
+              color: #4A90E2;
+              margin-bottom: 40px;
+              font-size: 2.5em;
+          }
+      
+          .row {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 30px;
+          }
+      
+          .box1 {
+              background-color: #ffffff;
+              border-radius: 10px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+              padding: 30px;
+              width: 30%;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+              text-align: center;
+          }
+      
+          .box1:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 10px 25px rgba(74, 144, 226, 0.2);
+          }
+      
+          .icon-wrapper {
+              font-size: 2.5em;
+              color: #4A90E2;
+              margin-bottom: 20px;
+          }
+      
+          .box1 h2 {
+              color: #333;
+              margin-bottom: 15px;
+              font-size: 1.5em;
+          }
+      
+          .box1 p {
+              color: #666;
+              margin-bottom: 20px;
+          }
+      
+          .service-img {
+              width: 100%;
+              height: 200px;
+              object-fit: cover;
+              border-radius: 5px;
+              transition: transform 0.3s ease;
+          }
+      
+          .box1:hover .service-img {
+              transform: scale(1.05);
+          }
+      </style>
+          
+          
+          
+    <!-- __________quality -->
+<section class="quality">
+  <h1 class="heading">Why Choose MindCare</h1>
+  <div class="row">
+    <div class="box2">
+      <i class="fas fa-clock"></i>
+      <h2>Accessible Care</h2>
+      <p>Expert support available 24/7 for your mental health needs.</p>
+    </div>
+    <div class="box2">
+      <i class="fas fa-heart"></i>
+      <h2>Compassionate Approach</h2>
+      <p>Personalized care and empathy from our experienced therapists.</p>
+    </div>
+    <div class="box2">
+      <i class="fas fa-chart-line"></i>
+      <h2>Proven Results</h2>
+      <p>Effective treatments and measurable progress for lasting well-being.</p>
+    </div>
+  </div>
+</section>
+
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design Mastery | MEDIBuddy</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #28bf96;
+  --primary-color-dark: #209677;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  text-decoration: none;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
+.header {
+  padding: 0 1rem;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.content h1 span {
+  font-weight: 400;
+}
+
+.content p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  line-height: 1.75rem;
+}
+
+.image {
+  position: relative;
+  text-align: center;
+  isolation: isolate;
+}
+
+.image__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 450px;
+  width: 450px;
+  background-color:;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.image img {
+  width: 100%;
+  max-width: 475px;
+}
+
+.image__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image__content__1 {
+  transform: translate(calc(-50% - 12rem), calc(-50% - 8rem));
+}
+
+.image__content__1 span {
+  padding: 10px 12px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background-color: #defcf4;
+  border-radius: 100%;
+}
+
+.image__content__1 h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.image__content__1 p {
+  color: var(--text-light);
+}
+
+.image__content__2 {
+  transform: translate(calc(-50% + 8rem), calc(-50% + 10rem));
+}
+
+.image__content__2 ul {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.image__content__2 li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: var(--text-light);
+}
+
+.image__content__2 span {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+@media (width < 900px) {
+  .nav__links {
+    display: none;
+  }
+
+  .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  background-image: linear-gradient(to bottom,);
+}
+
+.content {
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.image {
+  flex: 1;
+  padding: 20px;
+}
+
+.image__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+
+}
+:root {
+            --primary-color: #28a745;
+            --secondary-color: #17a2b8;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+       
+        .hero-section {
+           
+            background-image: url('free1.jpg');
+            background-size:auto;
+            background-position: center;
+           
+            padding: 100px 0;
+            position: relative;
+            height:476px;
+            width: 1500px;
+            
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
+        }
+        .dark-mode .card {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #218838;
+        }
+        .symptoms-section {
+            background-color: #e9ecef;
+            padding: 50px 0;
+        }
+        .dark-mode .symptoms-section {
+            background-color: #2c3e50;
+        }
+        .symptom-card {
+            text-align: center;
+            padding: 20px;
+        }
+        .symptom-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .testimonial-card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode .testimonial-card {
+            background-color: #34495e;
+        }
+        .testimonial-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+    </style>
+  </head>
+  <body>
+    
+   
+
+  <header class="hero-section">
+    <div class="container hero-content">
+ 
+
+
+      
+  </header>
+  
+  <section class="symptoms-section">
+    <h2 class="section-title text-center">Recognizing Anxiety: Common Symptoms</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="symptom-card">
+                <i class="fas fa-brain symptom-icon"></i>
+                <h4>Mental Symptoms</h4>
+                <p>Excessive worry, racing thoughts, difficulty concentrating, and fear of losing control.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="symptom-card">
+                <i class="fas fa-heartbeat symptom-icon"></i>
+                <h4>Physical Symptoms</h4>
+                <p>Rapid heartbeat, sweating, trembling, shortness of breath, and nausea.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="symptom-card">
+                <i class="fas fa-user-friends symptom-icon"></i>
+                <h4>Behavioral Symptoms</h4>
+                <p>Avoidance of certain situations, restlessness, irritability, and sleep disturbances.</p>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+</body>
+</html>
+<div style="height: 50px;"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Stress: Common Triggers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .section-title {
+            color: #6c5ce7;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: #6c5ce7;
+        }
+        .cause-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .cause-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(108, 92, 231, 0.2);
+        }
+        .cause-title {
+            font-weight: bold;
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #6c5ce7;
+        }
+        .cause-text {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        .cause-img-wrapper {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid #e0e0e0;
+        }
+        .cause-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .cause-card:hover .cause-img {
+            transform: scale(1.1);
+        }
+        .icon-wrapper {
+            font-size: 2.5rem;
+            color: #6c5ce7;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+  <title>Understanding Anxiety: Common Triggers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+      /* ... (keep the existing styles) ... */
+  </style>
+  </head>
+  <body>
+      <section class="py-5">
+          <div class="container">
+              <h2 class="text-center section-title mb-5">Understanding Anxiety: Common Triggers</h2>
+              <div class="row g-4">
+                  <div class="col-md-4">
+                      <div class="cause-card d-flex flex-column align-items-center">
+                          <div class="icon-wrapper">
+                              <i class="fas fa-dna"></i>
+                          </div>
+                          <h5 class="cause-title text-center">Biological Factors</h5>
+                          <p class="cause-text text-center">Genetic predisposition, brain chemistry imbalances, and certain medical conditions can contribute to anxiety disorders. Understanding these biological factors is crucial for effective treatment.</p>
+                          <div class="cause-img-wrapper">
+                              <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1289&q=80" alt="Biological Factors" class="cause-img">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="cause-card d-flex flex-column align-items-center">
+                          <div class="icon-wrapper">
+                              <i class="fas fa-exclamation-triangle"></i>
+                          </div>
+                          <h5 class="cause-title text-center">Environmental Stressors</h5>
+                          <p class="cause-text text-center">Traumatic experiences, major life changes, work or school pressures, and relationship issues can trigger or exacerbate anxiety. Identifying these stressors is key to managing anxiety symptoms.</p>
+                          <div class="cause-img-wrapper">
+                              <img src="https://images.unsplash.com/photo-1541199249251-f713e6145474?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Environmental Stressors" class="cause-img">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="cause-card d-flex flex-column align-items-center">
+                          <div class="icon-wrapper">
+       <i class="fas fa-brain"></i>
+                              
+                          </div>
+                          <h5 class="cause-title text-center">Cognitive Patterns</h5>
+                          <p class="cause-text text-center">Negative thought patterns, catastrophizing, and excessive worry can fuel anxiety. Learning to recognize and challenge these thought patterns is essential for anxiety management.</p>
+                          <div class="cause-img-wrapper">
+                              <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Cognitive Patterns" class="cause-img">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Components of Fitness Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <section class="py-5 anxiety-management-section">
+        <style>
+            .anxiety-management-section {
+                background-color: #f8f9fa;
+                padding: 80px 0;
+            }
+            .section-title {
+                color: #4A90E2;
+                font-weight: 600;
+                margin-bottom: 50px;
+                position: relative;
+            }
+            .section-title::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 50px;
+                height: 3px;
+                background-color: #4A90E2;
+            }
+            .anxiety-card {
+                background-color: #ffffff;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                height: 100%;
+            }
+            .anxiety-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(74, 144, 226, 0.2);
+            }
+            .icon-wrapper {
+                font-size: 2.5rem;
+                color: #4A90E2;
+                margin-bottom: 20px;
+            }
+            .anxiety-title {
+                color: #333;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+            .anxiety-text {
+                color: #666;
+                font-size: 0.9rem;
+                margin-bottom: 20px;
+            }
+            .anxiety-img-wrapper {
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+                border-radius: 10px;
+            }
+            .anxiety-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+            .anxiety-card:hover .anxiety-img {
+                transform: scale(1.05);
+            }
+        </style>
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Key Components of Anxiety Management</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="anxiety-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h5 class="anxiety-title text-center">Cognitive Behavioral Therapy</h5>
+                        <p class="anxiety-text text-center">Learn to identify and change negative thought patterns and behaviors that contribute to anxiety through evidence-based therapeutic techniques.</p>
+                        <div class="anxiety-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Cognitive Behavioral Therapy" class="anxiety-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="anxiety-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <h5 class="anxiety-title text-center">Breathing Techniques</h5>
+                        <p class="anxiety-text text-center">Master various breathing exercises to calm your mind, reduce physical symptoms of anxiety, and promote relaxation in stressful situations.</p>
+                        <div class="anxiety-img-wrapper">
+                            <img src="img 52.jpg" alt="Breathing Techniques" class="anxiety-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="anxiety-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h5 class="anxiety-title text-center">Nutrition for Mental Health</h5>
+                        <p class="anxiety-text text-center">Discover how a balanced diet rich in anxiety-reducing nutrients can support your mental health and help manage anxiety symptoms.</p>
+                        <div class="anxiety-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80" alt="Nutrition for Mental Health" class="anxiety-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="anxiety-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h5 class="anxiety-title text-center">Support Groups</h5>
+                        <p class="anxiety-text text-center">Connect with others who understand your experiences in a supportive group setting, sharing coping strategies and building a sense of community.</p>
+                        <div class="anxiety-img-wrapper">
+                            <img src="image12.jpg" alt="Support Groups" class="anxiety-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="anxiety-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h5 class="anxiety-title text-center">Mindfulness & Meditation</h5>
+                        <p class="anxiety-text text-center">Practice mindfulness and meditation techniques to stay present, reduce worry about the future, and cultivate a sense of inner calm.</p>
+                        <div class="anxiety-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1602192509154-0b900ee1f851?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Mindfulness & Meditation" class="anxiety-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="anxiety-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 class="anxiety-title text-center">Progress Monitoring</h5>
+                        <p class="anxiety-text text-center">Track your anxiety levels, identify triggers, and measure the effectiveness of various coping strategies to continuously improve your anxiety management.</p>
+                        <div class="anxiety-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Progress Monitoring" class="anxiety-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- _______________about -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cognitive Behavioral Therapy (CBT)</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+            .cbt-section {
+                max-width: 1200px;
+                margin: 2rem auto;
+                padding: 2rem;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            }
+            h1 {
+                font-family: 'Playfair Display', serif;
+                color: #2c3e50;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            .cbt-content {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+            }
+            .cbt-image {
+                flex: 1;
+                max-width: 50%;
+            }
+            .cbt-image img {
+                width: 100%;
+                border-radius: 10px;
+                transition: transform 0.3s ease;
+            }
+            .cbt-image img:hover {
+                transform: scale(1.05);
+            }
+            .cbt-text {
+                flex: 1;
+            }
+            .cbt-icon {
+                font-size: 3rem;
+                color: #3498db;
+                margin-bottom: 1rem;
+            }
+            p {
+                margin-bottom: 1.5rem;
+            }
+            .cbt-buttons {
+                display: flex;
+                gap: 1rem;
+            }
+            .btn {
+                padding: 0.8rem 1.5rem;
+                border: none;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+            .btn-primary {
+                background-color: #3498db;
+                color: #fff;
+            }
+            .btn-secondary {
+                background-color: #2ecc71;
+                color: #fff;
+            }
+            .btn:hover {
+                transform: translateY(-3px);
+            }
+            .btn-primary:hover {
+                background-color: #2980b9;
+            }
+            .btn-secondary:hover {
+                background-color: #27ae60;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="cbt-section">
+            <h1>Cognitive Behavioral Therapy (CBT)</h1>
+            <div class="cbt-content">
+                <div class="cbt-image">
+                    <img src="img 64.jpg" alt="CBT Therapy Session">
+                </div>
+                <div class="cbt-text">
+                    <i class="fas fa-brain cbt-icon"></i>
+                    <p>Cognitive Behavioral Therapy (CBT) is an evidence-based approach that helps individuals identify and change negative thought patterns and behaviors. Our expert therapists guide you through this transformative process, empowering you to develop healthier cognitive habits and improve your overall well-being.</p>
+                    <p>CBT is particularly effective for treating:</p>
+                    <ul>
+                        <li>Anxiety disorders</li>
+                        <li>Depression</li>
+                        <li>Phobias</li>
+                        <li>PTSD</li>
+                        <li>Sleep disorders</li>
+                    </ul>
+                    <div class="cbt-buttons">
+                        <a href="CBT.html" class="btn btn-primary" id="learnMoreBtn">Learn More</a>
+                        <a href="CONTACT US.html" class="btn btn-secondary" id="scheduleBtn">Get in touch</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+    </html>
+    <section class="quiz-section" style="
+    background-color: #f0f4f8;
+    padding: 50px 20px;
+    font-family: 'Arial', sans-serif;
+">
+    <h1 style="
+        color: #2c3e50;
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    ">Mental Health Self-Assessment Quiz</h1>
+    <div class="quiz-content" style="
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    ">
+        <div class="quiz-image" style="
+            flex: 1;
+            min-width: 300px;
+        ">
+            <img src="img 71.jpg" alt="Mental Health Quiz" style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            ">
+        </div>
+        <div class="quiz-text" style="
+            flex: 1;
+            padding: 40px;
+            min-width: 300px;
+        ">
+            <i class="fas fa-clipboard-check" style="
+                font-size: 3em;
+                color: #3498db;
+                margin-bottom: 20px;
+                display: block;
+            "></i>
+            <p style="
+                color: #34495e;
+                font-size: 1.1em;
+                line-height: 1.6;
+                margin-bottom: 20px;
+            ">Our Mental Health Self-Assessment Quiz is designed to help you gain insights into your emotional well-being. This interactive tool allows you to reflect on various aspects of your mental health and identify areas that may need attention.</p>
+            <p style="
+                color: #34495e;
+                font-size: 1.1em;
+                font-weight: bold;
+                margin-bottom: 10px;
+            ">This quiz can help you assess:</p>
+            <ul style="
+                color: #34495e;
+                font-size: 1.1em;
+                line-height: 1.6;
+                padding-left: 20px;
+                margin-bottom: 30px;
+            ">
+                <li>Anxiety levels</li>
+                <li>Depressive symptoms</li>
+                <li>Stress management</li>
+                <li>Sleep quality</li>
+                <li>Overall emotional well-being</li>
+            </ul>
+            <div class="quiz-buttons" style="
+                display: flex;
+                gap: 15px;
+            ">
+                <a href="m.html" class="btn btn-primary" id="mPageBtn" style="
+                    background-color: #3498db;
+                    color: #ffffff;
+                    border: none;
+                    padding: 12px 24px;
+                    font-size: 1.1em;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                ">Start Quiz</a>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Mental Health Tips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            
+            
+            margin: 0;
+            padding: 0;
+        }
+        .tips-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .tips-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .tips-image {
+            flex: 1;
+            max-width: 50%;
+        }
+        .tips-image img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .tips-image img:hover {
+            transform: scale(1.05);
+        }
+        .tips-text {
+            flex: 1;
+        }
+        .tips-icon {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+        p {
+            margin-bottom: 1.5rem;
+        }
+        .tips-list {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+        .tips-list h3 {
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+        .tips-list ul {
+            padding-left: 1.5rem;
+        }
+        .tips-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #3498db;
+            color: #fff;
+        }
+        .btn-secondary {
+            background-color: #2ecc71;
+            color: #fff;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+        .btn-secondary:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <section class="tips-section">
+        <h1>Daily Mental Health Tips</h1>
+        <div class="tips-content">
+            <div class="tips-image">
+                <img src="img 10.jpg" alt="Mental Health Tips">
+            </div>
+            <div class="tips-text">
+                <i class="fas fa-lightbulb tips-icon"></i>
+                <p>Boost your mental well-being with our daily tips. These simple yet effective strategies can help you maintain a positive mindset, reduce stress, and improve your overall mental health.</p>
+                <div class="tips-list">
+                    <h3>Today's Top Tips:</h3>
+                    <ul>
+                        <li>Practice mindfulness for 10 minutes</li>
+                        <li>Take a short walk in nature</li>
+                        <li>Connect with a friend or family member</li>
+                        <li>Write down three things you're grateful for</li>
+                        <li>Try a new hobby or activity</li>
+                    </ul>
+                </div>
+                <div class="tips-buttons">
+                    <a href="tips.html" class="btn btn-primary" id="moreTipsBtn">More Tips</a>
+                   
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+  
+</body>
+</html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Group Support Sessions</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Lora:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            body {
+                font-family: 'Montserrat', sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background-color: #f9f9f9;
+                margin: 0;
+                padding: 0;
+            }
+            .group-session-section {
+                max-width: 1200px;
+                margin: 2rem auto;
+                padding: 2rem;
+                background-color: #fff;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            h1 {
+                font-family: 'Lora', serif;
+                color: #2c3e50;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            .group-session-content {
+                display: flex;
+                align-items: center;
+                gap: 3rem;
+            }
+            .group-session-image {
+                flex: 1;
+                max-width: 50%;
+                position: relative;
+                overflow: hidden;
+                border-radius: 15px;
+            }
+            .group-session-image img {
+                width: 100%;
+                transition: transform 0.5s ease;
+            }
+            .group-session-image:hover img {
+                transform: scale(1.1);
+            }
+            .group-session-text {
+                flex: 1;
+            }
+            .group-session-icon {
+                font-size: 3.5rem;
+                color: #3498db;
+                margin-bottom: 1.5rem;
+                transition: transform 0.3s ease;
+            }
+            .group-session-icon:hover {
+                transform: rotate(15deg);
+            }
+            p {
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
+            }
+            .group-session-benefits {
+                background-color: #f0f8ff;
+                padding: 1.5rem;
+                border-radius: 10px;
+                margin-bottom: 1.5rem;
+            }
+            .group-session-benefits h3 {
+                color: #3498db;
+                margin-bottom: 1rem;
+            }
+            .group-session-benefits ul {
+                padding-left: 1.5rem;
+            }
+            .group-session-buttons {
+                display: flex;
+                gap: 1rem;
+            }
+            .btn {
+                padding: 0.8rem 1.5rem;
+                border: none;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            .btn-primary {
+                background-color: #3498db;
+                color: #fff;
+            }
+            .btn-secondary {
+                background-color: #2ecc71;
+                color: #fff;
+            }
+            .btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
+            .btn-primary:hover {
+                background-color: #2980b9;
+            }
+            .btn-secondary:hover {
+                background-color: #27ae60;
+            }
+            .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 500px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+            color: white;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #f1c40f;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,0.2);
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            background-color: rgba(255,255,255,0.3);
+            outline: none;
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .form-icon {
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+            color: #f1c40f;
+        }
+
+        .submit-btn {
+            background-color: #f1c40f;
+            color: #2c3e50;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            background-color: #f39c12;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .form-image {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-image img {
+            width: 150px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        </style>
+    </head>
+    <body>
+        <section class="group-session-section">
+            <h1>Group Support Sessions</h1>
+            <div class="group-session-content">
+                <div class="group-session-image">
+                    <img src="img 9.jpg" alt="Group Support Session">
+                </div>
+                <div class="group-session-text">
+                    <i class="fas fa-users group-session-icon"></i>
+                    <p>Our Group Support Sessions provide a safe and nurturing environment for individuals to share experiences, learn from others, and develop effective coping strategies. Led by experienced facilitators, these sessions foster connection, understanding, and personal growth.</p>
+                    <div class="group-session-benefits">
+                        <h3>Benefits of Group Support:</h3>
+                        <ul>
+                            <li>Shared experiences and mutual support</li>
+                            <li>Diverse perspectives on common challenges</li>
+                            <li>Improved social skills and relationships</li>
+                            <li>Increased self-awareness and personal growth</li>
+                            <li>Cost-effective alternative to individual therapy</li>
+                        </ul>
+                    </div>
+                    <div class="group-session-buttons">
+                        
+                        <button class="btn btn-secondary" id="joinGroupBtn">Join a Group</button>
+                    </div>
+                </div>
+                <div id="joinGroupModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="form-image">
+                            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Group Support">
+                        </div>
+                        <h2 style="text-align: center; margin-bottom: 1.5rem;">Join a Support Group</h2>
+                        <form id="joinGroupForm">
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user form-icon"></i>Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope form-icon"></i>Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><i class="fas fa-phone form-icon"></i>Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="group-type"><i class="fas fa-users form-icon"></i>Group Type</label>
+                                <select id="group-type" name="group-type" required>
+                                    <option value="">Select a group type</option>
+                                    <option value="anxiety">Anxiety Support</option>
+                                    <option value="depression">Depression Support</option>
+                                    <option value="ptsd">PTSD Support</option>
+                                    <option value="general">General Mental Health</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="submit-btn">Join Group</button>
+                        </form>
+                    </div>
+                </div>
+            
+               
+            
+            </div>
+        </section>
+    
+        
+    </body>
+    </html>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindfulness & Relaxation Techniques</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+        .mindfulness-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .technique {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        .technique:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .technique-image {
+            flex: 1;
+            max-width: 50%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .technique-image img {
+            width: 100%;
+            height: auto;
+        }
+        .technique-content {
+            flex: 1;
+            padding: 0 2rem;
+        }
+        .technique-icon {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-learn {
+            background-color: #3498db;
+            color: #fff;
+        }
+        .btn-try {
+            background-color: #2ecc71;
+            color: #fff;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section class="mindfulness-section">
+        <h1>Mindfulness & Relaxation Techniques</h1>
+        <div class="technique">
+            <div class="technique-image">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Deep Breathing">
+            </div>
+            <div class="technique-content">
+                <i class="fas fa-wind technique-icon"></i>
+                <h2>Deep Breathing</h2>
+                <p>Learn how to use deep breathing exercises to reduce anxiety, lower stress levels, and promote relaxation. Deep breathing is a simple yet powerful technique that can be practiced anywhere, anytime.</p>
+                <div class="btn-container">
+                    <a href="excersises.html" class="btn btn-try" data-technique="Mindfulness Meditation">Try Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="technique">
+            <div class="technique-image">
+                <img src="img 39.jpg" alt="Mindfulness Meditation">
+            </div>
+            <div class="technique-content">
+                <i class="fas fa-brain technique-icon"></i>
+                <h2>Mindfulness Meditation</h2>
+                <p>Discover the power of mindfulness meditation to increase awareness, reduce negative thinking, and improve overall well-being. This practice helps you stay present and engaged in the current moment.</p>
+                <div class="btn-container">
+
+                    <a href="excersises.html" class="btn btn-try" data-technique="Mindfulness Meditation">Try Now</a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="technique">
+            <div class="technique-image">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1220&q=80" alt="Progressive Muscle Relaxation">
+            </div>
+            <div class="technique-content">
+                <i class="fas fa-dumbbell technique-icon"></i>
+                <h2>Progressive Muscle Relaxation</h2>
+                <p>Explore techniques to systematically tense and relax different muscle groups, promoting physical and mental relaxation. This method helps reduce muscle tension and can lead to a decrease in anxiety and stress.</p>
+                <div class="btn-container">
+                    <a href="excersises.html" class="btn btn-try" data-technique="Mindfulness Meditation">Try Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="learnModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalContent"></p>
+        </div>
+    </div>
+
+   
+
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Anxiety Treatment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+        }
+        .treatment-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .treatment-steps {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .step {
+            width: 30%;
+            min-width: 250px;
+            margin-bottom: 2rem;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .step:hover {
+            transform: translateY(-5px);
+        }
+        .step-icon {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+        .cta-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .cta-btn:hover {
+            background-color: #2980b9;
+        }
+        .treatment-image {
+            width: 100%;
+            height: 300px;
+            background-image: url('https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="treatment-section">
+        <h1>Personalized Anxiety Treatment</h1>
+        <div class="treatment-image"></div>
+        <div class="treatment-steps">
+            <div class="step">
+                <i class="fas fa-clipboard-list step-icon"></i>
+                <h3>Assessment</h3>
+                <p>Complete a comprehensive evaluation to understand your unique anxiety symptoms and triggers.</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-tasks step-icon"></i>
+                <h3>Tailored Plan</h3>
+                <p>Receive a customized treatment plan designed to address your specific anxiety management needs.</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-user-md step-icon"></i>
+                <h3>Expert Support</h3>
+                <p>Work with experienced therapists who specialize in anxiety disorders and personalized care.</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-chart-line step-icon"></i>
+                <h3>Progress Tracking</h3>
+                <p>Monitor your improvement with regular check-ins and adjustments to your treatment plan as needed.</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-tools step-icon"></i>
+                <h3>Coping Strategies</h3>
+                <p>Learn and practice effective coping techniques tailored to your specific anxiety triggers.</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-heart step-icon"></i>
+                <h3>Holistic Approach</h3>
+                <p>Address all aspects of your well-being, including mental, emotional, and physical health.</p>
+            </div>
+        </div>
+        
+    </section>
+
+  
+     
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effective Strategies for Managing Anxiety</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .anxiety-strategies {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f5ff;
+            padding: 50px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .anxiety-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .anxiety-image {
+            width: 100%;
+            max-width: 500px;
+            height: 900px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .anxiety-steps {
+            flex: 1;
+            min-width: 300px;
+            margin-left: 30px;
+        }
+        .anxiety-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .anxiety-step:hover {
+            transform: translateY(-5px);
+        }
+        .anxiety-step-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+        .anxiety-step-content {
+            flex: 1;
+        }
+        .anxiety-step-title {
+            font-weight: 600;
+            color: #3a86ff;
+            margin: 0 0 5px 0;
+        }
+        .anxiety-step-text {
+            font-size: 14px;
+            color: #555;
+            margin: 0;
+        }
+        .anxiety-heading {
+            text-align: center;
+            color: #2b2d42;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+        @media (max-width: 768px) {
+            .anxiety-container {
+                flex-direction: column;
+            }
+            .anxiety-image {
+                margin-bottom: 30px;
+               
+            }
+            .anxiety-steps {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="anxiety-strategies">
+        <h2 class="anxiety-heading">Effective Strategies for Managing Anxiety</h2>
+        <div class="anxiety-container">
+            <img src="2.jpg" alt="Anxiety Management Flowchart" class="anxiety-image" >
+            <div class="anxiety-steps">
+                <div class="anxiety-step">
+                    <img src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Step 1" class="anxiety-step-img">
+                    <div class="anxiety-step-content">
+                        <h5 class="anxiety-step-title">Identify Triggers</h5>
+                        <p class="anxiety-step-text">Recognize and understand the situations, thoughts, or events that trigger your anxiety.</p>
+                    </div>
+                </div>
+                <div class="anxiety-step">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Step 2" class="anxiety-step-img">
+                    <div class="anxiety-step-content">
+                        <h5 class="anxiety-step-title">Practice Relaxation Techniques</h5>
+                        <p class="anxiety-step-text">Learn and regularly use relaxation methods such as deep breathing, meditation, or progressive muscle relaxation.</p>
+                    </div>
+                </div>
+                <div class="anxiety-step">
+                    <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Step 3" class="anxiety-step-img">
+                    <div class="anxiety-step-content">
+                        <h5 class="anxiety-step-title">Challenge Negative Thoughts</h5>
+                        <p class="anxiety-step-text">Question and reframe anxious thoughts to develop a more balanced perspective.</p>
+                    </div>
+                </div>
+                <div class="anxiety-step">
+                    <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Step 4" class="anxiety-step-img">
+                    <div class="anxiety-step-content">
+                        <h5 class="anxiety-step-title">Regular Exercise</h5>
+                        <p class="anxiety-step-text">Engage in physical activity to reduce stress, improve mood, and boost overall well-being.</p>
+                    </div>
+                </div>
+                <div class="anxiety-step">
+                    <img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Step 5" class="anxiety-step-img">
+                    <div class="anxiety-step-content">
+                        <h5 class="anxiety-step-title">Maintain a Healthy Lifestyle</h5>
+                        <p class="anxiety-step-text">Prioritize good sleep habits, balanced nutrition, and limit caffeine and alcohol intake.</p>
+                    </div>
+                </div>
+                <div class="anxiety-step">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Step 6" class="anxiety-step-img">
+                    <div class="anxiety-step-content">
+                        <h5 class="anxiety-step-title">Seek Professional Help</h5>
+                        <p class="anxiety-step-text">Consult with a therapist or counselor for personalized strategies and support in managing anxiety.</p>
+                    </div>
+                </div>
+                <div class="anxiety-step">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Step 7" class="anxiety-step-img">
+                    <div class="anxiety-step-content">
+                        <h5 class="anxiety-step-title">Build a Support Network</h5>
+                        <p class="anxiety-step-text">Connect with friends, family, or support groups to share experiences and coping strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+      <!doctype html>
+      <html>
+  <head>
+    <style>
+      .cta-section {
+  background-color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-weight: bold;
+  color: #0069d9;
+}
+
+.cta-section p {
+  font-size: 18px;
+  color: #666;
+}
+
+.btn-primary {
+  background-color: #0069d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="cta-section">
+      
+        <h2 class="text-center">Take the First Step Towards Managing Anxiety</h2>
+        <p class="text-center">Get started with our expert resources and support</p>
+        <div class="text-center">
+          <a href="CONTACT US.html" class="btn btn-primary btn-lg">Get Started Now</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+    document.getElementById('startQuizBtn').addEventListener('click', function() {
+        alert('Starting the Mental Health Quiz...');
+        setTimeout(function() {
+            window.location.href = 'm.html';
+        }, 1000);
+    });
+
+    document.getElementById('learnMoreBtn').addEventListener('click', function() {
+        alert('Redirecting to Mental Health Information page...');
+        setTimeout(function() {
+            window.location.href = 'mind.html';
+        }, 1000);
+    });
+
+    // Add hover effects for buttons
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.addEventListener('mouseover', function() {
+            this.style.opacity = '0.8';
+        });
+        button.addEventListener('mouseout', function() {
+            this.style.opacity = '1';
+        });
+    });
+</script> 
+<script>
+    document.getElementById('learnMoreBtn').addEventListener('click', function() {
+        alert('Redirecting to CBT information page...');
+        // Wait for 1 second (1000 milliseconds) before redirecting
+        setTimeout(function() {
+            window.location.href = 'cbt.html';
+        }, 1000);
+    });
+
+    document.getElementById('scheduleBtn').addEventListener('click', function() {
+        alert('Opening scheduling system...');
+        // Wait for 1 second (1000 milliseconds) before redirecting
+        setTimeout(function() {
+            window.location.href = 'CONTACT US .html';
+        }, 1000);
+    });
+</script>
+<script>
+    document.getElementById('moreTipsBtn').addEventListener('click', function() {
+        alert('Redirecting to more mental health tips...');
+        setTimeout(function() {
+            window.location.href = 'tips.html';
+        }, 1000);
+    });
+
+    document.getElementById('subscribeTipsBtn').addEventListener('click', function() {
+        alert('Opening subscription form...');
+        setTimeout(function() {
+            window.location.href = 'subscribe-tips.html';
+        }, 1000);
+    });
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Support Sessions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .group-session-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .group-session-buttons {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            background-color: #3498db;
+            color: #fff;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            border-radius: 10px;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(15, 14, 14, 0.8);
+        }
+        /* Change the background color of the select dropdown to pink */
+        .form-group select {
+            background-color: #080808; 
+
+        }
+        .submit-btn {
+            background-color: #3498db;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<!-- Modal for joining a group -->
+<div id="joinGroupModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 style="text-align: center; margin-bottom: 1.5rem;">Join a Support Group</h2>
+        <form id="joinGroupForm">
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user form-icon"></i>Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope form-icon"></i>Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone"><i class="fas fa-phone form-icon"></i>Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label for="group-type"><i class="fas fa-users form-icon"></i>Group Type</label>
+                <select id="group-type" name="group-type" required>
+                    <option value="">Select a group type</option>
+                    <option value="anxiety">Anxiety Support</option>
+                    <option value="depression">Depression Support</option>
+                    <option value="ptsd">PTSD Support</option>
+                    <option value="general">General Mental Health</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Join Group</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("joinGroupModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("joinGroupBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
