@@ -1,0 +1,494 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Awareness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .section {
+            padding: 80px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .section:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        .section-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .section-image:hover {
+            transform: scale(1.05);
+        }
+        .icon-box {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .icon-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .icon-box i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+        .btn-custom {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .btn-custom:hover {
+            background-color: #2980b9;
+        }
+      
+      
+      nav {
+          display: flex; 
+          justify-content: space-around; 
+          align-items: center; 
+          background-color: rgba(255, 255, 255, 0.8); 
+          border-radius: 25px; 
+          padding: 10px 20px; 
+          position: absolute;
+          top: 20px;
+          left: 50%; 
+          max-width: 1000px;
+          width: 100%;
+          transform: translateX(-50%); 
+      }
+     
+            .card {
+                position: relative;
+                overflow: hidden;
+                transition: transform 0.3s ease-in-out;
+            }
+        
+            .card:hover {
+                transform: scale(1.05);
+            }
+        
+            .card-hover-text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(203, 184, 184, 0.8);
+                color: white;
+                padding: 20px;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+        
+            .card:hover .card-hover-text {
+                opacity: 1;
+            }
+            .gradient-bg {
+                background: linear-gradient(45deg, #fa8ec6, #a64ad4);
+            }
+            .mental-health-card {
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            }
+            .mental-health-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            }
+            .icon-bg {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+  </style>
+   
+</head>
+<body>
+    
+
+    <header style="background-image: url('mbg1.jpg'); background-size: cover; height: 300px; padding: 20px; text-align: center; color:black; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+
+        <nav>
+            <a href="MindCare Home.html" style="text-decoration: none; color: black;">Home</a>
+            <a href="MindCare About us.html" style="text-decoration: none; color: black;">About</a>
+            <a href="MindCare Services.html" style="text-decoration: none; color: black;">Services</a>
+            <a href="CONTACT US.html" style="text-decoration: none; color: black;">Contact</a>
+        </nav>
+   
+   
+        <h1 class="display-4" style="margin-top: 80PX;">Mental Health Awareness</h1>
+        <p class="lead">Understanding and improving our mental well-being</p>
+    </header>
+
+    <main>
+        <section id="what-is-mental-health" class="section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="image2.jpg" alt="Mental Health Concept" class="section-image">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="section-title">What is Mental Health?</h2>
+                        <p>Mental health encompasses our emotional, psychological, and social well-being. It affects how we think, feel, and act, influencing how we handle stress, relate to others, and make choices. Good mental health is essential for leading a happy and productive life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="importance-of-mental-health" class="section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2">
+                        <img src="image6.jpg" alt="Importance of Mental Health" class="section-image">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <h2 class="section-title">Why is Mental Health Important?</h2>
+                        <p>Mental health is crucial because it impacts every aspect of our lives. It affects our ability to cope with stress, overcome challenges, build relationships, and recover from life's setbacks. Good mental health contributes to our overall well-being and quality of life.</p>
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <div class="icon-box">
+                                    <i class="fas fa-heart"></i>
+                                    <h4>Emotional Well-being</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="icon-box">
+                                    <i class="fas fa-users"></i>
+                                    <h4>Social Connections</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="icon-box">
+                                    <i class="fas fa-brain"></i>
+                                    <h4>Cognitive Function</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="common-mental-health-conditions" class="section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="image5.jpg" alt="Common Mental Health Conditions" class="section-image">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="section-title">Common Mental Health Conditions</h2>
+                        <p>There are various mental health conditions that can affect individuals. Some of the most common include:</p>
+                        <ul>
+                            <li>Depression</li>
+                            <li>Anxiety Disorders</li>
+                            <li>Bipolar Disorder</li>
+                            <li>Post-Traumatic Stress Disorder (PTSD)</li>
+                            <li>Schizophrenia</li>
+                            <li>Eating Disorders</li>
+                        </ul>
+                        <p>It's important to remember that mental health conditions are treatable, and many people recover or learn to manage their symptoms effectively.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="improving-mental-health" class="section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2">
+                        <img src="image3.jpg" alt="Improving Mental Health" class="section-image" >
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <h2 class="section-title">How Can I Improve My Mental Health?</h2>
+                        <p>There are many ways to improve and maintain good mental health:</p>
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <div class="icon-box">
+                                    <i class="fas fa-running"></i>
+                                    <h4>Regular Exercise</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="icon-box">
+                                    <i class="fas fa-utensils"></i>
+                                    <h4>Healthy Diet</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="icon-box">
+                                    <i class="fas fa-bed"></i>
+                                    <h4>Adequate Sleep</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <div class="icon-box">
+                                    <i class="fas fa-hands-helping"></i>
+                                    <h4>Social Connections</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="icon-box">
+                                    <i class="fas fa-spa"></i>
+                                    <h4>Mindfulness</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="icon-box">
+                                    <i class="fas fa-book-reader"></i>
+                                    <h4>Continuous Learning</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="getting-help" class="section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="f2.jpg" alt="Getting Help for Mental Health" class="section-image">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="section-title">Where Can I Get Help for Mental Health Problems?</h2>
+                        <p>If you're experiencing mental health issues, it's important to seek help. There are many resources available:</p>
+                        <ul>
+                            <li>Talk to your primary care physician</li>
+                            <li>Consult a mental health professional (psychologist, psychiatrist, or therapist)</li>
+                            <li>Contact a local mental health clinic or community health center</li>
+                            <li>Reach out to support groups or online communities</li>
+                            <li>Use mental health hotlines for immediate support</li>
+                        </ul>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mindcare-suggestions" class="section">
+            <div class="container">
+                <h2 class="section-title text-center mb-5" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">MindCare Suggestions</h2>
+                <div class="row g-4">
+                    <!-- Row 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="s8.jpg" class="card-img-top" alt="Meditation"style="height: 600px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Meditation</h5>
+                            </div>
+                            <div class="card-hover-text">
+                                <p>Practice mindfulness meditation for 10 minutes daily to reduce stress and improve focus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="img 56.jpg" class="card-img-top" alt="Exercise" style="height: 600px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Regular Exercise</h5>
+                            </div>
+                            <div class="card-hover-text">
+                                <p>Engage in 30 minutes of moderate exercise 5 times a week to boost mood and reduce anxiety.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="s6.jpg" class="card-img-top" alt="Healthy Diet">
+                            <div class="card-body">
+                                <h5 class="card-title">Healthy Diet</h5>
+                            </div>
+                            <div class="card-hover-text">
+                                <p>Maintain a balanced diet rich in omega-3 fatty acids, vegetables, and whole grains to support brain health.</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Row 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="s12.jpg" class="card-img-top" alt="Social Connections"style="height: 600px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Social Connections</h5>
+                            </div>
+                            <div class="card-hover-text">
+                                <p>Nurture relationships and spend quality time with friends and family to combat loneliness.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="s4.jpg" class="card-img-top" alt="Sleep Hygiene"style="height: 600px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Sleep Hygiene</h5>
+                            </div>
+                            <div class="card-hover-text">
+                                <p>Aim for 7-9 hours of quality sleep each night by maintaining a consistent sleep schedule.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="s5.jpg" class="card-img-top" alt="Stress Management">
+                            <div class="card-body">
+                                <h5 class="card-title">Stress Management</h5>
+                            </div>
+                            <div class="card-hover-text">
+                                <p>Practice deep breathing exercises or progressive muscle relaxation to manage stress effectively.</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Row 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="s11.jpg" class="card-img-top" alt="Gratitude Practice">
+                            <div class="card-body">
+                                <h5 class="card-title">Gratitude Practice</h5>
+                            </div>
+                            <div class="card-hover-text">
+                                <p>Keep a gratitude journal and write down three things you're thankful for each day to boost positivity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="s2.jpg" class="card-img-top" alt="Limit Screen Time" ">
+                            <div class="card-body">
+                                <h5 class="card-title">Limit Screen Time</h5>
+                            </div>
+                            <div class="card-hover-text">
+                                <p>Reduce screen time, especially before bed, to improve sleep quality and reduce digital stress.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="s7.jpg" class="card-img-top" alt="Creative Expression">
+                            <div class="card-body">
+                                <h5 class="card-title">Creative Expression</h5>
+                            </div>
+                            <div class="card-hover-text">
+                                <p>Engage in creative activities like art, music, or writing to express emotions and reduce stress.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+  
+   
+    
+        <section class="gradient-bg py-5">
+            <div class="container">
+                <h2 class="text-center mb-5" style="color:wheat; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Signs You Have Good Mental Health</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card mental-health-card h-100">
+                            <div class="card-body text-center">
+                                <div class="icon-bg bg-primary mx-auto">
+                                    <i class="fas fa-smile fa-2x text-white"></i>
+                                </div>
+                                <h5 class="card-title">Positive Outlook</h5>
+                                <p class="card-text">You maintain a generally positive attitude towards life and its challenges.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mental-health-card h-100">
+                            <div class="card-body text-center">
+                                <div class="icon-bg bg-success mx-auto">
+                                    <i class="fas fa-heart fa-2x text-white"></i>
+                                </div>
+                                <h5 class="card-title">Good Relationships</h5>
+                                <p class="card-text">You maintain healthy and supportive relationships with others.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mental-health-card h-100">
+                            <div class="card-body text-center">
+                                <div class="icon-bg bg-info mx-auto">
+                                    <i class="fas fa-balance-scale fa-2x text-white"></i>
+                                </div>
+                                <h5 class="card-title">Emotional Balance</h5>
+                                <p class="card-text">You can manage your emotions effectively and maintain emotional stability.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mental-health-card h-100">
+                            <div class="card-body text-center">
+                                <div class="icon-bg bg-warning mx-auto">
+                                    <i class="fas fa-brain fa-2x text-white"></i>
+                                </div>
+                                <h5 class="card-title">Self-Awareness</h5>
+                                <p class="card-text">You have a good understanding of your thoughts, feelings, and behaviors.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mental-health-card h-100">
+                            <div class="card-body text-center">
+                                <div class="icon-bg bg-danger mx-auto">
+                                    <i class="fas fa-hands-helping fa-2x text-white"></i>
+                                </div>
+                                <h5 class="card-title">Ability to Cope</h5>
+                                <p class="card-text">You have effective strategies to deal with stress and life's challenges.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mental-health-card h-100">
+                            <div class="card-body text-center">
+                                <div class="icon-bg bg-secondary mx-auto">
+                                    <i class="fas fa-seedling fa-2x text-white"></i>
+                                </div>
+                                <h5 class="card-title">Personal Growth</h5>
+                                <p class="card-text">You're open to learning and continuously working on self-improvement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>&copy; 2023 Mental Health Awareness. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+   

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+            background-image: url('img 43.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        #mental-health-quiz {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4a4a4a;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #quiz-form .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        select:hover, select:focus {
+            border-color: #007bff;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #results {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #007bff;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .fade-in {
+            opacity: 1 !important;
+        }
+
+        .icon {
+            margin-right: 10px;
+            color: #007bff;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+   
+<body>
+    <section id="mental-health-quiz">
+        <h2><i class="fas fa-brain icon"></i>Interactive Mental Health Quiz</h2>
+        <p>Take our quiz to gain insights into your mental health.</p>
+        <form id="quiz-form">
+            <div class="form-group">
+                <label for="question1"><i class="fas fa-heartbeat icon"></i>How often do you feel anxious or on edge?</label>
+                <select class="form-control" id="question1">
+                    <option>Never</option>
+                    <option>Rarely</option>
+                    <option>Sometimes</option>
+                    <option>Often</option>
+                    <option>Always</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question2"><i class="fas fa-moon icon"></i>Do you have trouble sleeping?</label>
+                <select class="form-control" id="question2">
+                    <option>Never</option>
+                    <option>Rarely</option>
+                    <option>Sometimes</option>
+                    <option>Often</option>
+                    <option>Always</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question3"><i class="fas fa-frown icon"></i>How often do you feel down or depressed?</label>
+                <select class="form-control" id="question3">
+                    <option>Never</option>
+                    <option>Rarely</option>
+                    <option>Sometimes</option>
+                    <option>Often</option>
+                    <option>Always</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question4"><i class="fas fa-users icon"></i>Do you find it difficult to maintain relationships?</label>
+                <select class="form-control" id="question4">
+                    <option>Not at all</option>
+                    <option>Slightly</option>
+                    <option>Moderately</option>
+                    <option>Very</option>
+                    <option>Extremely</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question5"><i class="fas fa-utensils icon"></i>Have your eating habits changed significantly recently?</label>
+                <select class="form-control" id="question5">
+                    <option>No change</option>
+                    <option>Slight change</option>
+                    <option>Moderate change</option>
+                    <option>Significant change</option>
+                    <option>Extreme change</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question6"><i class="fas fa-running icon"></i>How often do you engage in physical exercise?</label>
+                <select class="form-control" id="question6">
+                    <option>Never</option>
+                    <option>Rarely</option>
+                    <option>Sometimes</option>
+                    <option>Often</option>
+                    <option>Daily</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question7"><i class="fas fa-briefcase icon"></i>How stressed do you feel about work or school?</label>
+                <select class="form-control" id="question7">
+                    <option>Not at all</option>
+                    <option>Slightly</option>
+                    <option>Moderately</option>
+                    <option>Very</option>
+                    <option>Extremely</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question8"><i class="fas fa-wine-glass-alt icon"></i>How often do you use alcohol or other substances to cope with stress?</label>
+                <select class="form-control" id="question8">
+                    <option>Never</option>
+                    <option>Rarely</option>
+                    <option>Sometimes</option>
+                    <option>Often</option>
+                    <option>Always</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question9"><i class="fas fa-hand-holding-heart icon"></i>Do you have a support system you can rely on?</label>
+                <select class="form-control" id="question9">
+                    <option>No support</option>
+                    <option>Little support</option>
+                    <option>Some support</option>
+                    <option>Good support</option>
+                    <option>Strong support</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question10"><i class="fas fa-book icon"></i>How often do you engage in activities you enjoy?</label>
+                <select class="form-control" id="question10">
+                    <option>Never</option>
+                    <option>Rarely</option>
+                    <option>Sometimes</option>
+                    <option>Often</option>
+                    <option>Daily</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question11"><i class="fas fa-comments icon"></i>How comfortable do you feel expressing your emotions?</label>
+                <select class="form-control" id="question11">
+                    <option>Not at all</option>
+                    <option>Slightly</option>
+                    <option>Moderately</option>
+                    <option>Very</option>
+                    <option>Extremely</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question12"><i class="fas fa-balance-scale icon"></i>How well do you feel you can manage your daily responsibilities?</label>
+                <select class="form-control" id="question12">
+                    <option>Not at all</option>
+                    <option>With difficulty</option>
+                    <option>Moderately well</option>
+                    <option>Well</option>
+                    <option>Very well</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question13"><i class="fas fa-lightbulb icon"></i>How often do you have trouble concentrating?</label>
+                <select class="form-control" id="question13">
+                    <option>Never</option>
+                    <option>Rarely</option>
+                    <option>Sometimes</option>
+                    <option>Often</option>
+                    <option>Always</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question14"><i class="fas fa-smile icon"></i>Overall, how would you rate your current mental health?</label>
+                <select class="form-control" id="question14">
+                    <option>Poor</option>
+                    <option>Fair</option>
+                    <option>Good</option>
+                    <option>Very good</option>
+                    <option>Excellent</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question15"><i class="fas fa-hand-holding-medical icon"></i>Have you ever considered seeking professional help for your mental health?</label>
+                <select class="form-control" id="question15">
+                    <option>Never</option>
+                    <option>Rarely</option>
+                    <option>Sometimes</option>
+                    <option>Often</option>
+                    <option>Already seeing a professional</option>
+                </select>
+            </div>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
+        </form>
+        <div id="results"></div>
+    </section>
+    
+</body>
+
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Calculate score
+            let score = 0;
+            let questions = document.querySelectorAll('select');
+            questions.forEach(question => {
+                let value = question.selectedIndex;
+                score += value;
+            });
+
+            // Normalize score to 0-100 range
+            let normalizedScore = (score / (questions.length * 4)) * 100;
+
+            // Determine mental health status based on score
+            let status;
+            if (normalizedScore < 20) {
+                status = "Excellent";
+            } else if (normalizedScore < 40) {
+                status = "Good";
+            } else if (normalizedScore < 60) {
+                status = "Fair";
+            } else if (normalizedScore < 80) {
+                status = "Concerning";
+            } else {
+                status = "Poor";
+            }
+
+            // Generate feedback
+            let feedback = `
+                <h3>Quiz Results</h3>
+                <p>Your mental health score: ${normalizedScore.toFixed(2)}</p>
+                <p>Status: ${status}</p>
+                <h4>Recommendations:</h4>
+                <ul>
+                    <li>Practice mindfulness and relaxation techniques</li>
+                    <li>Maintain a regular sleep schedule</li>
+                    <li>Exercise regularly</li>
+                    <li>Reach out to friends and family for support</li>
+                    ${normalizedScore > 60 ? '<li>Consider speaking with a mental health professional</li>' : ''}
+                </ul>
+                <p>Remember, this quiz is not a diagnostic tool. If you're concerned about your mental health, please consult with a qualified healthcare provider.</p>
+            `;
+
+            let resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = feedback;
+            resultsDiv.classList.add('fade-in');
+
+            // Scroll to results
+            resultsDiv.scrollIntoView({behavior: "smooth"});
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindCare: Comprehensive Mental Health and Wellness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9) !important;
+        }
+        .hero-section {
+            background: url('bg4.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .section-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .card-img-top {
+    height: 200px; 
+    object-fit: cover; 
+    object-position: center; 
+}
+
+
+#mindful-communication .card-title {
+    color: #4a90e2; 
+}
+
+#mindful-communication .card ul li i {
+    color: #4a90e2; 
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.card-title {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card ul li {
+    margin-bottom: 0.5rem;
+}
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px; 
+    object-fit: cover; 
+    object-position: center; 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-title {
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card ul li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.card ul li i {
+    margin-right: 0.5rem;
+    color: #28a745;
+}
+
+.section-title {
+    color: #333;
+    font-weight: 700;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-brain"></i> MindCare</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="MindCare Home.html">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="MindCare Services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doc1.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MindCare Login_page.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="CONTACT US.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container hero-content text-center text-white">
+            <h1 class="display-4 mb-4">Nourish Your Mind, Flourish in Life</h1>
+            <p class="lead mb-5">Discover the path to mental wellness with MindCare</p>
+            <a href="excersises.html" class="btn btn-primary btn-lg me-3">Explore Exercises</a>
+            <a href="tips.html" class="btn btn-outline-light btn-lg">Get Tips</a>
+        </div>
+    </section>
+
+    <section id="exercises" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Mental Health Exercises</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-wind card-icon"></i>
+                        <h5 class="card-title">Mindful Breathing</h5>
+                        <p class="card-text">Practice deep, slow breathing to reduce stress and anxiety. Focus on your breath for 5-10 minutes daily.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-book-open card-icon"></i>
+                        <h5 class="card-title">Gratitude Journaling</h5>
+                        <p class="card-text">Write down three things you're grateful for each day to improve mood and overall well-being.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-dumbbell card-icon"></i>
+                        <h5 class="card-title">Progressive Muscle Relaxation</h5>
+                        <p class="card-text">Tense and relax different muscle groups to reduce physical tension and promote relaxation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tips" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Mental Health Tips</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-calendar-alt card-icon"></i>
+                        <h5 class="card-title">Establish a Routine</h5>
+                        <p class="card-text">Create a daily schedule to provide structure and reduce anxiety. Include time for work, relaxation, and self-care.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-users card-icon"></i>
+                        <h5 class="card-title">Stay Connected</h5>
+                        <p class="card-text">Maintain social connections through regular calls, video chats, or safe in-person meetings with friends and family.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-tv card-icon"></i>
+                        <h5 class="card-title">Limit Media Consumption</h5>
+                        <p class="card-text">Set boundaries on news and social media intake to reduce stress and information overload.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="mindfulness-resources" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Mindfulness Resources</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-laptop card-icon"></i>
+                        <h5 class="card-title">Online Courses</h5>
+                        <p class="card-text">Explore a variety of online mindfulness courses to deepen your practice and understanding.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li>Mindfulness-Based Stress Reduction (MBSR)</li>
+                            <li>Introduction to Meditation</li>
+                            <li>Mindful Self-Compassion</li>
+                        </ul>
+                        <button id="findCoursesBtn" class="btn btn-primary mt-3">Find Courses</button>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-mobile-alt card-icon"></i>
+                        <h5 class="card-title">Mindfulness Apps</h5>
+                        <p class="card-text">Discover mobile apps that can help you practice mindfulness anytime, anywhere.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li>Headspace</li>
+                            <li>Calm</li>
+                            <li>Insight Timer</li>
+                        </ul>
+                        <button id="exploreAppsBtn" class="btn btn-primary mt-3">Explore Apps</button>
+                    </div>
+
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-book card-icon"></i>
+                        <h5 class="card-title">Recommended Books</h5>
+                        <p class="card-text">Dive deeper into mindfulness with these highly recommended books.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li>"The Power of Now" by Eckhart Tolle</li>
+                            <li>"Mindfulness in Plain English" by Bhante Gunaratana</li>
+                            <li>"Full Catastrophe Living" by Jon Kabat-Zinn</li>
+                        </ul>
+                        <button id="viewBooksBtn" class="btn btn-primary mt-3">View Book List</button>
+                        <script>
+                        
+                            const exploreAppsBtn = document.getElementById('exploreAppsBtn');
+                            const findCoursesBtn = document.getElementById('findCoursesBtn');
+                            const viewBooksBtn = document.getElementById('viewBooksBtn');
+    
+                            exploreAppsBtn.addEventListener('click', () => {
+                            alert('Explore these great mindfulness apps:\n\n1. Headspace: https://www.headspace.com/\n2. Calm: https://www.calm.com/\n3. Insight Timer: https://insighttimer.com/');
+                              });
+    
+    
+                            findCoursesBtn.addEventListener('click', () => {
+                            alert('Find these fantastic mindfulness courses:\n\n1. Mindfulness-Based Stress Reduction (MBSR): https://www.coursera.org/learn/mindfulness-based-stress-reduction\n2. Introduction to Meditation: https://www.udemy.com/course/introduction-to-meditation/\n3. Mindful Self-Compassion: https://www.mindfulselfcompassion.org/');
+                                });
+    
+    
+                            viewBooksBtn.addEventListener('click', () => {
+                             alert('Check out these recommended mindfulness books:\n\n1. "The Power of Now" by Eckhart Tolle: https://www.amazon.com/Power-Now-Guide-Spiritual-Enlightenment/dp/1577314808\n2. "Mindfulness in Plain English" by Bhante Gunaratana: https://www.amazon.com/Mindfulness-Plain-English-Bhante-Gunaratana/dp/0861719069\n3. "Full Catastrophe Living" by Jon Kabat-Zinn: https://www.amazon.com/Full-Catastrophe-Living-Revised-Mindfulness/dp/0345536932');
+                                });
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="mindful-activities" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Mindful Physical Activities</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Yoga for Relaxation">
+                        <div class="card-body">
+                            <h5 class="card-title">Yoga for Relaxation</h5>
+                            <p class="card-text">Practice gentle yoga poses to release tension, improve flexibility, and promote relaxation.</p>
+                            <a href="Yoga for Relaxation.html" class="btn btn-primary mt-3" id="yogaBtn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Brisk Walking">
+                        <div class="card-body">
+                            <h5 class="card-title">Brisk Walking</h5>
+                            <p class="card-text">Engage in regular brisk walks to boost mood, reduce stress, and improve overall health.</p>
+                            <a href="Brisk Walking.html" class="btn btn-primary mt-3" id="walkingBtn">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="https://images.unsplash.com/photo-1551634979-2b11f8c946fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Mindful Movement">
+                        <div class="card-body">
+                            <h5 class="card-title">Mindful Movement</h5>
+                            <p class="card-text">Explore mindful movement practices like Tai Chi or Qigong to enhance body awareness and reduce anxiety.</p>
+                            <a href="Mindful Movements.html" class="btn btn-primary mt-3" id="movementBtn">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="mindful-communication" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Mindful Communication</h2>
+            <p class="text-center mb-5">Enhance your relationships through present, aware, and empathetic communication.</p>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="https://th.bing.com/th/id/OIP.DF1VKXlFqr3D6apk01iFZwHaE8?rs=1&pid=ImgDetMain" alt="What is Mindful Communication">
+                        <div class="card-body">
+                            <h5 class="card-title">What is Mindful Communication?</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-ear-listen"></i> Improved listening skills</li>
+                                <li><i class="fas fa-heart"></i> Enhanced empathy and understanding</li>
+                                <li><i class="fas fa-handshake"></i> Reduced conflicts</li>
+                                <li><i class="fas fa-users"></i> Increased intimacy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="img 58.jpg" alt="Tips for Mindful Communication" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Tips for Mindful Communication</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-headphones"></i> Practice active listening</li>
+                                <li><i class="fas fa-comment"></i> Use "I" statements</li>
+                                <li><i class="fas fa-ban"></i> Avoid assumptions and judgments</li>
+                                <li><i class="fas fa-pause"></i> Take breaks to reflect before responding</li>
+                                <li><i class="fas fa-eye"></i> Maintain eye contact</li>
+                                <li><i class="fas fa-smile"></i> Use positive body language</li>
+                                <li><i class="fas fa-comment-dots"></i> Ask open-ended questions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Exercises for Mindful Communication" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Exercises for Mindful Communication</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-brain"></i> Mindful listening meditation</li>
+                                <li><i class="fas fa-comments"></i> Non-violent communication practice</li>
+                                <li><i class="fas fa-gift"></i> Gratitude sharing</li>
+                                <li><i class="fas fa-book"></i> Mindfulness journaling</li>
+                                <li><i class="fas fa-leaf"></i> Nature connection exercises</li>
+                                <li><i class="fas fa-music"></i> Guided meditation with music</li>
+                                <li><i class="fas fa-yoga"></i> Yoga for emotional balance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                           
+                     
+    <section id="mindful-relationships" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Building Mindful Relationships</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-heart card-icon mb-3"></i>
+                            <h5 class="card-title">Foundations</h5>
+                            <ul class="list-unstyled">
+                                <li>Trust</li>
+                                <li>Respect</li>
+                                <li>Empathy</li>
+                                <li>Open communication</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-calendar-check card-icon mb-3"></i>
+                            <h5 class="card-title">Regular Practices</h5>
+                            <ul class="list-unstyled">
+                                <li>Check-ins</li>
+                                <li>Emotional validation</li>
+                                <li>Conflict resolution</li>
+                                <li>Shared activities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-mountain card-icon mb-3"></i>
+                            <h5 class="card-title">Overcoming Challenges</h5>
+                            <ul class="list-unstyled">
+                                <li>Managing expectations</li>
+                                <li>Practicing forgiveness</li>
+                                <li>Setting healthy boundaries</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-dumbbell card-icon mb-3"></i>
+                            <h5 class="card-title">Exercises</h5>
+                            <ul class="list-unstyled">
+                                <li>Couples meditation</li>
+                                <li>Gratitude journaling</li>
+                                <li>Active listening exercises</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="mindful-conflict-resolution" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Mindful Conflict Resolution</h2>
+            <p class="text-center mb-5">Approach conflicts with mindfulness, empathy, and effective communication.</p>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="img 3.jpg" class="card-img-top" alt="Mindful Approach">
+                        <div class="card-body">
+                            <h5 class="card-title">Mindful Approach</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-lightbulb"></i> Recognize triggers</li>
+                                <li><i class="fas fa-balance-scale"></i> Stay calm and centered</li>
+                                <li><i class="fas fa-ear-listen"></i> Listen actively</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Conflict Resolution Strategies">
+                        <div class="card-body">
+                            <h5 class="card-title">Resolution Strategies</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-wind"></i> De-escalation techniques</li>
+                                <li><i class="fas fa-users"></i> Problem-solving together</li>
+                                <li><i class="fas fa-handshake"></i> Seeking common ground</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Exercises for Mindful Conflict Resolution">
+                        <div class="card-body">
+                            <h5 class="card-title">Exercises</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-brain"></i> Mindful argument meditation</li>
+                                <li><i class="fas fa-heart"></i> Empathy-building exercises</li>
+                                <li><i class="fas fa-dove"></i> Forgiveness practice</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <div class="modal fade" id="resourceModal" tabindex="-1" aria-labelledby="resourceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resourceModalLabel">Resource Links</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="resourceModalBody">
+                    <h6>Online Mindfulness Courses</h6>
+                    <p>Mindfulness-Based Stress Reduction (MBSR)</p>
+                    <p>Introduction to Meditation</p>
+                    <p>Mindful Self-Compassion</p>
+
+                    <h6>Mindfulness Apps</h6>
+
+                    <p>Headspace</p>
+                    <p>Calm</p>
+                    <p>Insight Timer</p>
+
+                    <h6>Recommended Mindfulness Books</h6>
+                    
+                    <p>The Power of Now by Eckhart Tolle</p>
+                    <p>Mindfulness in Plain English by Bhante Gunaratana</p>
+                    <p>Full Catastrophe Living by Jon Kabat-Zinn</p>
+                </div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resourceModal">
+                    View Resources
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 MindCare. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

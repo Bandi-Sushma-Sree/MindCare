@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> 
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Services Styles.css"> 
+
+</head>
+<body>
+  <header>
+    <nav class="section__container nav__container">
+      <div class="nav__logo">Mind<span>Care</span></div>
+      <ul class="nav__links">
+       <li class="link"><a href="MindCare Wellness.html"> Wellness</a></li>
+        <li class="link"><a href="sleep journal.html">Sleep Journal</a></li>
+        <li class="link"><a href="mindcare quiz.html"> Quiz</a></li>
+        <li class="link"><a href="mindcare stories.html">Stories</a></li>
+        <li class="link"><a href="excersises.html">Try excersices</a></li>
+       
+
+      </ul>
+      <a href="CONTACT US.html">
+      <button class="btn-know-more">Contact Us</button>
+    </a>
+    </nav>
+    <div class="section__container header__container" id="home">
+      <div class="header__content">
+      
+          
+         
+              <h1>Empowering You To achieve Greater Mental Health And wellness</h1>
+              <p>
+                Welcome, where Your exceptional experiences are our priority.
+                With compassionate care, state-of-art facilities, and a
+                care-centered approach, we're dedicated to your well-being. Trust
+                us with your Mental health and experience the difference.
+              </p>
+              <a href="MindGuides.html">
+                <button class="btn-know-more">Explore More about Mental Health</button>
+              </a>
+            </div>
+            <div class="header__form mood-check">
+              <h4>How are you feeling today?</h4>
+              <div class="mood-icons">
+                <button class="mood-btn" data-mood="happy">
+                  <i class="fas fa-smile"></i>
+                </button>
+                <button class="mood-btn" data-mood="neutral">
+                  <i class="fas fa-meh"></i>
+                </button>
+                <button class="mood-btn" data-mood="sad">
+                  <i class="fas fa-frown"></i>
+                </button>
+              </div>
+              <div id="mood-message" class="mood-message"></div>
+              <div class="mindfulness-image">
+                <img src="img 8.jpg" alt="Mindfulness illustration">
+              </div>
+            </div>
+          </div>
+        </header>
+       
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const moodButtons = document.querySelectorAll('.mood-btn');
+          const moodMessage = document.getElementById('mood-message');
+        
+          moodButtons.forEach(button => {
+            button.addEventListener('click', function() {
+             
+              moodButtons.forEach(btn => btn.classList.remove('selected'));
+              
+             
+              this.classList.add('selected');
+        
+              const mood = this.getAttribute('data-mood');
+              let message = '';
+        
+              switch(mood) {
+                case 'happy':
+                  message = "That's wonderful! Your positivity can brighten someone else's day too!";
+                  break;
+                case 'neutral':
+                  message = "It's okay to have neutral days. Why not try a quick mindfulness exercise?";
+                  break;
+                case 'sad':
+                  message = "We're here for you. Remember, it's okay to reach out for support.";
+                  break;
+              }
+        
+              moodMessage.textContent = message;
+              moodMessage.style.opacity = '0';
+              setTimeout(() => {
+                moodMessage.style.opacity = '1';
+              }, 50);
+            });
+          });
+        });
+        </script>
+  </header>
+<html>
+<head>
+<style>
+ 
+</style>
+</head>
+<body>
+<div class="bg">
+  <div class="services">
+    <h1>Our Services</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-3 text-center">
+      <div class="icon">
+        <img src="i5.jpg" alt="Your Icon" class="rounded-circle img-fluid" style="max-width: 40px; max-height: 70px;">
+        <h3 style="color: #00698f;">Stress Management</h3>
+        <p style="color: #666;">This is stress Management</p>
+      </div>
+    </div>
+    <div class="col-md-3 text-center">
+      <div class="icon">
+        <img src="i6.jpg" alt="Your Icon" class="rounded-circle img-fluid" style="max-width: 40px; max-height: 70px;">
+        <h3 style="color: #00698f;">Anxiety Management</h3>
+        <p style="color: #666;">This is anxiety Management</p>
+      </div>
+    </div>
+    <div class="col-md-3 text-center">
+      <div class="icon">
+        <img src="i3.jpg" alt="Your Icon" class="rounded-circle img-fluid" style="max-width: 40px; max-height: 70px;">
+        <h3 style="color: #00698f;">Sleep Management</h3>
+        <p style="color: #666;">This is sleep Management</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 text-center">
+      <div class="icon">
+        <img src="i4.jpg" alt="Your Icon" class="rounded-circle img-fluid" style="max-width: 40px; max-height: 70px;">
+        <h3 style="color: #00698f;">Depression Management</h3>
+<p style="color: #666;">This is depression Management</p>
+
+
+      </div>
+    </div>
+    <div class="col-md-3 text-center">
+      <div class="icon">
+        <img src="i2.jpg" alt="Your Icon" class="rounded-circle img-fluid" style="max-width: 40px; max-height: 70px;">
+        <h3 style="color: #00698f;">Nutrition  Management</h3>
+        <p style="color: #666;">This is Nutrition Management</p>
+      </div>
+    </div>
+    <div class="col-md-3 text-center">
+      <div class="icon">
+        <img src="i1.jpg" alt="Your Icon" class="rounded-circle img-fluid" style="max-width: 40px; max-height: 70px;">
+        <h3 style="color: #00698f;">Fitness Management</h3>
+        <p style="color: #666;">This is Fitness Management</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<img src="57.jpg" alt="service icon" class="img-fluid" style="width: 1500px; height: 500px; object-fit: cover;padding-right: 20px;padding-bottom: 50px;padding-left:20px">
+
+
+        <div id="doctor">
+            <div class="head">
+                <h1>Understanding Mental Health Disorders</h1>
+                <h1>Explore Now!</h1>
+            </div>
+            <div class="teams">
+                <div class="card">
+                <img src="11.jpg" alt="">
+                
+                <p>Stress Management</p>
+                <a href="article Stress.html" class="btn-know-more">Know More</a>
+                </div>
+                <div class="card">
+                <img src="12.jpg" alt="">
+                <p>Anxiety Management</p>
+                <a href="article anxiety.html" class="btn-know-more">Know More</a>
+                </div>
+                <div class="card">
+                <img src="16.jpg" alt="">
+                <p>Depression Management</p>
+                <a href="article Depression.html" class="btn-know-more">Know More</a>
+                </div>
+                </div>
+                
+                <div id="doctor">
+                    
+                    <div class="teams">
+                        <div class="card">
+                        <img src="image30.jpg" alt="">
+                        <p>Sleep Management</p>
+                        <a href="article Sleep.html" class="btn-know-more">Know More</a>
+                        </div>
+                        <div class="card">
+                        <img src="46.jpg" alt="">
+                        <p>Fitness Management</p>
+                        <a href="article fitness.html" class="btn-know-more">Know More</a>
+                        </div>
+                        <div class="card">
+                        <img src="47.jpg" alt="">
+                        <p>Nutrition  Management</p>
+                        <a href="article Nutrition.html" class="btn-know-more">Know More</a>
+                        </div>
+                        </div>
+                        
+                
+
+        <div id="speciality">
+            <div class="head">
+                <h1>We Are here to Provide you with </h1>
+            </div>
+            <div class="speciality">
+                <div class="spCard">
+                    <img src="43.jpg" alt="">
+                    <h4> Everything Your Mind Needs</h4>
+                    <p>Take care of your mental health with proven courses and expert-led guidance to help you meet your goals.</p>
+
+                </div>
+                <div class="spCard">
+                    <img src="44.jpg" alt="">
+                    <h4>Have More Good Days</h4>
+                    <p>Let go of everyday stress and anxiety with guided medication and tips.</p>
+
+                </div>
+                <div class="spCard">
+                    <img src="45.jpg" alt="">
+                    <h4>Get The Sleep Of Your Dreams</h4>
+                    <p>Sleep more soundly every night with bedtime medications ,excersices,and relaxing sounds.</p>
+
+                </div>
+            </div>
+        </div>
+      
+        
+            <section class="vision-mission-section">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="vision-box shadow">
+                                <h2>Our Vision</h2>
+                                <p>Our vision is to empower individuals to take control of their mental health and wellness, and to live a more fulfilling and balanced life.</p>
+                                <p>Our vision is not limited to just mental health awareness, but also extends to promoting a culture of empathy, understanding, and support.</p><br>
+                                <p>We strive to create a safe space where individuals can openly discuss their mental health without fear of judgment or stigma.</p><br>
+                                <p>By empowering individuals to prioritize their mental well-being, we aim to foster a society that values mental health as much as physical health.</p><br>
+                                <a href="MindCare About us.html" class="btn btn-learn-more mt-3">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mission-box shadow">
+                                <h2>Our Mission</h2>
+                                <div class="row g-4">
+                                    <div class="col-6 text-center">
+                                        <div class="icon-box">
+                                            <i class="fas fa-brain"></i>
+                                        </div>
+                                        <h5>Promote mental health awareness</h5>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <div class="icon-box">
+                                            <i class="fas fa-hands-helping"></i>
+                                        </div>
+                                        <h5>Provide personalized support and care</h5>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <div class="icon-box">
+                                            <i class="fas fa-bullseye"></i>
+                                        </div>
+                                        <h5>Empower individuals to achieve their wellness goals</h5>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <div class="icon-box">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <h5>Foster a community of support and healing</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    <div class="container py-5">
+        <h1 class="text-center mb-5 animate__animated animate__fadeInDown">Mental Health Resource Library</h1>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="resourceContainer">
+            <div class="col animate__animated animate__fadeIn">
+                <div class="card h-100 resource-card">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="Stress Management Techniques">
+                    <div class="card-body">
+                        <h5 class="card-title">Stress Management Techniques</h5>
+                        <p class="card-text">Learn effective ways to manage stress in your daily life.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="Stress Management.html" class="btn btn-primary w-100">Access Resource</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate__animated animate__fadeIn">
+                <div class="card h-100 resource-card">
+                    <img src="image2.jpg" class="card-img-top" alt="Mindfulness Meditation Guide">
+                    <div class="card-body">
+                        <h5 class="card-title">Mindfulness Meditation Guide</h5>
+                        <p class="card-text">Discover the benefits of mindfulness and how to practice it.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="meditation guide.html" class="btn btn-primary w-100">Access Resource</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate__animated animate__fadeIn">
+                <div class="card h-100 resource-card">
+                    <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="Cognitive Behavioral Therapy Workbook">
+                    <div class="card-body">
+                        <h5 class="card-title">Cognitive Behavioral Therapy Workbook</h5>
+                        <p class="card-text">Access CBT exercises to improve your mental well-being.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="CBT.html" class="btn btn-primary w-100">Access Resource</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate__animated animate__fadeIn">
+                <div class="card h-100 resource-card">
+                    <img src="https://images.unsplash.com/photo-1474418397713-7ede21d49118?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="Anxiety Management Strategies">
+                    <div class="card-body">
+                        <h5 class="card-title">Anxiety Management Strategies</h5>
+                        <p class class="card-text">Explore techniques to cope with and reduce anxiety.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="Anxiety Management.html" class="btn btn-primary w-100">Access Resource</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate__animated animate__fadeIn">
+                <div class="card h-100 resource-card">
+                    <img src="https://images.unsplash.com/photo-1541199249251-f713e6145474?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="Depression Management Tools">
+                    <div class="card-body">
+                        <h5 class="card-title">Depression Management Tools</h5>
+                        <p class="card-text">Find resources and methods to manage depression symptoms.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="Depression Management.html" class="btn btn-primary w-100">Access Resource</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate__animated animate__fadeIn">
+                <div class="card h-100 resource-card">
+                    <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="Sleep Hygiene and Management">
+                    <div class="card-body">
+                        <h5 class="card-title">Sleep Hygiene and Management</h5>
+                        <p class="card-text">Learn how to improve your sleep quality for better mental health.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="Sleep Management.html" class="btn btn-primary w-100">Access Resource</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate__animated animate__fadeIn">
+                <div class="card h-100 resource-card">
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="Nutrition for Mental Wellness">
+                    <div class="card-body">
+                        <h5 class="card-title">Nutrition for Mental Wellness</h5>
+                        <p class class="card-text">Discover how diet affects mental health and get nutrition tips.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="Nutrition Management.html" class="btn btn-primary w-100">Access Resource</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate__animated animate__fadeIn">
+                <div class="card h-100 resource-card">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="Fitness for Mental Health">
+                    <div class="card-body">
+                        <h5 class="card-title">Fitness for Mental Health</h5>
+                        <p class class="card-text">Explore exercise routines that boost mental well-being.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="Fitness Management.html" class="btn btn-primary w-100">Access Resource</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col animate__animated animate__fadeIn">
+                <div class="card h-100 resource-card">
+                    <img src="https://images.unsplash.com/photo-1495727034151-8fdc73e332a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="Emotional Intelligence Development">
+                    <div class="card-body">
+                        <h5 class="card-title">Emotional Intelligence Development</h5>
+                        <p class class="card-text">Enhance your ability to understand and manage emotions effectively.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="EI Development.html" class="btn btn-primary w-100">Access Resource</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <footer class="footer">
+          <div class="section__container footer__container">
+            <div class="footer__col">
+              <h3>Mind<span>Care</span></h3>
+              <p>
+                We are honored to be a part of your  Mental healthcare journey and committed
+                to delivering compassionate, personalized, and top-notch care every
+                step of the way.
+              </p>
+              <p>
+                Trust us with your Mental health, and let us work together to achieve the
+                best possible outcomes for you and your loved ones.
+              </p>
+            </div>
+            <div class="footer__col">
+              <h4>About Us</h4>
+              <p>Home</p>
+              <p>About Us</p>
+              <p>Sevices</p>
+              <p>contact us</p>
+              <p>Login</p>
+            </div>
+            <div class="footer__col">
+              <h4>Services</h4>
+              <p>Stress Management</p>
+              <p>Anxiety Management</p>
+              <p>Sleep Management</p>
+              <p>Depression Management</p>
+              <p>Nutrition and Fitness management</p>
+            </div>
+            <div class="footer__col">
+              <h4>Contact Us</h4>
+              <p>
+                <i class="ri-map-pin-2-fill"></i> 123, Madhapur,Hitech city,Hyderabad,Telangana,500076
+              </p>
+              <p><i class="ri-mail-fill"></i> MindCare@gmail.com</p>
+              <p><i class="ri-phone-fill"></i> (+012) 3456 789</p>
+            </div>
+          </div>
+          <div class="footer__bar">
+            <div class="footer__bar__content">
+              <p>Copyright © 2024 Mental Health Management and well-being. All rights reserved.</p>
+              <div class="footer__socials">
+                <span><i class="ri-instagram-line"></i></span>
+                <span><i class="ri-facebook-fill"></i></span>
+                <span><i class="ri-heart-fill"></i></span>
+                <span><i class="ri-twitter-fill"></i></span>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </body>
+    </html>

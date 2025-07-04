@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINDCARE - Share Your Story</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f39c12;
+            --background-color: #f0f4f8;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .stories-section {
+            background-image: url('https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 4rem 0;
+        }
+
+        .stories-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .stories-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .story-form {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .story-input {
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            resize: none;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            border: none;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #3498db;
+        }
+
+        .story-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .story-author {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .story-content {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .story-date {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 1rem;
+        }
+
+        .story-image {
+            width: 100%;
+            height: 470px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .stories-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="stories" class="stories-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="stories-container">
+                        <h2 class="stories-title text-center mb-4">Share Your Story</h2>
+                        <div class="story-form mb-5">
+                            <form id="storyForm">
+                                <div class="mb-3">
+                                    <label for="storyAuthor" class="form-label">Your Name (optional)</label>
+                                    <input type="text" class="form-control" id="storyAuthor" placeholder="Anonymous">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="storyContent" class="form-label">Your Story</label>
+                                    <textarea class="form-control story-input" id="storyContent" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">Share Your Story</button>
+                            </form>
+                        </div>
+                        <h3 class="text-center mb-4">Community Stories</h3>
+                        <div id="storiesContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const storiesContainer = document.getElementById('storiesContainer');
+        const storyForm = document.getElementById('storyForm');
+    
+        // Fetch stories from the backend
+        async function fetchStories() {
+            try {
+                const response = await fetch('http://localhost:3083/api/stories');
+                const stories = await response.json();
+                displayStories(stories);
+            } catch (error) {
+                console.error('❌ Error fetching stories:', error);
+            }
+        }
+    
+        // Display stories in the frontend
+        function displayStories(stories) {
+            storiesContainer.innerHTML = '';
+            stories.forEach((story, index) => {
+                const storyCard = document.createElement('div');
+                storyCard.classList.add('story-card');
+                storyCard.innerHTML = `
+                    <img src="story.jpeg" alt="Story image" class="story-image">
+                    <h4 class="story-author">${story.author}</h4>
+                    <p class="story-content">${story.content}</p>
+                    <p class="story-date">${story.date}</p>
+                `;
+                storiesContainer.appendChild(storyCard);
+            });
+        }
+    
+        // Handle story form submission
+        storyForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const author = document.getElementById('storyAuthor').value || 'Anonymous';
+            const content = document.getElementById('storyContent').value;
+            const date = new Date().toISOString().split('T')[0];
+    
+            if (content) {
+                const newStory = { author, content, date };
+    
+                try {
+                    // Send new story to backend
+                    const response = await fetch('http://localhost:3083/api/stories', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(newStory)
+                    });
+    
+                    const result = await response.json();
+                    alert(result.message); // Show success message
+                    fetchStories(); // Refresh stories
+                    storyForm.reset();
+                } catch (error) {
+                    console.error('❌ Error submitting story:', error);
+                }
+            }
+        });
+    
+        // Initially load the stories from the backend
+        fetchStories();
+    });
+</script> 
+</body>
+</html>

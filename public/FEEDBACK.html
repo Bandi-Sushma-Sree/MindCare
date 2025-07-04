@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feedback Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css">
+</head>
+<body class="bg-gray-800 text-gray-100 px-8 py-12">
+<div class="text-center w-full">
+    <h1 class="text-4xl lg:text-6xl">Feedback Form</h1>
+</div>
+<div
+    class="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
+    <div class="flex flex-col justify-between">
+        <div>
+            <h2 class="text-4xl lg:text-5xl font-bold leading-tight">What's on your mind?</h2>
+            <img src="f3.jpg" alt="Feedback Image" class="mt-8">
+        </div>
+    </div>
+    <form id="feedbackForm">
+        <div>
+            <span class="uppercase text-sm text-gray-600 font-bold">Full Name</span>
+            <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                   type="text" id="fullname" name="fullname" placeholder="Your Name" required>
+        </div>
+        <div class="mt-8">
+            <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
+            <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                   type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="mt-8">
+            <span class="uppercase text-sm text-gray-600 font-bold">Feedback</span>
+            <textarea id="message" name="message"
+                      class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                      placeholder="Your Feedback" required></textarea>
+        </div>
+        <div class="mt-8">
+            <button type="submit"
+                    class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                Send Feedback
+            </button>
+        </div>
+        <p id="responseMessage" class="mt-4 text-center text-sm"></p>
+    </form>
+</div>
+
+<script>
+    // Handle form submission
+    document.getElementById('feedbackForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        // Capture form values
+        const fullname = document.getElementById('fullname').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const responseMessage = document.getElementById('responseMessage');
+
+        try {
+            // Send POST request to the backend
+            const response = await fetch('http://localhost:8563/feedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ fullname, email, message }),
+            });
+
+            if (response.ok) {
+                responseMessage.textContent = 'Feedback submitted successfully.';
+                responseMessage.style.color = 'green';
+
+                // Clear the form
+                document.getElementById('feedbackForm').reset();
+            } else {
+                responseMessage.textContent = 'Failed to submit feedback. Please try again.';
+                responseMessage.style.color = 'red';
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            responseMessage.textContent = 'An error occurred. Please try again later.';
+            responseMessage.style.color = 'red';
+        }
+    });
+</script>
+</body>
+</html>

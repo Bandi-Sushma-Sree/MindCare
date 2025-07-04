@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Tips</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      margin: 0;
+      padding: 20px;
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+
+    #daily-tips {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    h2, h5 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-body {
+      padding: 20px;
+      background: linear-gradient(45deg, #3498db, #2ecc71);
+      border-radius: 10px;
+      color: white;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      font-size: 1rem;
+    }
+
+    #archived-tips {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #archived-tips li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      transition: background-color 0.3s ease;
+    }
+
+    #archived-tips li:hover {
+      background-color: #f8f9fa;
+      padding-left: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary {
+      background-color: #3498db;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #2980b9;
+    }
+
+    .icon {
+      margin-right: 10px;
+      color: #3498db;
+    }
+
+  </style>
+</head>
+<body>
+  <section id="daily-tips" class="mb-5">
+    <h2><i class="fas fa-lightbulb icon"></i>Daily Tips</h2>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-star icon"></i>Tip of the Day</h5>
+            <p class="card-text" id="tip-of-the-day">Practice mindfulness. Take a few minutes each day to focus on your breath and be present.</p>
+        </div>
+    </div>
+    <div class="mt-4">
+        <h5><i class="fas fa-archive icon"></i>Archived Tips</h5>
+        <ul id="archived-tips">
+            <li><i class="fas fa-check icon"></i>Remember to take breaks and step away from your work.</li>
+            <li><i class="fas fa-tree icon"></i>Spend time in nature to recharge your mind.</li>
+            <li><i class="fas fa-heart icon"></i>Practice gratitude by writing down three things you are thankful for.</li>
+            <li><i class="fas fa-check icon"></i>Stay connected with friends and family.</li>
+            <li><i class="fas fa-tree icon"></i>Engage in physical activity regularly.</li>
+            <li><i class="fas fa-heart icon"></i>Limit your screen time, especially before bed.</li>
+            <li><i class="fas fa-check icon"></i>Try journaling to express your thoughts and feelings.</li>
+            <li><i class="fas fa-tree icon"></i>Practice deep breathing exercises when feeling stressed.</li>
+            <li><i class="fas fa-heart icon"></i>Set realistic goals and break tasks into smaller steps.</li>
+            <li><i class="fas fa-check icon"></i>Learn to say no to avoid overcommitting yourself.</li>
+            <li><i class="fas fa-tree icon"></i>Engage in hobbies that bring you joy.</li>
+            <li><i class="fas fa-heart icon"></i>Seek professional help if you are feeling overwhelmed.</li>
+            <li><i class="fas fa-check icon"></i>Establish a regular sleep routine.</li>
+            <li><i class="fas fa-tree icon"></i>Practice self-compassion and be kind to yourself.</li>
+            <li><i class="fas fa-heart icon"></i>Limit caffeine and sugar intake.</li>
+            <li><i class="fas fa-check icon"></i>Try meditation or yoga to calm your mind.</li>
+            <li><i class="fas fa-tree icon"></i>Listen to music that uplifts your mood.</li>
+            <li><i class="fas fa-heart icon"></i>Volunteer or help others to boost your own mood.</li>
+            <li><i class="fas fa-check icon"></i>Take time for self-care activities.</li>
+            <li><i class="fas fa-tree icon"></i>Practice positive affirmations daily.</li>
+            <li><i class="fas fa-heart icon"></i>Limit exposure to negative news and social media.</li>
+            <li><i class="fas fa-check icon"></i>Engage in creative activities like painting or writing.</li>
+            <li><i class="fas fa-tree icon"></i>Stay hydrated and eat a balanced diet.</li>
+            <li><i class="fas fa-heart icon"></i>Find a support group or community.</li>
+            <li><i class="fas fa-check icon"></i>Take a moment to reflect on your achievements.</li>
+            <li><i class="fas fa-tree icon"></i>Practice forgiveness, both for yourself and others.</li>
+            <li><i class="fas fa-heart icon"></i>Spend time with pets or animals.</li>
+            <li><i class="fas fa-check icon"></i>Learn a new skill or take up a new hobby.</li>
+            <li><i class="fas fa-tree icon"></i>Focus on the present moment, rather than worrying about the future.</li>
+            <li><i class="fas fa-heart icon"></i>Seek out laughter and humor in your day.</li>
+            <li><i class="fas fa-check icon"></i>Practice mindfulness while eating, savoring each bite.</li>
+            <li><i class="fas fa-tree icon"></i>Take a digital detox regularly.</li>
+            <li><i class="fas fa-heart icon"></i>Remember that it's okay to ask for help when you need it.</li>
+        </ul>
+    </div>
+  </section>
+  
+  <script>
+    const tips = [
+      "Practice mindfulness. Take a few minutes each day to focus on your breath and be present.",
+      "Remember to take breaks and step away from your work.",
+      "Spend time in nature to recharge your mind.",
+      "Practice gratitude by writing down three things you are thankful for.",
+      "Stay connected with friends and family.",
+      "Engage in physical activity regularly.",
+      "Limit your screen time, especially before bed.",
+      "Try journaling to express your thoughts and feelings.",
+      "Practice deep breathing exercises when feeling stressed.",
+      "Set realistic goals and break tasks into smaller steps.",
+      "Learn to say no to avoid overcommitting yourself.",
+      "Engage in hobbies that bring you joy.",
+      "Seek professional help if you are feeling overwhelmed.",
+      "Establish a regular sleep routine.",
+      "Practice self-compassion and be kind to yourself.",
+      "Limit caffeine and sugar intake.",
+      "Try meditation or yoga to calm your mind.",
+      "Listen to music that uplifts your mood.",
+      "Volunteer or help others to boost your own mood.",
+      "Take time for self-care activities.",
+      "Practice positive affirmations daily.",
+      "Limit exposure to negative news and social media.",
+      "Engage in creative activities like painting or writing.",
+      "Stay hydrated and eat a balanced diet.",
+      "Find a support group or community.",
+      "Take a moment to reflect on your achievements.",
+      "Practice forgiveness, both for yourself and others.",
+      "Spend time with pets or animals.",
+      "Learn a new skill or take up a new hobby.",
+      "Focus on the present moment, rather than worrying about the future.",
+      "Seek out laughter and humor in your day.",
+      "Practice mindfulness while eating, savoring each bite.",
+      "Take a digital detox regularly.",
+      "Remember that it's okay to ask for help when you need it."
+    ];
+
+    // Function to get a random tip
+    function getRandomTip() {
+      const randomIndex = Math.floor(Math.random() * tips.length);
+      return tips[randomIndex];
+    }
+
+    // Set the tip of the day
+    document.getElementById('tip-of-the-day').innerText = getRandomTip();
+  </script>
+</body>
+</html>

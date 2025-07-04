@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Management </title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="stress.css">
+    <title>Login Form</title>
+   
+</head>
+<body>
+    <section class="background">
+        <nav class="navbar">
+           
+            <div class="navbar-items h-class">
+                <ul class="nav v-class">
+                    <li><a href="MindCare Home.html">HOME</a></li>
+                    <li><a href="MindCare About us.html">ABOUT</a></li>
+                    <li><a href="CONTACT US.html">CONTACT</a></li>
+                    <li><a href="sleep journal.html">SlEEP JOURNAL</a></li>
+                    <li><a href="MindCare Login_page.html">LOGIN</a></li>
+                </ul>
+            </div>
+            <div class="burger">&#9776</div>
+        </nav>
+        <!-- _________main-sec -->
+        <div class="main">
+            <div class="text-box">
+                <strong> <h1>your health is our first priority</h1></strong>
+                 <p>At MindCare ,we understand that mental wellness is just as essential as 
+                  physical health. Our expert team is dedicated to providing compassionate and 
+                  comprehensive support to help you navigate life's challenges, achieve balance, 
+                  and cultivate a healthier mindset. From stress management and anxiety relief to 
+                  personalized therapy and wellness strategies, we're here to empower you on your 
+                  journey towards whole-person well-being.</p>
+                
+                 
+
+
+            </div>
+           
+          </section> 
+         
+          
+              <section class="stress-management">
+                  <h1 class="heading">Stress Management Techniques</h1>
+                  <div class="techniques">
+                      <div class="technique">
+                          <i class="fas fa-spa"></i>
+                          <h2>Mindfulness Meditation</h2>
+                          <p>Learn to focus on the present moment and reduce stress through guided meditation practices.</p>
+                          <a href="#" class="learn-more" data-technique="mindfulness">Learn More</a>
+                      </div>
+                      <div class="technique">
+                          <i class="fas fa-dumbbell"></i>
+                          <h2>Physical Exercise</h2>
+                          <p>Discover how regular exercise can significantly lower stress levels and improve overall mood.</p>
+                          <a href="#" class="learn-more" data-technique="exercise">Learn More</a>
+                      </div>
+                      <div class="technique">
+                          <i class="fas fa-moon"></i>
+                          <h2>Sleep Hygiene</h2>
+                          <p>Improve your sleep quality with effective techniques for better stress management and recovery.</p>
+                          <a href="#" class="learn-more" data-technique="sleep">Learn More</a>
+                      </div>
+                      <div class="technique">
+                          <i class="fas fa-utensils"></i>
+                          <h2>Nutrition for Stress</h2>
+                          <p>Learn about foods and dietary habits that can help reduce stress and promote overall well-being.</p>
+                          <a href="#" class="learn-more" data-technique="nutrition">Learn More</a>
+                      </div>
+                      <div class="technique">
+                          <i class="fas fa-brain"></i>
+                          <h2>Cognitive Restructuring</h2>
+                          <p>Reframe negative thought patterns to manage stress more effectively and build resilience.</p>
+                          <a href="#" class="learn-more" data-technique="cognitive">Learn More</a>
+                      </div>
+                      <div class="technique">
+                          <i class="fas fa-clock"></i>
+                          <h2>Time Management</h2>
+                          <p>Develop skills to organize your time and reduce stress from overwhelming schedules and tasks.</p>
+                          <a href="#" class="learn-more" data-technique="time">Learn More</a>
+                      </div>
+                  </div>
+              </section>
+          
+              <script>
+                  document.querySelectorAll('.learn-more').forEach(button => {
+                      button.addEventListener('click', function(e) {
+                          e.preventDefault();
+                          const technique = this.getAttribute('data-technique');
+                          let message = '';
+                          switch(technique) {
+                              case 'mindfulness':
+                                  message = "Mindfulness meditation involves focusing on the present moment. Try sitting quietly for 5 minutes each day, focusing on your breath.";
+                                  break;
+                              case 'exercise':
+                                  message = "Regular exercise can significantly reduce stress. Aim for at least 30 minutes of moderate exercise most days of the week.";
+                                  break;
+                              case 'sleep':
+                                  message = "Good sleep hygiene is crucial for stress management. Establish a regular sleep schedule and create a relaxing bedtime routine.";
+                                  break;
+                              case 'nutrition':
+                                  message = "A balanced diet can help manage stress. Include foods rich in omega-3 fatty acids, complex carbohydrates, and antioxidants in your diet.";
+                                  break;
+                              case 'cognitive':
+                                  message = "Cognitive restructuring involves identifying and challenging negative thought patterns. Try keeping a thought journal to track and reframe negative thoughts.";
+                                  break;
+                              case 'time':
+                                  message = "Effective time management can reduce stress. Use tools like calendars and to-do lists to prioritize tasks and manage your time more efficiently.";
+                                  break;
+                          }
+                          alert(message);
+                      });
+                  });
+              </script>
+         
+          
+          
+          
+    <!-- __________quality -->
+<section class="quality">
+  <h1 class="heading">Why Choose MindCare</h1>
+  <div class="row">
+    <div class="box2">
+      <i class="fas fa-clock"></i>
+      <h2>Accessible Care</h2>
+      <p>Expert support available 24/7 for your mental health needs.</p>
+    </div>
+    <div class="box2">
+      <i class="fas fa-heart"></i>
+      <h2>Compassionate Approach</h2>
+      <p>Personalized care and empathy from our experienced therapists.</p>
+    </div>
+    <div class="box2">
+      <i class="fas fa-chart-line"></i>
+      <h2>Proven Results</h2>
+      <p>Effective treatments and measurable progress for lasting well-being.</p>
+    </div>
+  </div>
+</section>
+
+    
+
+      
+
+    
+
+  <header class="hero-section">
+      <div class="container hero-content">
+      
+        <div style="color:burlywood; text-align: left; padding: 20px;">
+            <h3 style="font-weight: bold; font-size: 36px; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                Empowering Your Mental Wellness Journey
+            </h1>
+            <p style="margin: 0; font-size: 18px; line-height: 1.5; color: #e0e0e0;">
+                Discover effective strategies for managing stress and achieving balance in your life.
+            </p><br>
+        <p style="margin: 0; font-size: 18px; line-height: 1.5; color: #e0e0e0;">
+            Explore our comprehensive resources and expert advice to help you manage stress effectively and improve your overall well-being.
+        </p><br>
+        <p style="margin: 0; font-size: 18px; line-height: 1.5; color: #e0e0e0;">
+            From mindfulness practices to physical exercise, we'll guide you through a journey of self-discovery and empowerment.
+        </p><br>
+        <p style="margin: 0; font-size: 18px; line-height: 1.5; color: #e0e0e0;">
+            Take control of your mental health and start living a more balanced, fulfilling life.
+        </p><br>
+        </div>
+
+      </div>
+  </header>
+  <section class="symptoms-section">
+   
+        <h2 class="section-title text-center">Recognizing Stress: Common Symptoms</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="symptom-card">
+                    <i class="fas fa-brain symptom-icon"></i>
+                    <h4>Cognitive Symptoms</h4>
+                    <p>Difficulty concentrating, memory issues, and racing thoughts.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="symptom-card">
+                    <i class="fas fa-heartbeat symptom-icon"></i>
+                    <h4>Physical Symptoms</h4>
+                    <p>Headaches, muscle tension, fatigue, and sleep disturbances.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="symptom-card">
+                    <i class="fas fa-frown symptom-icon"></i>
+                    <h4>Emotional Symptoms</h4>
+                    <p>Irritability, anxiety, mood swings, and feeling overwhelmed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>   
+      
+    
+    
+</div>
+
+<div style="height: 50px;"></div>
+
+        
+    
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Understanding Stress: Common Triggers</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="cause-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <h5 class="cause-title text-center">Internal Influences</h5>
+                        <p class="cause-text text-center">Genetics, brain chemistry, and hormonal imbalances can contribute to stress. These internal factors play a crucial role in how we respond to stressors.</p>
+                        <div class="cause-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1289&q=80" alt="Internal Influences" class="cause-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cause-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h5 class="cause-title text-center">Life Events & Experiences</h5>
+                        <p class="cause-text text-center">Trauma, relationships, work pressures, and significant life changes can trigger stress. These external factors often require adaptation and coping strategies.</p>
+                        <div class="cause-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Life Events" class="cause-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cause-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h5 class="cause-title text-center">Thought Patterns & Behaviors</h5>
+                        <p class="cause-text text-center">Negative self-talk, perfectionism, and unhealthy coping mechanisms can exacerbate stress. Recognizing and modifying these patterns is key to stress management.</p>
+                        <div class="cause-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Thought Patterns" class="cause-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+
+
+
+       
+    
+    <div class="cap">
+        <h1>Mindfulness Meditation</h1>
+        
+        <div class="meditation-content">
+            <div class="meditation-image">
+                <img src="img 47.jpg" alt="Meditation">
+            </div>
+            
+            <div class="meditation-text">
+                <div class="meditation-info">
+                    <p>Learn to focus on the present moment and reduce stress through guided meditation. Mindfulness Meditation helps you cultivate awareness and improve overall well-being.</p>
+                </div>
+                
+                <div class="meditation-steps">
+                    <h2>How to Practice Mindfulness Meditation:</h2>
+                    <ol>
+                        <li>Find a quiet and comfortable place to sit.</li>
+                        <li>Set a time limit (e.g., 5-10 minutes for beginners).</li>
+                        <li>Pay attention to your body and get into a comfortable position.</li>
+                        <li>Focus on your breath, noticing the sensation of inhaling and exhaling.</li>
+                        <li>When your mind wanders, gently bring your attention back to your breath.</li>
+                        <li>Be kind to yourself if you get distracted; it's normal and part of the practice.</li>
+                        <li>When the time is up, slowly open your eyes and notice how you feel.</li>
+                    </ol>
+                </div>
+                
+                <button class="start-button" id="startMeditation">Start 5-Minute Meditation</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('startMeditation').addEventListener('click', function() {
+            alert("Find a comfortable position and close your eyes. We'll guide you through a 5-minute mindfulness meditation.");
+            
+            // Wait for 2 seconds before redirecting
+            setTimeout(function() {
+                // Replace 'meditation-session.html' with the actual page you want to redirect to
+                window.location.href = 'meditation guide.html';
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+    </script>
+
+       
+  
+    <div class="cor">
+        <h1>Physical Exercise for Stress Management</h1>
+        
+        <div class="exercise-content">
+            <div class="exercise-image">
+                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Physical Exercise">
+            </div>
+            
+            <div class="exercise-text">
+                <div class="exercise-info">
+                    <p>Discover how regular exercise can significantly lower stress levels and improve overall mood. Physical activity is a powerful tool for managing stress and enhancing mental well-being.</p>
+                </div>
+                
+                <div class="exercise-benefits">
+                    <div class="benefit">
+                        <i class="fas fa-heart"></i>
+                        <h3>Reduces Stress</h3>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-brain"></i>
+                        <h3>Improves Mood</h3>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-bed"></i>
+                        <h3>Better Sleep</h3>
+                    </div>
+                </div>
+                
+                <a href="#" class="exercise-button" id="startWorkout">View Workout</a>
+                <a href="#" class="exercise-button" id="startTimer">Start Timer</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="workoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>10-Minute Stress-Relief Workout</h2>
+            <div class="workout-step">
+                <h3>1. Warm-up (2 minutes)</h3>
+                <p>March in place, swing your arms, and do light stretches to warm up your body.</p>
+            </div>
+            <div class="workout-step">
+                <h3>2. Jumping Jacks (1 minute)</h3>
+                <p>Do jumping jacks to get your heart rate up and release endorphins.</p>
+            </div>
+            <div class="workout-step">
+                <h3>3. Body-weight Squats (1 minute)</h3>
+                <p>Perform squats to engage large muscle groups and boost your mood.</p>
+            </div>
+            <div class="workout-step">
+                <h3>4. Push-ups or Wall Push-ups (1 minute)</h3>
+                <p>Do push-ups to build upper body strength and increase confidence.</p>
+            </div>
+            <div class="workout-step">
+                <h3>5. Plank Hold (1 minute)</h3>
+                <p>Hold a plank position to strengthen your core and improve focus.</p>
+            </div>
+            <div class="workout-step">
+                <h3>6. High Knees (1 minute)</h3>
+                <p>Run in place with high knees to boost energy and reduce stress.</p>
+            </div>
+            <div class="workout-step">
+                <h3>7. Lunges (1 minute)</h3>
+                <p>Alternate lunges to improve balance and release tension.</p>
+            </div>
+            <div class="workout-step">
+                <h3>8. Cool-down (2 minutes)</h3>
+                <p>Finish with light stretches to relax your muscles and calm your mind.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="timerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Workout Timer</h2>
+            <div id="timer">10:00</div>
+            <div style="display: flex; justify-content: space-between;">
+                
+                <button id="startStopTimer" class="exercise-button" style="background-color: #0069d9;margin-left: 190px; color: white;">Start</button>
+                <button id="resetTimer" class="exercise-button" style="background-color: #FF0000;width: 80px;margin-right: 190px; color: white;">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var workoutModal = document.getElementById("workoutModal");
+        var timerModal = document.getElementById("timerModal");
+        var workoutBtn = document.getElementById("startWorkout");
+        var timerBtn = document.getElementById("startTimer");
+        var spans = document.getElementsByClassName("close");
+        var startStopBtn = document.getElementById("startStopTimer");
+        var resetBtn = document.getElementById("resetTimer");
+        var timerDisplay = document.getElementById("timer");
+        var timerInterval;
+        var timeLeft = 600; // 10 minutes in seconds
+        var timerRunning = false;
+
+        workoutBtn.onclick = function(e) {
+            e.preventDefault();
+            workoutModal.style.display = "block";
+        }
+
+        timerBtn.onclick = function(e) {
+            e.preventDefault();
+            timerModal.style.display = "block";
+        }
+
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].onclick = function() {
+                workoutModal.style.display = "none";
+                timerModal.style.display = "none";
+            }
+        }
+
+        window.onclick = function(event) {
+            if (event.target == workoutModal) {
+                workoutModal.style.display = "none";
+            }
+            if (event.target == timerModal) {
+                timerModal.style.display = "none";
+            }
+        }
+
+        function updateTimerDisplay() {
+            var minutes = Math.floor(timeLeft / 60);
+            var seconds = timeLeft % 60;
+            timerDisplay.textContent = minutes.toString().padStart(2, '0') + ':' + 
+                                       seconds.toString().padStart(2, '0');
+        }
+
+        startStopBtn.onclick = function() {
+            if (timerRunning) {
+                clearInterval(timerInterval);
+                startStopBtn.textContent = "Start";
+                timerRunning = false;
+            } else {
+                timerInterval = setInterval(function() {
+                    if (timeLeft > 0) {
+                        timeLeft--;
+                        updateTimerDisplay();
+                    } else {
+                        clearInterval(timerInterval);
+                        startStopBtn.textContent = "Start";
+                        timerRunning = false;
+                    }
+                }, 1000);
+                startStopBtn.textContent = "Pause";
+                timerRunning = true;
+            }
+        }
+
+        resetBtn.onclick = function() {
+            clearInterval(timerInterval);
+            timeLeft = 600;
+            updateTimerDisplay();
+            startStopBtn.textContent = "Start";
+            timerRunning = false;
+        }
+    </script>
+
+       
+    </style>
+</head>
+<body>
+    <div class="con">
+        <h1>Sleep Hygiene for Stress Management</h1>
+        
+        <div class="sleep-content">
+            <div class="sleep-image">
+                <img src="img 25.jpg" alt="Peaceful Sleep">
+            </div>
+            
+            <div class="sleep-text">
+                <div class="sleep-info">
+                    <p>Improve your sleep quality with effective techniques for better stress management and recovery. Good sleep hygiene can significantly reduce stress levels and improve overall well-being.</p>
+                </div>
+                
+                <div class="sleep-tips">
+                    <div class="tip">
+                        <i class="fas fa-moon"></i>
+                        <h3>Consistent Schedule</h3>
+                        <p>Maintain a regular sleep schedule, even on weekends.</p>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-bed"></i>
+                        <h3>Comfortable Environment</h3>
+                        <p>Create a cool, quiet, and dark sleeping environment.</p>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Limit Screen Time</h3>
+                        <p>Avoid screens at least 1 hour before bedtime.</p>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-mug-hot"></i>
+                        <h3>Watch Your Diet</h3>
+                        <p>Avoid caffeine and heavy meals close to bedtime.</p>
+                    </div>
+                </div>
+                
+                <button class="sleep-button" id="sleepTipsBtn">More Sleep Tips</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="sleepModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Additional Sleep Hygiene Tips</h2>
+            <ul>
+                <li>Exercise regularly, but not too close to bedtime.</li>
+                <li>Practice relaxation techniques like deep breathing or meditation before bed.</li>
+                <li>Use your bed only for sleep and intimacy to strengthen the association between bed and sleep.</li>
+                <li>If you can't sleep, don't force it. Get up and do a calming activity until you feel sleepy.</li>
+                <li>Avoid naps during the day, especially in the late afternoon or evening.</li>
+                <li>Expose yourself to natural daylight during the day to help regulate your sleep-wake cycle.</li>
+                <li>Consider using white noise or earplugs if your environment is noisy.</li>
+                <li>Invest in a comfortable mattress, pillows, and bedding.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("sleepModal");
+        var btn = document.getElementById("sleepTipsBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <div class="cont">
+        <h1>Nutrition for Stress Management</h1>
+        
+        <div class="nutrition-content">
+            <div class="nutrition-image">
+                <img src="https://www.healthifyme.com/blog/wp-content/uploads/2020/07/stress-relieving-foods-1.jpg" alt="Cognitive Restructuring" style="height: 500px; margin-bottom: 100px;">
+                <img src="img 66.jpg" alt="Cognitive Restructuring">
+            </div>
+            
+            <div class="nutrition-text">
+                <div class="nutrition-info">
+                    <p>Learn about foods and dietary habits that can help reduce stress and promote overall well-being. A balanced diet plays a crucial role in managing stress and maintaining good mental health.</p>
+                </div>
+                
+                <h2>Stress-Reducing Foods</h2>
+                <p>Click on each food to learn more about its stress-reducing properties:</p>
+                <div class="stress-foods">
+                    <div class="food-item" data-food="avocado">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Avocado</h3>
+                    </div>
+                    <div class="food-item" data-food="blueberries">
+                        <i class="fas fa-apple-alt"></i>
+                        <h3>Blueberries</h3>
+                    </div>
+                    <div class="food-item" data-food="salmon">
+                        <i class="fas fa-fish"></i>
+                        <h3>Salmon</h3>
+                    </div>
+                    <div class="food-item" data-food="darkChocolate">
+                        <i class="fas fa-cookie"></i>
+                        <h3>Dark Chocolate</h3>
+                    </div>
+                </div>
+                
+                <div id="foodInfo"></div>
+                
+                <div class="nutrition-tips">
+                    <h2>Dietary Habits for Stress Management</h2>
+                    <ul class="tip-list">
+                        <li>Eat regular, balanced meals to maintain stable blood sugar levels.</li>
+                        <li>Stay hydrated by drinking plenty of water throughout the day.</li>
+                        <li>Limit caffeine and alcohol intake, especially in the evening.</li>
+                        <li>Include protein-rich foods in your diet to support neurotransmitter production.</li>
+                        <li>Incorporate fermented foods for gut health, which is linked to mental well-being.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const foodItems = document.querySelectorAll('.food-item');
+        const foodInfo = document.getElementById('foodInfo');
+
+        const foodDetails = {
+            avocado: "Avocados are rich in B vitamins, which help reduce stress levels. They also contain potassium, which helps lower blood pressure.",
+            blueberries: "Blueberries are high in antioxidants, which can help combat stress-related free radicals. They also improve brain function and memory.",
+            salmon: "Salmon is rich in omega-3 fatty acids, which have been shown to reduce stress and anxiety. It's also a good source of vitamin D.",
+            darkChocolate: "Dark chocolate contains antioxidants and can lower cortisol levels. It also boosts serotonin, which helps improve mood."
+        };
+
+        foodItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const food = item.getAttribute('data-food');
+                foodInfo.innerHTML = `<h3>${item.querySelector('h3').textContent}</h3><p>${foodDetails[food]}</p>`;
+                foodInfo.style.display = 'block';
+            });
+        });
+    </script>
+
+        
+    
+    <div class="conta">
+        <h1>Cognitive Restructuring for Stress Management</h1>
+        
+        <div class="cognitive-content">
+            <div class="cognitive-image">
+                <img src="https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Cognitive Restructuring" style="height: 500px; margin-bottom: 100px;">
+                <img src="img 63.jpg" alt="Cognitive Restructuring">
+            </div>
+            
+            <div class="cognitive-text">
+                <div class="cognitive-info">
+                    <p>Cognitive restructuring is a powerful technique to reframe negative thought patterns, manage stress more effectively, and build resilience. By challenging and changing unhelpful thoughts, you can improve your emotional well-being and reduce stress.</p>
+                </div>
+                
+                <div class="thought-bubble-generator">
+                    <h2>Thought Bubble Generator</h2>
+                    <p>Enter a thought or feeling, and see it transformed into a positive affirmation!</p>
+                    <input type="text" id="thoughtInput" class="thought-input" placeholder="Enter a thought or feeling...">
+                    <button class="generate-button" onclick="generateThoughtBubble()">Generate Thought Bubble</button>
+                    <div id="thoughtBubble"></div>
+                </div>
+                
+                <div class="steps">
+                    <div class="step">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Identify</h3>
+                        <p>Recognize negative or stressful thoughts.</p>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Challenge</h3>
+                        <p>Question the validity of your thoughts.</p>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-sync-alt"></i>
+                        <h3>Reframe</h3>
+                        <p>Find a more balanced perspective.</p>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-brain"></i>
+                        <h3>Practice</h3>
+                        <p>Regularly apply this technique to build resilience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generateThoughtBubble() {
+            const thought = document.getElementById('thoughtInput').value;
+            const thoughtBubble = document.getElementById('thoughtBubble');
+            
+            if (thought.trim() === '') {
+                alert('Please enter a thought or feeling.');
+                return;
+            }
+
+            const positiveAffirmations = [
+                "I am capable of handling this.",
+                "Every challenge is an opportunity for growth.",
+                "I choose to focus on the positive.",
+                "I am stronger than I think.",
+                "I trust in my ability to find solutions.",
+                "My thoughts create my reality, and I choose positive thoughts.",
+                "I am worthy of peace and happiness.",
+                "I embrace change and learn from new experiences."
+            ];
+
+            const randomAffirmation = positiveAffirmations[Math.floor(Math.random() * positiveAffirmations.length)];
+            
+            thoughtBubble.innerHTML = randomAffirmation;
+            thoughtBubble.style.display = 'flex';
+            thoughtBubble.style.alignItems = 'center';
+            thoughtBubble.style.justifyContent = 'center';
+
+            thoughtBubble.style.animation = 'none';
+            thoughtBubble.offsetHeight; // Trigger reflow
+            thoughtBubble.style.animation = 'popIn 0.5s ease-out';
+        }
+    </script>
+
+       
+    </style>
+</head>
+<body>
+    <div class="contai">
+        <h1>Time Management for Stress Reduction</h1>
+        
+        <div class="time-management-content">
+            <div class="time-management-image">
+                <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80" alt="Time Management" style="height: 500px; margin-bottom: 100px;">
+                <img src="img 62.jpg" alt="Time Management" style="height: 500px;">
+
+            </div>
+            
+            <div class="time-management-text">
+                <div class="time-management-info">
+                    <p>Effective time management is crucial for reducing stress from overwhelming schedules and tasks. By developing key skills and using the right tools, you can organize your time more efficiently and increase your productivity.</p>
+                </div>
+                
+                <div class="time-management-skills">
+                    <div class="skill">
+                        <i class="fas fa-list-check"></i>
+                        <h3>Prioritization</h3>
+                        <p>Focus on what's most important.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-clock"></i>
+                        <h3>Time Blocking</h3>
+                        <p>Allocate specific time for tasks.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-ban"></i>
+                        <h3>Eliminate Distractions</h3>
+                        <p>Create a focused work environment.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-battery-half"></i>
+                        <h3>Take Breaks</h3>
+                        <p>Recharge to maintain productivity.</p>
+                    </div>
+                </div>
+                <div class="daily-planner">
+                    <h2>Daily Planner</h2>
+                    <p>Click on a time slot to add or edit an activity. Plan your day to manage your time effectively.</p>
+                    <div class="planner-grid" id="plannerGrid"></div>
+                    <button class="save-button" onclick="savePlanner()">Save Planner</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Daily Planner functionality
+        const plannerGrid = document.getElementById('plannerGrid');
+        const timeSlots = ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM'];
+
+        function createPlannerGrid() {
+            timeSlots.forEach(slot => {
+                const timeSlot = document.createElement('div');
+                timeSlot.className = 'time-slot';
+                timeSlot.textContent = slot;
+                plannerGrid.appendChild(timeSlot);
+
+                const activitySlot = document.createElement('div');
+                activitySlot.className = 'activity-slot';
+                activitySlot.addEventListener('click', () => editActivity(activitySlot));
+                plannerGrid.appendChild(activitySlot);
+            });
+        }
+
+        function editActivity(slot) {
+            const currentActivity = slot.textContent;
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.className = 'activity-input';
+            input.value = currentActivity;
+            
+            input.addEventListener('blur', () => {
+                slot.textContent = input.value;
+            });
+
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    slot.textContent = input.value;
+                }
+            });
+
+            slot.textContent = '';
+            slot.appendChild(input);
+            input.focus();
+        }
+
+        function savePlanner() {
+            const activities = Array.from(document.querySelectorAll('.activity-slot')).map(slot => slot.textContent);
+            localStorage.setItem('dailyPlanner', JSON.stringify(activities));
+            alert('Daily planner saved successfully!');
+        }
+
+        function loadPlanner() {
+            const savedActivities = JSON.parse(localStorage.getItem('dailyPlanner'));
+            if (savedActivities) {
+                const slots = document.querySelectorAll('.activity-slot');
+                savedActivities.forEach((activity, index) => {
+                    if (slots[index]) {
+                        slots[index].textContent = activity;
+                    }
+                });
+            }
+        }
+
+        createPlannerGrid();
+        loadPlanner();
+    </script>
+
+          <div class="strategies-section">
+            <h2 class="text-center">Effective Strategies for Managing Stress</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <img src="55.jpg" alt="Stress Management Flowchart" class="flowchart-imgst">
+              </div>
+              <div class="col-md-6">
+                <div class="strategy-stepst">
+                  <div class="stepst">
+                    <img src="24.jpg" alt="Step 1" class="stepst-img">
+                    <h5 class="stepst-title">Identify Your Stressors</h5>
+                    <p class="stepst-text">Recognize the situations, thoughts, and events that trigger your stress response.</p>
+                  </div>
+                  <div class="stepst">
+                    <img src="25.jpg" alt="Step 2" class="stepst-img">
+                    <h5 class="stepst-title">Practice Stress-Relief Techniques</h5>
+                    <p class="stepst-text">Learn and apply methods like deep breathing, meditation, and progressive muscle relaxation to reduce stress levels.</p>
+                  </div>
+                  <div class="stepst">
+                    <img src="26.jpg" alt="Step 3" class="stepst-img">
+                    <h5 class="stepst-title">Reframe Negative Thoughts</h5>
+                    <p class="stepst-text">Identify stress-inducing thought patterns and replace them with more balanced and positive perspectives.</p>
+                  </div>
+                  <div class="stepst">
+                    <img src="27.jpg" alt="Step 4" class="stepst-img">
+                    <h5 class="stepst-title">Develop a Support System</h5>
+                    <p class="stepst-text">Connect with friends, family, or professionals who can offer emotional support and practical advice.</p>
+                  </div>
+                  <div class="stepst">
+                    <img src="28.jpg" alt="Step 5" class="stepst-img">
+                    <h5 class="stepst-title">Prioritize Self-Care</h5>
+                    <p class="stepst-text">Maintain a healthy lifestyle with regular exercise, balanced nutrition, and adequate sleep to boost stress resilience.</p>
+                  </div>
+                  <div class="stepst">
+                    <img src="29.jpg" alt="Step 6" class="stepst-img">
+                    <h5 class="stepst-title">Set Boundaries</h5>
+                    <p class="stepst-text">Learn to say no to unnecessary commitments and establish healthy limits in your personal and professional life.</p>
+                  </div>
+                  <div class="stepst">
+                    <img src="83.jpg" alt="Step 7" class="stepst-img">
+                    <h5 class="stepst-title">Practice Time Management</h5>
+                    <p class="stepst-text">Organize your tasks, set realistic goals, and allocate time efficiently to reduce stress from overwhelming schedules.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+                 
+           
+          </div>
+    
+    <div class="cta-section">
+      
+        <h2 class="text-center">Take the First Step Towards Managing Stress</h2>
+        <p class="text-center">Get started with our expert resources and support for effective stress reduction</p>
+        <div class="text-center">
+          <a href="CONTACT US.html" class="btn btn-primary btn-lg">Get Started Now</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+      

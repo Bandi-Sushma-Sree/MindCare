@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga for Relaxation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h2, h3 {
+            font-family: 'Lora', serif;
+            color: deeppink;
+        }
+        h1{
+            color: wheat;
+        }
+        .hero-section {
+            background: url('https://t3.ftcdn.net/jpg/04/87/48/66/360_F_487486623_CatNgUbulZ6rOpENckeTzRfY7IzrqOKd.jpg') no-repeat center center;
+            background-size: cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #fff;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: #3498db;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .icon-box {
+            background-color: #ecf0f1;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        .icon-box i {
+            font-size: 24px;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="display-3 fw-bold">"Empower Your Body, Elevate Your Mind: Discover Workouts That Work for You"</h1>
+            <p class="lead">Discover inner peace and tranquility through the art of yoga</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <section class="mb-5">
+            <h2 class="text-center section-title">The Power of Yoga</h2>
+            <p class="text-center mb-4">Yoga is an ancient practice that combines physical postures, breathing techniques, and meditation to promote relaxation and overall well-being. By incorporating yoga into your daily routine, you can experience numerous benefits for both your body and mind.</p>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h5 class="card-title">Stress Reduction</h5>
+                            <p class="card-text">Regular yoga practice can significantly lower stress levels and promote a sense of calm and relaxation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h5 class="card-title">Mental Clarity</h5>
+                            <p class="card-text">Yoga helps clear the mind, improve focus, and enhance overall cognitive function.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <h5 class="card-title">Better Sleep</h5>
+                            <p class="card-text">Practicing yoga can improve sleep quality and help you fall asleep faster.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="text-center section-title">Relaxing Yoga Poses</h2>
+            <p class="text-center mb-4">Incorporate these gentle yoga poses into your routine to promote relaxation and reduce tension in your body.</p>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Child's Pose" height="76%">
+                        <div class="card-body">
+                            <h5 class="card-title">Child's Pose (Balasana)</h5>
+                            <p class="card-text">A gentle resting pose that helps calm the mind and relieve tension in the back, shoulders, and neck.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="img 40.jpg" class="card-img-top" alt="Legs Up the Wall">
+                        <div class="card-body">
+                            <h5 class="card-title">Legs Up the Wall (Viparita Karani)</h5>
+                            <p class="card-text">A restorative pose that promotes relaxation and helps reduce swelling in the legs and feet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="img 39.jpg" class="card-img-top" alt="Corpse Pose" height="76%" >
+                        <div class="card-body">
+                            <h5 class="card-title">Corpse Pose (Savasana)</h5>
+                            <p class="card-text">A final relaxation pose that allows the body and mind to fully relax and integrate the benefits of your practice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="text-center section-title">Creating a Relaxing Yoga Practice</h2>
+            <p class="text-center mb-4">Follow these tips to create a calming and rejuvenating yoga practice:</p>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-clock me-2 text-primary"></i>Set Aside Dedicated Time</h5>
+                            <p class="card-text">Choose a specific time each day for your yoga practice, even if it's just for 10-15 minutes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Create a Peaceful Space</h5>
+                            <p class="card-text">Designate a quiet area in your home for your practice, free from distractions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-wind text-primary"></i>Focus on Your Breath</h5>
+                            <p class="card-text">Incorporate deep, mindful breathing throughout your practice to enhance relaxation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-music me-2 text-primary"></i>Use Calming Music</h5>
+                            <p class="card-text">Play soft, soothing music to create a tranquil atmosphere during your practice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section class="mb-5">
+        <h2 class="text-center section-title">Yoga for Relaxation: A Gentle Path to Inner Peace</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <img src="img 5.jpg" class="img-fluid rounded" alt="Yoga for Relaxation">
+            </div>
+            <div class="col-md-6">
+                <p>Yoga for Relaxation is a gentle and calming practice designed to reduce stress, anxiety, and tension. This holistic approach combines physical postures, breathing techniques, and meditation to promote overall well-being and inner peace.</p>
+                
+                <h3 class="mt-4">Benefits</h3>
+                <ul>
+                    <li>Reduces stress and anxiety</li>
+                    <li>Improves sleep quality</li>
+                    <li>Enhances flexibility and balance</li>
+                    <li>Boosts mood and energy levels</li>
+                    <li>Improves concentration and focus</li>
+                    <li>Supports immune function</li>
+                    <li>Enhances overall well-being</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="mt-4">Getting Started</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Equipment Needed</h4>
+                <ul>
+                    <li>Yoga mat</li>
+                    <li>Comfortable clothing</li>
+                    <li>Quiet and peaceful space</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4>Preparation</h4>
+                <ol>
+                    <li>Find a quiet and peaceful space</li>
+                    <li>Sit comfortably on your yoga mat</li>
+                    <li>Close your eyes and take deep breaths</li>
+                    <li>Set aside distractions (phones, TVs, etc.)</li>
+                </ol>
+            </div>
+        </div>
+
+        <h3 class="mt-4">Exercise Instructions</h3>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h4>Warm-Up (5 minutes)</h4>
+                <ol>
+                    <li>Neck Stretch: Slowly tilt your head to the right, bringing your ear towards your shoulder. Hold for 30 seconds and repeat on the left side.</li>
+                    <li>Shoulder Rolls: Roll your shoulders forward and backward in a circular motion. Repeat for 30 seconds.</li>
+                    <li>Wrist Circles: Hold your arms straight out and make small circles with your wrists. Repeat for 30 seconds.</li>
+                </ol>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h4>Gentle Stretches (10 minutes)</h4>
+                <ol>
+                    <li>Seated Forward Fold: Slowly lean forward, reaching for your toes. Hold for 30 seconds.</li>
+                    <li>Seated Twist: Twist your torso to the right, bringing your right hand to your left knee. Hold for 30 seconds and repeat on the left side.</li>
+                    <li>Leg Stretch: Lift your right leg out to the side, keeping your knee straight. Hold for 30 seconds and repeat on the left side.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h4>Breathing Techniques (5 minutes)</h4>
+                <ol>
+                    <li>Deep Breathing: Inhale deeply through your nose, filling your lungs. Exhale slowly through your mouth. Repeat for 5 minutes.</li>
+                    <li>Alternate Nostril Breathing: Close your right nostril with your thumb and inhale through your left. Switch and exhale through your right nostril. Repeat for 5 minutes.</li>
+                </ol>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h4>Meditation (5 minutes)</h4>
+                <ol>
+                    <li>Focus on your breath, letting go of thoughts and distractions.</li>
+                    <li>Visualize a peaceful and calming environment.</li>
+                    <li>Repeat a mantra or affirmation to yourself.</li>
+                </ol>
+            </div>
+        </div>
+        
+    </section>
+    
+   
+    </main>
+
+    <footer class="bg-light py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 Yoga for Relaxation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

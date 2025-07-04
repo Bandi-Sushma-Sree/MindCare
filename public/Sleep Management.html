@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Management - MindCare</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icons">
+    
+   
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <title>Login Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Gabarito&family=Inclusive+Sans&family=Inter&family=Montserrat&family=Poppins&family=Raleway&family=Roboto&family=Space+Grotesk&family=Ubuntu&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    transition: all 0.5s linear;
+    font-family: 'Courgette', cursive;
+    font-family: 'Gabarito', sans-serif;
+    font-family: 'Inclusive Sans', sans-serif;
+}
+.background{
+    height: 110vh;
+    width: 1500px;
+    background-image: url(s.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.navbar img{
+    width: 80px;
+}
+.navbar-items{
+    flex: 1;
+    text-align: right;
+}
+.navbar{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.navbar ul li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    padding: 1% 2%;
+    font-weight: bold;
+    font-size: 18px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:blanchedalmond;
+}
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    background-color: #2e6476;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.burger{
+    display: none;
+}
+/* ___________main */
+.main{
+    height: 85vh;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.text-box{
+    color: #fff;
+    width: 40%;
+}
+.text-box h1{
+    padding: 2px;
+    font-size: 60px;
+}
+.text-box p{
+    padding: 1% 0;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #2e6476;
+    height: 55%;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+.box input{
+    width: 70%;
+    border: none;
+    outline: none;
+    margin: 2% 3%;
+    padding: 3%;
+    border-radius: 5px;
+}
+.box h1{
+    margin-bottom: 3%;
+}
+.btn{
+    background-color: #2e6476;
+    color: #fff;
+    border: 2px solid transparent;
+    padding: 10px 8px;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn1:hover{
+    background-color: #fff;
+    color: #2e6476;
+}
+.btn2{
+    background-color: #fff;
+    color: #2e6476;
+    margin-top: 1%;
+}
+.btn2:hover{
+    color: #fff;
+    background-color: #6a8d9a;
+}
+/* _________services */
+.services{
+    width: 80%;
+    margin: auto;
+    padding: 2% 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box1{
+    flex-basis: 30%;
+    color: #fff;
+    padding: 2%;
+    margin-bottom: 2%;
+    background-color: #1a92bedb;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+.heading{
+    padding: 2% 0;
+    color: #2e6476;
+    font-size: 40px;
+}
+.box1 i{
+    padding:  5%;
+    background-color: #f8fdff6b;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.box1 h2{
+    padding: 2% 0;
+    font-size: 28px;
+}
+/* ____________quality  */
+.quality{
+    width: 80%;
+    margin: auto;
+}
+.box2,.box3{
+    flex-basis: 29%;
+    text-align: center;
+    padding: 2%;
+    margin: 3% 0;
+}
+.box2 h2{
+    padding: 2% 0;
+    font-size: 29px;
+}
+.box2 i{
+    font-size: 3em;
+    padding-bottom: 2%;
+}
+.quality div :nth-child(1) i{
+    color: #30e430;
+}
+.quality div :nth-child(2) i{
+color: red;
+}
+.quality div :nth-child(3) i{
+color: blue;
+}
+.box2:hover{
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    transition: all 0.5s ease-out;
+}
+/* ______________about */
+.about{
+    width: 80%;
+    margin: auto;
+}
+.row1{
+    padding: 2% 0;
+}
+.left{
+    width: 50%;
+}
+.left img{
+    max-width: 100%;
+    height: auto;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+.right{
+    width: 45%;
+}
+.right h1{
+    font-size: 40px;
+}
+.right p{
+    padding: 3% 0;
+}
+.btn3{
+    font-size: 20px;
+}
+.btn3:hover{
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.5s linear;
+}
+/* __________departments */
+.department{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 2%;
+}
+.box3{
+    flex-basis:22% ;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+.box3:hover{
+    transform: scale(1.1);
+    background-color: #6a8d9a;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+/* __________footer */
+footer{
+    background-color: #2e6476;
+    color: #fff;
+}
+.footer-sec{
+    padding: 3% 0;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+.sec{
+    display: flex;
+    flex-basis: 40%;
+}
+.f_box{
+    flex-basis: 50%;
+}
+.f_box h2{
+    padding-bottom: 2%;
+}
+.f_box p{
+    padding: 4px 0;
+}
+.f_box p i{
+    font-size: 23px;
+    padding: 5px 3px;
+    cursor: pointer;
+}
+.para{
+    text-align: center;
+    padding: 12px 0;
+    background-color: #333;
+}
+/* ____________responsiveness */
+@media only screen and (max-width:995px){
+    .box{
+        width: 40%;
+        height: 69%;
+    }
+    .row1{
+        flex-direction: column;
+    }
+    .left{
+        width: 60%;
+    }
+    .right{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:828px){
+    .text-box h1{
+        font-size: 40px;
+    }
+    .footer-sec {
+        width: 100%;
+    }
+}
+@media only screen and (max-width:766px){
+    .navbar ul li{
+        display: block;
+        padding: 2px 0 34px;
+    }
+    .navbar-items{
+        position: absolute;
+        background-color: #2e6476;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+        transition: all 1s ease-out;
+    }
+    .navbar-items ul{
+        padding: 98px 51px 8px 49px;
+    }
+    .burger{
+        display: block;
+        z-index: 3;
+        position: absolute;
+        top: 15px;
+        right: 5%;
+        cursor: pointer;
+        font-size: 33px;
+        color: #fff;
+    }
+    .h-class{
+        height: 100vh;
+        opacity: 0;
+    }
+    .v-class{
+        opacity: 0;
+    }
+    .main{
+        flex-direction: column-reverse;
+    }
+    .text-box{
+        width: 80%;
+    }
+    .box input{
+        width: 85%;
+    }
+    .row,.sec{
+        flex-direction: column;
+    }
+    .box3{
+        width: 90%;
+    }
+    .row,.box1{
+        margin-bottom: 7%;
+    }
+    .box1{
+        padding: 4%;
+    }
+}
+@media only screen and (max-width:570px){
+    .box{
+        width: 68%;
+    }
+    .text-box,.right,.left{
+        width: 95%;
+    }
+    .box h1{
+        padding: 0;
+    }
+    .text-box p{
+        font-size: 12px;
+    }
+    .right p{
+        font-size: 14px;
+    }
+}
+    </style>
+</head>
+<body>
+    <section class="background">
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="" alt=""></a>
+            <div class="navbar-items h-class">
+                <ul class="nav v-class">
+                    <li><a href="MindCare Home.html">HOME</a></li>
+                    <li><a href="MindCare About us.html">ABOUT</a></li>
+                    <li><a href="CONTACT US.html">CONTACT</a></li>
+                    <li><a href="MindCare Services.html">Services</a></li>
+                    <li><a href="sleep journal.html">Sleep Journal</a></li>
+                    <li><a href="MindCare Login_page.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="burger">&#9776</div>
+        </nav>
+        <!-- _________main-sec -->
+        <div class="main">
+            <div class="text-box">
+              <h1 style="color: white; text-align: left;">Sleep Better, Live Better</h1>
+
+              <p style="color:burlywood; text-align: left;">At MindCare, we prioritize your sleep health. Our expert team provides compassionate guidance and comprehensive support to help you overcome sleep challenges, achieve restful nights, and wake up refreshed. From sleep disorder management and insomnia relief to personalized sleep plans and relaxation techniques, we empower you to take control of your sleep journey and transform your overall well-being.</p>
+              
+              
+           
+          </section> 
+          <section class="services">
+  <h1 class="heading">Our Sleep Management Services</h1>
+  <div class="row">
+    <div class="box1">
+      <i class="fas fa-bed"></i>
+      <h2>Sleep Disorder Assessment</h2>
+      <p>Comprehensive evaluation to identify and diagnose sleep-related issues.</p>
+    </div>
+    <div class="box1">
+      <i class="fas fa-brain"></i>
+      <h2>Cognitive Behavioral Therapy for Insomnia (CBT-I)</h2>
+      <p>Evidence-based therapy to improve sleep patterns and habits.</p>
+    </div>
+    <div class="box1">
+      <i class="fas fa-moon"></i>
+      <h2>Sleep Hygiene Education</h2>
+      <p>Learn effective strategies to create an optimal sleep environment and routine.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="box1">
+      <i class="fas fa-pills"></i>
+      <h2>Medication Management</h2>
+      <p>Personalized medication plans to address sleep disorders when necessary.</p>
+    </div>
+    <div class="box1">
+      <i class="fas fa-heartbeat"></i>
+      <h2>Sleep Apnea Treatment</h2>
+      <p>Specialized care for sleep apnea, including CPAP therapy and alternatives.</p>
+    </div>
+    <div class="box1">
+      <i class="fas fa-chart-line"></i>
+      <h2>Sleep Tracking and Analysis</h2>
+      <p>Utilize advanced technology to monitor and improve your sleep patterns.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.services {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.heading {
+  text-align: center;
+  color: #2e6476;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.box1 {
+  flex-basis: 30%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.box1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(46,100,118,0.2);
+}
+
+.box1 i {
+  font-size: 3rem;
+  color: #2e6476;
+  margin-bottom: 20px;
+}
+
+.box1 h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.box1 p {
+  color: #666;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .box1 {
+    flex-basis: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .box1 {
+    flex-basis: 100%;
+  }
+}
+</style>
+
+          
+          
+    <!-- __________quality -->
+<section class="quality">
+  <h1 class="heading">Why Choose MindCare</h1>
+  <div class="row">
+    <div class="box2">
+      <i class="fas fa-clock"></i>
+      <h2>Accessible Care</h2>
+      <p>Expert support available 24/7 for your mental health needs.</p>
+    </div>
+    <div class="box2">
+      <i class="fas fa-heart"></i>
+      <h2>Compassionate Approach</h2>
+      <p>Personalized care and empathy from our experienced therapists.</p>
+    </div>
+    <div class="box2">
+      <i class="fas fa-chart-line"></i>
+      <h2>Proven Results</h2>
+      <p>Effective treatments and measurable progress for lasting well-being.</p>
+    </div>
+  </div>
+</section>
+
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design Mastery | MEDIBuddy</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #28bf96;
+  --primary-color-dark: #209677;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  text-decoration: none;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
+.header {
+  padding: 0 1rem;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.content h1 span {
+  font-weight: 400;
+}
+
+.content p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  line-height: 1.75rem;
+}
+
+.image {
+  position: relative;
+  text-align: center;
+  isolation: isolate;
+}
+
+.image__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 450px;
+  width: 450px;
+  background-color:;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.image img {
+  width: 100%;
+  max-width: 475px;
+}
+
+.image__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image__content__1 {
+  transform: translate(calc(-50% - 12rem), calc(-50% - 8rem));
+}
+
+.image__content__1 span {
+  padding: 10px 12px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background-color: #defcf4;
+  border-radius: 100%;
+}
+
+.image__content__1 h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.image__content__1 p {
+  color: var(--text-light);
+}
+
+.image__content__2 {
+  transform: translate(calc(-50% + 8rem), calc(-50% + 10rem));
+}
+
+.image__content__2 ul {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.image__content__2 li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: var(--text-light);
+}
+
+.image__content__2 span {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+@media (width < 900px) {
+  .nav__links {
+    display: none;
+  }
+
+  .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  background-image: linear-gradient(to bottom,);
+}
+
+.content {
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.image {
+  flex: 1;
+  padding: 20px;
+}
+
+.image__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+
+}
+:root {
+            --primary-color: #28a745;
+            --secondary-color: #17a2b8;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+        .hero-section {
+          background-image: url('image30.jpg');
+        
+            background-size:auto;
+            background-position: center;
+            color: #fff;
+            padding: 100px 0;
+            position: relative;
+            height:476px;
+            
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
+        }
+        .dark-mode .card {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #218838;
+        }
+        .symptoms-section {
+            background-color: #e9ecef;
+            padding: 50px 0;
+        }
+        .dark-mode .symptoms-section {
+            background-color: #2c3e50;
+        }
+        .symptom-card {
+            text-align: center;
+            padding: 20px;
+        }
+        .symptom-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .testimonial-card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode .testimonial-card {
+            background-color: #34495e;
+        }
+        .testimonial-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+       
+
+    </style>
+  </head>
+  <body>
+    
+   
+
+  <header class="hero-section">
+    <div class="container hero-content">
+      <h1 class="display-4 mb-4">Sleep Better, Live Better: Empowering Your Restful Nights</h1>
+
+      <p class="lead mb-4">Discover proven techniques for managing sleep disorders, improving sleep quality, and waking up refreshed and revitalized.</p>
+      
+        
+        
+  
+
+
+      </div>
+  </header>
+  <section class="symptoms-section">
+   
+    <h2 class="section-title text-center">Recognizing Insomnia: Common Symptoms</h2>
+
+    <div class="row g-4">
+    <div class="col-md-4">
+    <div class="symptom-card">
+    <i class="fas fa-moon symptom-icon"></i>
+    <h4>Difficulty Falling Asleep</h4>
+    <p>Struggling to fall asleep, lying awake for hours, or waking up frequently.</p>
+    </div>
+    </div>
+    <div class="col-md-4">
+    <div class="symptom-card">
+      <i class="fa fa-battery-half" style="color: green; font-size: 54px;"></i>
+    <h4>Daytime Fatigue</h4>
+    <p>Feeling tired, groggy, or lacking energy during the day.</p>
+    </div>
+    </div>
+    <div class="col-md-4">
+    <div class="symptom-card">
+    <i class="fas fa-exclamation-circle symptom-icon"></i>
+    <h4>Mood Disturbances</h4>
+    <p>Irritability, anxiety, depression, or mood swings due to lack of sleep.</p>
+    </div>
+    </div>
+    </div>
+    
+   </section>
+    
+    
+    
+</div>
+</body>
+</html>
+<div style="height: 50px;"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Stress: Common Triggers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .section-title {
+            color: #6c5ce7;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: #6c5ce7;
+        }
+        .cause-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .cause-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(108, 92, 231, 0.2);
+        }
+        .cause-title {
+            font-weight: bold;
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #6c5ce7;
+        }
+        .cause-text {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        .cause-img-wrapper {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid #e0e0e0;
+        }
+        .cause-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .cause-card:hover .cause-img {
+            transform: scale(1.1);
+        }
+        .icon-wrapper {
+            font-size: 2.5rem;
+            color: #6c5ce7;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+  
+
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center section-title mb-5">Understanding Insomnia: Common Triggers</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="cause-card d-flex flex-column align-items-center">
+            <div class="icon-wrapper">
+              <i class="fas fa-coffee"></i>
+            </div>
+            <h5 class="cause-title text-center">Caffeine and Nicotine</h5>
+            <p class="cause-text text-center">Consuming caffeine and nicotine before bedtime can disrupt sleep patterns.</p>
+            <div class="cause-img-wrapper">
+              <img src="img 18.jpg" alt="Caffeine" class="cause-img">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="cause-card d-flex flex-column align-items-center">
+            <div class="icon-wrapper">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h5 class="cause-title text-center">Screen Time Before Bed</h5>
+            <p class="cause-text text-center">Using electronic devices before bedtime can interfere with sleep due to blue light exposure.</p>
+            <div class="cause-img-wrapper">
+              <img src="img 19.jpg" alt="Screen Time" class="cause-img">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="cause-card d-flex flex-column align-items-center">
+            <div class="icon-wrapper">
+              <i class="fas fa-bed"></i>
+            </div>
+            <h5 class="cause-title text-center">Sleep Environment</h5>
+            <p class="cause-text text-center">An uncomfortable sleeping environment, including noise, temperature, and lighting, can disrupt sleep.</p>
+            <div class="cause-img-wrapper">
+              <img src="img 21.jpg" alt="Sleep Environment" class="cause-img">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="cause-card d-flex flex-column align-items-center">
+            <div class="icon-wrapper">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <h5 class="cause-title text-center">Medical Conditions</h5>
+            <p class="cause-text text-center">Chronic pain, sleep apnea, and other medical conditions can contribute to insomnia.</p>
+            <div class="cause-img-wrapper">
+              <img src="img 23.jpg" alt="Medical Conditions" class="cause-img">
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="col-md-4">
+          <div class="cause-card d-flex flex-column align-items-center">
+            <div class="icon-wrapper">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h5 class="cause-title text-center">Lifestyle Factors</h5>
+            <p class="cause-text text-center">Irregular sleep schedules, travel, or night shifts can affect sleep quality.</p>
+            <div class="cause-img-wrapper">
+              <img src="img 22.jpg" alt="Lifestyle" class="cause-img">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="cause-card d-flex flex-column align-items-center">
+            <div class="icon-wrapper">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <h5 class="cause-title text-center">Dietary Factors</h5>
+            <p class="cause-text text-center">Heavy meals, caffeine, and sugary foods before bedtime can harm sleep quality.</p>
+            <div class="cause-img-wrapper">
+              <img src="img 20.jpg" alt="Diet" class="cause-img">
+            </div>
+          </div>
+        </div>
+        
+           
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Management Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #2e6476;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .image-container {
+            flex: 1;
+        }
+
+        .image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-container {
+            flex: 1;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .list {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .list li {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .list li i {
+            color: #2e6476;
+            margin-right: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #2e6476;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #1e4456;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Specific styles for each section */
+        #assessmentModal .modal-content {
+            max-width: 400px;
+        }
+
+        #assessmentModal form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #assessmentModal form input,
+        #assessmentModal form select {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        #hygieneModal .tips-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #hygieneModal .tips-list li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f0f4f8;
+            border-radius: 5px;
+        }
+
+        #cbtiModal .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #cbtiModal .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #2e6476;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        #cbtiModal .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        #cbtiModal .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #2e6476;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        #cbtiModal .left {
+            left: 0;
+        }
+
+        #cbtiModal .right {
+            left: 50%;
+        }
+
+        #cbtiModal .right::after {
+            left: -16px;
+        }
+
+        #medicationModal .accordion {
+            background-color: #f0f4f8;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+
+        #medicationModal .active, .accordion:hover {
+            background-color: #ccc;
+        }
+
+        #medicationModal .panel {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+
+        #sleepAnalysisModal .analysis-report {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        #sleepAnalysisModal .report-item {
+            background-color: #f0f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #sleepAnalysisModal .report-item h3 {
+            color: #2e6476;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .image-container,
+            .text-container {
+                flex: none;
+                width: 100%;
+            }
+            
+            .image {
+                margin-bottom: 30px;
+            }
+            
+            #sleepAnalysisModal .analysis-report {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sleep Disorder Assessment Section -->
+    <section id="assessmentSection" class="section">
+        <div class="container">
+            <h2 class="section-title">Sleep Disorder Assessment</h2>
+            <div class="content">
+                <div class="image-container">
+                    <img src="img 27.jpg" alt="Sleep Assessment" class="image">
+                </div>
+                <div class="text-container">
+                    <h3 class="subtitle">Comprehensive Evaluation for Better Sleep</h3>
+                    <p class="description">Our expert sleep specialists conduct thorough assessments to identify and diagnose various sleep-related issues. Using state-of-the-art technology and proven methodologies, we analyze your sleep patterns, habits, and health history to create a personalized treatment plan.</p>
+                    <ul class="list">
+                        <li><i class="fas fa-check-circle"></i> In-depth sleep history evaluation</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced sleep monitoring technology</li>
+                        <li><i class="fas fa-check-circle"></i> Comprehensive physical examination</li>
+                        <li><i class="fas fa-check-circle"></i> Customized treatment recommendations</li>
+                    </ul>
+                    <a href="#" class="cta-button" id="assessmentButton">Schedule Your Assessment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sleep Hygiene Education Section -->
+    <section id="hygieneSection" class="section">
+        <div class="container">
+            <h2 class="section-title">Sleep Hygiene Education</h2>
+            <div class="content">
+                <div class="image-container">
+                    <img src="s1.jpg" alt="Sleep Hygiene" class="image">
+                </div>
+                <div class="text-container">
+                    <h3 class="subtitle">Improve Your Sleep Quality</h3>
+                    <p class="description">Sleep hygiene refers to a set of practices and habits that are necessary to have good nighttime sleep quality and full daytime alertness. Our sleep experts will guide you through effective strategies to optimize your sleep environment and routine.</p>
+                    <ul class="list">
+                        <li><i class="fas fa-moon"></i> Establish a consistent sleep schedule</li>
+                        <li><i class="fas fa-bed"></i> Create a relaxing bedtime routine</li>
+                        <li><i class="fas fa-lightbulb"></i> Optimize your sleep environment</li>
+                        <li><i class="fas fa-utensils"></i> Manage diet and exercise for better sleep</li>
+                    </ul>
+                    <a href="#" class="cta-button" id="hygieneButton">Get Sleep Hygiene Tips</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CBT-I Section -->
+    <section id="cbtiSection" class="section">
+        <div class="container">
+            <h2 class="section-title">Cognitive Behavioral Therapy for Insomnia (CBT-I)</h2>
+            <div class="content">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1517898717281-8e4385a41802?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="CBT-I Therapy" class="image">
+                </div>
+                <div class="text-container">
+                    <h3 class="subtitle">Effective, Long-term Solution for Insomnia</h3>
+                    <p class="description">CBT-I is a structured program that helps you identify and replace thoughts and behaviors that cause or worsen sleep problems with habits that promote sound sleep. Unlike sleeping pills, CBT-I helps you overcome the underlying causes of your sleep problems.</p>
+                    <ul class="list">
+                        <li><i class="fas fa-brain"></i> Addresses cognitive factors</li>
+                        <li><i class="fas fa-bed"></i> Improves sleep behaviors</li>
+                        <li><i class="fas fa-chart-line"></i> Long-lasting results</li>
+                        <li><i class="fas fa-pills"></i> Reduces reliance on sleep medications</li>
+                    </ul>
+                    <a href="#" class="cta-button" id="cbtiButton">Explore CBT-I Process</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="medicationSection" class="section">
+        <div class="container">
+            <h2 class="section-title">Medication Management</h2>
+            <div class="content">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Medication Management" class="image">
+                </div>
+                <div class="text-container">
+                    <h3 class="subtitle">Commonly Used Sleep Medications</h3>
+                    <p class="description">Our expert team provides comprehensive medication management for sleep disorders. Below are some commonly used medications for sleep:</p>
+                    <ul class="list">
+                        <li><i class="fas fa-pills"></i> Zolpidem (Ambien)</li>
+                        <li><i class="fas fa-pills"></i> Eszopiclone (Lunesta)</li>
+                        <li><i class="fas fa-pills"></i> Temazepam (Restoril)</li>
+                        <li><i class="fas fa-pills"></i> Melatonin</li>
+                    </ul>
+                    <p style="font-size: 22px;"><strong>Note:</strong> These medications should only be used when prescribed by a doctor. We are not responsible for any misuse or side effects.</p>
+                    <a href="#" class="cta-button" id="medicationButton">Explore Sleep Medications</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sleep Tracking and Analysis Section -->
+    <section id="trackingSection" class="section">
+        <div class="container">
+            <h2 class="section-title">Sleep Tracking and Analysis</h2>
+            <div class="content">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1560762484-813fc97650a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Sleep Tracking" class="image">
+                </div>
+                <div class="text-container">
+                    <h3 class="subtitle">Understand Your Sleep Patterns</h3>
+                    <p class="description">Our advanced sleep tracking technology provides detailed insights into your sleep patterns. By analyzing your sleep data, we can help you identify areas for improvement and develop strategies to enhance your sleep quality.</p>
+                    <ul class="list">
+                        <li><i class="fas fa-chart-line"></i> Detailed sleep cycle analysis</li>
+                        <li><i class="fas fa-clock"></i> Sleep duration and efficiency tracking</li>
+                        <li><i class="fas fa-heartbeat"></i> Heart rate and breathing monitoring</li>
+                        <li><i class="fas fa-moon"></i> Environmental factors assessment</li>
+                    </ul>
+                    <a href="#" class="cta-button" id="trackingButton">View Sample Analysis</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Assessment Modal -->
+    <div id="assessmentModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Schedule Your Sleep Assessment</h2>
+          <form id="assessmentForm">
+              <input type="text" placeholder="Full Name" required>
+              <input type="email" placeholder="Email" required>
+              <input type="tel" placeholder="Phone Number" required>
+              <input type="date" required>
+              <select required>
+                  <option value="" disabled selected>Preferred Time</option>
+                  <option value="morning">Morning</option>
+                  <option value="afternoon">Afternoon</option>
+                  <option value="evening">Evening</option>
+              </select>
+              <button type="submit" class="cta-button">Submit</button>
+          </form>
+      </div>
+  </div>
+
+  <!-- Hygiene Modal -->
+  <div id="hygieneModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Sleep Hygiene Tips</h2>
+          <ul class="tips-list" id="tipsList">
+              <!-- Tips will be dynamically added here -->
+          </ul>
+      </div>
+  </div>
+
+  <!-- CBT-I Modal -->
+  <div id="cbtiModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>CBT-I Treatment Process</h2>
+          <div class="timeline" id="cbtiTimeline">
+              <!-- Timeline items will be dynamically added here -->
+          </div>
+      </div>
+  </div>
+
+  <!-- Medication Modal -->
+  <div id="medicationModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Common Sleep Medications</h2>
+          <div id="medicationAccordion">
+              <!-- Accordion items will be dynamically added here -->
+          </div>
+      </div>
+  </div>
+
+  <!-- Sleep Analysis Modal -->
+  <div id="sleepAnalysisModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Sample Sleep Analysis Report</h2>
+          <div id="analysisReport" class="analysis-report">
+              <!-- Report items will be dynamically added here -->
+          </div>
+      </div>
+  </div>
+
+  <script>
+      // Common modal functionality
+      function setupModal(buttonId, modalId) {
+          const modal = document.getElementById(modalId);
+          const btn = document.getElementById(buttonId);
+          const span = modal.getElementsByClassName("close")[0];
+
+          btn.onclick = function(event) {
+              event.preventDefault();
+              modal.style.display = "block";
+          }
+
+          span.onclick = function() {
+              modal.style.display = "none";
+          }
+
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+      }
+
+      // Setup modals
+      setupModal("assessmentButton", "assessmentModal");
+      setupModal("hygieneButton", "hygieneModal");
+      setupModal("cbtiButton", "cbtiModal");
+      setupModal("medicationButton", "medicationModal");
+      setupModal("trackingButton", "sleepAnalysisModal");
+
+      // Assessment form submission
+      document.getElementById("assessmentForm").onsubmit = function(event) {
+          event.preventDefault();
+          alert("Thank you for scheduling an assessment. We will contact you soon to confirm your appointment.");
+          document.getElementById("assessmentModal").style.display = "none";
+      }
+
+      // Sleep Hygiene Tips
+      const tips = [
+          "Stick to a sleep schedule",
+          "Practice a relaxing bedtime ritual",
+          "Exercise daily",
+          "Evaluate your bedroom to ensure ideal temperature, sound and light",
+          "Sleep on a comfortable mattress and pillows",
+          "Avoid alcohol, cigarettes, and heavy meals in the evening",
+          "Wind down before bed",
+          "If you can't sleep, go into another room and do something relaxing",
+          "Avoid looking at bright screens 1-2 hours before bedtime",
+          "Expose yourself to sunlight in the morning"
+      ];
+
+      const tipsList = document.getElementById("tipsList");
+      tips.forEach(tip => {
+          const li = document.createElement("li");
+          li.textContent = tip;
+          tipsList.appendChild(li);
+      });
+
+      // CBT-I Timeline
+      const cbtiSteps = [
+          {title: "Initial Assessment", content: "Evaluate sleep patterns and habits"},
+          {title: "Sleep Restriction", content: "Limit time in bed to increase sleep efficiency"},
+          {title: "Stimulus Control", content: "Associate bed with sleep only"},
+          {title: "Cognitive Restructuring", content: "Address negative thoughts about sleep"},
+          {title: "Sleep Hygiene Education", content: "Improve sleep-related behaviors"},
+          {title: "Relaxation Techniques", content: "Learn methods to reduce pre-sleep arousal"},
+          {title: "Progress Monitoring", content: "Regular check-ins and adjustments"}
+      ];
+
+      const timeline = document.getElementById("cbtiTimeline");
+      cbtiSteps.forEach((step, index) => {
+          const item = document.createElement("div");
+          item.className = `timeline-item ${index % 2 === 0 ? 'left' : 'right'}`;
+          item.innerHTML = `
+              <div class="timeline-content">
+                  <h3>${step.title}</h3>
+                  <p>${step.content}</p>
+              </div>
+          `;
+          timeline.appendChild(item);
+      });
+
+      // Medication Accordion
+      const medications = [
+          {name: "Benzodiazepines", content: "Short-term treatment for insomnia. Examples include temazepam and triazolam."},
+          {name: "Non-benzodiazepine hypnotics", content: "Newer sleep medications like zolpidem, zaleplon, and eszopiclone."},
+          {name: "Melatonin receptor agonists", content: "Medications like ramelteon that target the sleep-wake cycle."},
+          {name: "Orexin receptor antagonists", content: "Newer class of sleep medications like suvorexant."}
+      ];
+
+      const accordion = document.getElementById("medicationAccordion");
+      medications.forEach(med => {
+          const button = document.createElement("button");
+          button.className = "accordion";
+          button.textContent = med.name;
+
+          const panel = document.createElement("div");
+          panel.className = "panel";
+          panel.innerHTML = `<p>${med.content}</p>`;
+
+          accordion.appendChild(button);
+          accordion.appendChild(panel);
+
+          button.addEventListener("click", function() {
+              this.classList.toggle("active");
+              const panel = this.nextElementSibling;
+              if (panel.style.display === "block") {
+                  panel.style.display = "none";
+              } else {
+                  panel.style.display = "block";
+              }
+          });
+      });
+
+      // Sleep Analysis Report
+      const analysisData = [
+          {title: "Sleep Duration", value: "7 hours 15 minutes"},
+          {title: "Sleep Efficiency", value: "92%"},
+          {title: "Deep Sleep", value: "1 hour 45 minutes (24%)"},
+          {title: "REM Sleep", value: "1 hour 30 minutes (21%)"},
+          {title: "Light Sleep", value: "4 hours (55%)"},
+          {title: "Sleep Quality Score", value: "8.5 / 10"}
+      ];
+
+      const report = document.getElementById("analysisReport");
+      analysisData.forEach(item => {
+          const div = document.createElement("div");
+          div.className = "report-item";
+          div.innerHTML = `
+              <h3>${item.title}</h3>
+              <p>${item.value}</p>
+          `;
+          report.appendChild(div);
+      });
+  </script>
+</body>
+</html>
+
+    <!-- _______________about -->
+    <html>
+      <head>
+        <style>
+          .strategies-section {
+      padding: 50px 0;
+    }
+    
+    .flowchart-img {
+      width: 100%;
+      height: 200;
+      border-radius: 10px;
+    }
+    
+    .strategy-steps {
+      margin-top: 20px;
+    }
+    
+    .step {
+      margin-bottom: 20px;
+    }
+    
+    .step-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    
+    .step-title {
+      font-weight: bold;
+      color: #0069d9;
+    }
+    
+    .step-text {
+      font-size: 16px;
+      color: #666;
+    }
+    
+    
+    
+        </style>
+      </head>
+      <body>
+        
+        <div class="strategies-section">
+          <div class="container">
+          <h2 class="text-center">Effective Strategies for Better Sleep</h2>
+          <div class="row">
+          <div class="col-md-6">
+            <img src="18.jpg" alt="Sleep" class="flowchart-img" height="700" width="700">
+
+          </div>
+          <div class="col-md-6">
+          <div class="strategy-steps">
+          <div class="step">
+          <img src="19.jpg" alt="Step 1" class="step-img">
+          <h5 class="step-title">Establish a Consistent Sleep Schedule</h5>
+          <p class="step-text">Go to bed and wake up at the same time every day, including weekends.</p>
+          </div>
+          <div class="step">
+          <img src ="20.jpg" alt="Step 2" class="step-img">
+          <h5 class="step-title">Practice Relaxation Techniques Before Bed</h5>
+          <p class="step-text">Try techniques like deep breathing, progressive muscle relaxation, or meditation to calm your mind.</p>
+          </div>
+          <div class="step">
+          <img src ="21.jpg" alt="Step 3" class="step-img">
+          <h5 class="step-title">Create a Sleep-Conducive Environment</h5>
+          <p class="step-text">Make your bedroom dark, quiet, and cool to promote better sleep.</p>
+          </div>
+          <div class="step">
+          <img src ="22.jpg" alt="Step 4" class="step-img">
+          <h5 class="step-title">Limit Screen Time Before Bed</h5>
+          <p class="step-text">Avoid screens for at least an hour before bedtime to reduce blue light exposure.</p>
+          </div>
+          <div class="step">
+          <img src="23.jpg" alt="Step 5" class="step-img">
+          <h5 class="step-title">Maintain a Healthy Lifestyle</h5>
+          <p class="step-text">Regular exercise, a balanced diet, and stress management can improve sleep quality.</p>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+            
+            
+        
+        
+        
+      </body>
+    </html>
+      <!doctype html>
+
+
+    
+      
+
+
+   
+
+      <html>
+
+
+  <head>
+    <style>
+      .cta-section {
+  background-color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-weight: bold;
+  color: #0069d9;
+}
+
+.cta-section p {
+  font-size: 18px;
+  color: #666;
+}
+
+.btn-primary {
+  background-color: #0069d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="cta-section">
+      
+      <h2 class="text-center">Improve Your Sleep, Improve Your Life: Get Started Today</h2>
+
+        <p class="text-center">Get started with our expert resources and support</p>
+        <div class="text-center">
+          <a href="CONTACT US.html" class="btn btn-primary btn-lg">Get Started Now</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+      <html>
+    
+    
+                   
+                   
+    <script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Symptom card animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        });
+
+        document.querySelectorAll('.symptom-card').forEach((card) => {
+            observer.observe(card);
+        });
+
+       
+
+        // Booking form submission
+        const bookingForm = document.getElementById('bookingForm');
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const date = document.getElementById('date').value;
+            const service = document.getElementById('service').value;
+
+            // Here you would typically send this data to a server
+            // For this example, we'll just log it to the console
+            console.log('Booking submitted:', { name, email, date, service });
+
+            alert('Thank you for booking a consultation. We will contact you shortly to confirm your appointment.');
+            bookingForm.reset();
+        });
+    </script>
+    
+
+</body>
+</html>

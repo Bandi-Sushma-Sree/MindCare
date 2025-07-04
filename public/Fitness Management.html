@@ -1,0 +1,2142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Management - MindCare</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icons">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <title>Login Form</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Gabarito&family=Inclusive+Sans&family=Inter&family=Montserrat&family=Poppins&family=Raleway&family=Roboto&family=Space+Grotesk&family=Ubuntu&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    transition: all 0.5s linear;
+    font-family: 'Courgette', cursive;
+    font-family: 'Gabarito', sans-serif;
+    font-family: 'Inclusive Sans', sans-serif;
+}
+.background{
+    height: 100vh;
+    width: 100%;
+    background-image: url(Designer.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.navbar img{
+    width: 80px;
+}
+.navbar-items{
+    flex: 1;
+    text-align: left;
+}
+.navbar{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.navbar ul li{
+    position:static;
+    list-style: none;
+    display: flex;
+    padding: 1% 2%;
+    font-weight: bold;
+    font-size: 18px;
+    justify-content: flex-end;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:black;
+}
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    transition: 0.5s;
+    background-color: #2e6476;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.main{
+    height: 85vh;
+    display: flex;
+    justify-content:flex-start;
+    margin-left: 120px;
+    margin-top: 50px;
+    
+    
+
+}
+
+.text-box{
+    color:black;
+    width: 40%;
+    font-weight: bold;
+    font-family: "nunito",sans-serif;
+    align-items:flex-start;
+}
+.text-box h1{
+    padding: 2px;
+    font-size: 60px;
+}
+.text-box p{
+    padding: 1% 0;
+}
+
+.heading{
+    padding: 2% 0;
+    color: #2e6476;
+    font-size: 40px;
+}
+
+.quality{
+    width: 80%;
+    margin: auto;
+}
+.box2,.box3{
+    flex-basis: 29%;
+    text-align: center;
+    padding: 2%;
+    margin: 3% 0;
+}
+.box2 h2{
+    padding: 2% 0;
+    font-size: 29px;
+}
+.box2 i{
+    font-size: 3em;
+    padding-bottom: 2%;
+}
+.quality div :nth-child(1) i{
+    color: #30e430;
+}
+.quality div :nth-child(2) i{
+color: red;
+}
+.quality div :nth-child(3) i{
+color: blue;
+}
+.box2:hover{
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    transition: all 0.5s ease-out;
+}
+
+
+
+
+
+    
+/* ____________responsiveness */
+@media only screen and (max-width:995px){
+    .box{
+        width: 40%;
+        height: 69%;
+    }
+    .row1{
+        flex-direction: column;
+    }
+    .left{
+        width: 60%;
+    }
+    .right{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:828px){
+    .text-box h1{
+        font-size: 40px;
+    }
+    .footer-sec {
+        width: 100%;
+    }
+}
+@media only screen and (max-width:766px){
+    .navbar ul li{
+        display: block;
+        padding: 2px 0 34px;
+    }
+    .navbar-items{
+        position: absolute;
+        background-color: #2e6476;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+        transition: all 1s ease-out;
+    }
+    .navbar-items ul{
+        padding: 98px 51px 8px 49px;
+    }
+   
+    .h-class{
+        height: 100vh;
+        opacity: 0;
+    }
+    .v-class{
+        opacity: 0;
+    }
+    .main{
+        flex-direction: column-reverse;
+    }
+    .text-box{
+        width: 80%;
+    }
+    .box input{
+        width: 85%;
+    }
+    .row,.sec{
+        flex-direction: column;
+    }
+    .box3{
+        width: 90%;
+    }
+    .row,.box1{
+        margin-bottom: 7%;
+    }
+    .box1{
+        padding: 4%;
+    }
+}
+@media only screen and (max-width:570px){
+    .box{
+        width: 68%;
+    }
+    .text-box,.right,.left{
+        width: 95%;
+    }
+    .box h1{
+        padding: 0;
+    }
+    .text-box p{
+        font-size: 12px;
+    }
+    .right p{
+        font-size: 14px;
+    }
+}
+.services {
+                background-color: #f8f9fa;
+                padding: 80px 0;
+            }
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+            .section-title {
+                text-align: center;
+                font-size: 2.5rem;
+                color: #333;
+                margin-bottom: 50px;
+            }
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+            }
+            .service-card {
+                background-color: #fff;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative;
+            }
+            .service-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+            .service-icon {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                background-color: rgba(255, 255, 255, 0.9);
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                color: #007bff;
+                z-index: 1;
+            }
+            .service-image {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+            .service-content {
+                padding: 20px;
+            }
+            .service-content h2 {
+                font-size: 1.5rem;
+                color: #333;
+                margin-bottom: 10px;
+            }
+            .service-content p {
+                font-size: 1rem;
+                color: #666;
+                line-height: 1.6;
+            }
+            @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #28bf96;
+  --primary-color-dark: #209677;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  text-decoration: none;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
+.header {
+  padding: 0 1rem;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.content h1 span {
+  font-weight: 400;
+}
+
+.content p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  line-height: 1.75rem;
+}
+
+.image {
+  position: relative;
+  text-align: center;
+  isolation: isolate;
+}
+
+.image__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 450px;
+  width: 450px;
+  background-color:;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.image img {
+  width: 100%;
+  max-width: 475px;
+}
+
+.image__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image__content__1 {
+  transform: translate(calc(-50% - 12rem), calc(-50% - 8rem));
+}
+
+.image__content__1 span {
+  padding: 10px 12px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background-color: #defcf4;
+  border-radius: 100%;
+}
+
+.image__content__1 h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.image__content__1 p {
+  color: var(--text-light);
+}
+
+.image__content__2 {
+  transform: translate(calc(-50% + 8rem), calc(-50% + 10rem));
+}
+
+.image__content__2 ul {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.image__content__2 li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: var(--text-light);
+}
+
+.image__content__2 span {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+@media (width < 900px) {
+  .nav__links {
+    display: none;
+  }
+
+  .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  background-image: linear-gradient(to bottom,);
+}
+
+.content {
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.image {
+  flex: 1;
+  padding: 20px;
+}
+
+.image__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+
+}
+:root {
+            --primary-color: #28a745;
+            --secondary-color: #17a2b8;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+        .hero-section {
+    background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    position: relative;
+    height: 476px;
+}
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
+        }
+        .dark-mode .card {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #218838;
+        }
+        .symptoms-section {
+            background-color: #e9ecef;
+            padding: 50px 0;
+        }
+        .dark-mode .symptoms-section {
+            background-color: #2c3e50;
+        }
+        .symptom-card {
+            text-align: center;
+            padding: 20px;
+        }
+        .symptom-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .section-title {
+            color: #4CAF50;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: #4CAF50;
+        }
+        .fitness-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .fitness-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(76, 175, 80, 0.2);
+        }
+        .fitness-title {
+            font-weight: bold;
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #4CAF50;
+        }
+        .fitness-text {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        .fitness-img-wrapper {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid #e0e0e0;
+        }
+        .fitness-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .fitness-card:hover .fitness-img {
+            transform: scale(1.1);
+        }
+        .icon-wrapper {
+            font-size: 2.5rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .personal-training {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 50px;
+        }
+    
+        .training-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+    
+        .training-text {
+            flex: 1;
+        }
+    
+        .training-text h3 {
+            font-size: 2rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+    
+        .training-text p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    
+        .training-benefits {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+    
+        .training-benefits li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+    
+        .training-benefits i {
+            color: #4CAF50;
+            margin-right: 10px;
+        }
+    
+        .btn-primary {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+    
+        .btn-primary:hover {
+            background-color: #45a049;
+        }
+    
+        .training-gallery {
+            flex: 1;
+        }
+    
+        .main-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    
+        .gallery-thumbnails {
+            display: flex;
+            gap: 10px;
+        }
+    
+        .thumbnail {
+            width: calc(33.333% - 7px);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+    
+        .thumbnail:hover {
+            opacity: 0.8;
+        }
+    
+        @media (max-width: 768px) {
+            .training-content {
+                flex-direction: column;
+            }
+    
+            .training-text, .training-gallery {
+                width: 100%;
+            }
+        }
+        .group-fitness {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 50px;
+        }
+    
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+    
+        .class-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+    
+        .class-card:hover {
+            transform: translateY(-5px);
+        }
+    
+        .class-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    
+        .class-content {
+            padding: 20px;
+        }
+    
+        .class-content h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    
+        .class-content p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+    
+        .btn-book {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .btn-book:hover {
+            background-color: #45a049;
+        }
+        .nutrition-counseling {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 50px;
+        }
+    
+        .nutrition-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+    
+        .nutrition-text {
+            flex: 1;
+        }
+    
+        .nutrition-text h3 {
+            font-size: 2rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+    
+        .nutrition-text p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    
+        .nutrition-benefits {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+    
+        .nutrition-benefits li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+    
+        .nutrition-benefits i {
+            color: #4CAF50;
+            margin-right: 10px;
+        }
+    
+        .btn-consult {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .btn-consult:hover {
+            background-color: #45a049;
+        }
+    
+        .nutrition-image {
+            flex: 1;
+        }
+    
+        .nutrition-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .small-group-training {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 50px;
+        }
+    
+        .sgt-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+    
+        .sgt-text {
+            flex: 1;
+        }
+    
+        .sgt-text h3 {
+            font-size: 2rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+    
+        .sgt-text p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    
+        .sgt-benefits {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+    
+        .sgt-benefits li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+    
+        .sgt-benefits i {
+            color: #4CAF50;
+            margin-right: 10px;
+            width: 20px;
+        }
+    
+        .btn-signup {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .btn-signup:hover {
+            background-color: #45a049;
+        }
+    
+        .sgt-image-gallery {
+            flex: 1;
+        }
+    
+        .main-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+    
+        .image-grid img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .injury-rehabilitation {
+        background-color: #f8f9fa;
+        padding: 80px 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 50px;
+    }
+
+    .rehab-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .rehab-text {
+        flex: 1;
+    }
+
+    .rehab-text h3 {
+        font-size: 2rem;
+        color: #4CAF50;
+        margin-bottom: 20px;
+    }
+
+    .rehab-text p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .rehab-benefits {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .rehab-benefits li {
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .rehab-benefits i {
+        color: #4CAF50;
+        margin-right: 10px;
+        width: 20px;
+    }
+
+    .btn-consult {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-consult:hover {
+        background-color: #45a049;
+    }
+
+    .rehab-image-gallery {
+        flex: 1;
+    }
+
+    .main-image {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .image-grid img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    .progress-tracking {
+        background-color: #f8f9fa;
+        padding: 80px 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 50px;
+    }
+
+    .tracking-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .tracking-text {
+        flex: 1;
+    }
+
+    .tracking-text h3 {
+        font-size: 2rem;
+        color: #4CAF50;
+        margin-bottom: 20px;
+    }
+
+    .tracking-text p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .tracking-features {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .tracking-features li {
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .tracking-features i {
+        color: #4CAF50;
+        margin-right: 10px;
+        width: 20px;
+    }
+
+    .btn-demo {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-demo:hover {
+        background-color: #45a049;
+    }
+
+    .tracking-visual {
+        flex: 1;
+    }
+
+    .dashboard-image {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .metric-cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .metric-card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        flex: 1;
+    }
+
+    .metric-card i {
+        font-size: 2rem;
+        color: #4CAF50;
+        margin-bottom: 10px;
+    }
+
+    .metric-card h4 {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .metric-card p {
+        font-size: 1rem;
+        color: #666;
+    }
+    .strategies-section {
+              padding: 50px 0;
+            }
+            
+            .flowchart-img {
+              width: 100%;
+              height: 1000px;
+              border-radius: 10px;
+              object-fit: cover;
+            }
+            
+            .strategy-steps {
+              margin-top: 20px;
+            }
+            
+            .step {
+              margin-bottom: 20px;
+            }
+            
+            .step-img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              margin-right: 10px;
+              object-fit: cover;
+            }
+            
+            .step-title {
+              font-weight: bold;
+              color: #4CAF50;
+            }
+            
+            .step-text {
+              font-size: 16px;
+              color: #666;
+            }
+            .cta-section {
+  background-color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-weight: bold;
+  color: #0069d9;
+}
+
+.cta-section p {
+  font-size: 18px;
+  color: #666;
+}
+
+.btn-primary {
+  background-color: #0069d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+       
+    </style>
+  </head>
+  <body>
+    
+   
+    </style>
+</head>
+<body>
+    <section class="background">
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="" alt=""></a>
+            <div class="navbar-items h-class">
+                <ul class="nav v-class">
+                    <li><a href="MindCare Home.html">HOME</a></li>
+                    <li><a href="MindCare About us.html">ABOUT</a></li>
+                    <li><a href="MindCare Services.html">SERVICES</a></li>
+                    <li><a href="CONTACT US.html">CONTACT US</a></li>
+                    <li><a href="sleep journal.html">SLEEP JOURNAL</a></li>
+                    <li><a href="MindCare Login_page.html">LOGIN</a></li>
+                   
+                </ul>
+            </div>
+            
+        </nav>
+        
+        <div class="main" style="text-align: center;"> <!-- Centering the text -->
+            <div class="text-box" style="display: inline-block; margin-top: 50px;"> <!-- Centering the text box -->
+                <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold; font-size: 50px; color: coral; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Transform Your Body, Transform Your Life</h1>
+        
+                <p style="font-size: 18px; color:white; line-height: 1.6; margin: 20px 0;">Take control of your fitness journey with our expert guidance and support. Our personalized programs help you achieve your goals, whether it's weight loss, muscle gain, or overall wellness.</p>
+                
+                <a href="" class="btn btn1" style="background-color: palevioletred; color: #fff; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; text-align: left; font-size: 18px; font-weight: bold; transition: background-color 0.3s;">Get Started Today!</a>
+            </div>
+        </div>
+           
+          </section> 
+          <section class="services">
+            <div class="container">
+                <h1 class="section-title">Our Mental Health Fitness Services</h1>
+                <div class="services-grid">
+                    <div class="service-card">
+                        
+                        <img src="img 38.jpg" alt="Mindfulness Coaching" class="service-image">
+                        <div class="service-content">
+                            <h2>Outdoor Activities</h2>
+                            <p>Engage in various outdoor activities to boost your physical and mental well-being.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        
+                        <img src="77.jpg" alt="Support Groups" class="service-image">
+                        <div class="service-content">
+                            <h2>Home Workout Routines</h2>
+                            <p>Follow our guided home workout routines to stay fit without the gym.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        
+                        <img src="img 52.jpg" alt="Mental Health Workshops" class="service-image">
+                        <div class="service-content">
+                            <h2>Breathing Exercises</h2>
+                            <p>Learn effective breathing techniques to enhance relaxation and focus.</p>   
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        
+                        <img src="img 69.jpg" alt="Peer Support" class="service-image">
+                        <div class="service-content">
+                            <h2>Daily Stretching and Flexibility</h2>
+                            <p>Incorporate daily stretching routines to improve flexibility and prevent injuries.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                       
+                        <img src="79.jpg" alt="Mindfulness Coaching" class="service-image">
+                        <div class="service-content">
+                            <h2>Fun Fitness Challenges</h2>
+                            <p>Participate in our fun fitness challenges to stay motivated and engaged in your fitness journey.</p>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        
+                        <img src="img 26.jpg" alt="Progress Tracking" class="service-image" height="500px">
+                        <div class="service-content">
+                            <h2>Sleep and Recovery</h2>
+                            <p>Understand the importance of sleep and recovery for optimal fitness performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+          
+
+<section class="quality">
+  <h1 class="heading">Why Choose MindCare</h1>
+  <div class="row">
+    <div class="box2">
+      <i class="fas fa-clock"></i>
+      <h2>Accessible Care</h2>
+      <p>Expert support available 24/7 for your mental health needs.</p>
+    </div>
+    <div class="box2">
+      <i class="fas fa-heart"></i>
+      <h2>Compassionate Approach</h2>
+      <p>Personalized care and empathy from our experienced therapists.</p>
+    </div>
+    <div class="box2">
+      <i class="fas fa-chart-line"></i>
+      <h2>Proven Results</h2>
+      <p>Effective treatments and measurable progress for lasting well-being.</p>
+    </div>
+  </div>
+</section>
+
+    <section>
+      
+
+  <header class="hero-section">
+    <div class="container hero-content">
+        <h1 class="display-4 mb-4">Transform Your Body, Elevate Your Life: Your Fitness Journey Starts Here</h1>
+
+        <p class="lead mb-4">Personalized workout plans, expert guidance, and cutting-edge tools to help you achieve your fitness goals and unlock your full potential.</p>
+      
+      <p class="lead mb-4">Embark on a transformative journey with our comprehensive fitness management program, designed to empower you with the tools, knowledge, and support needed to achieve your unique fitness goals.</p>
+      
+         
+
+
+
+      </div>
+  </header>
+  </section>
+  <section class="symptom-card">
+    <h2 class="section-title text-center">Unlock the Benefits of Regular Exercise</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="benefit-card">
+                <i class="fas fa-dumbbell" style="font-size: 58px; color: #28a745;"></i>
+                <h4>Physical Benefits</h4>
+                <p>Increased strength, improved endurance, better flexibility, and weight management.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="benefit-card">
+                <i class="fas fa-brain" style="font-size: 58px; color: #28a745;"></i>
+                <h4>Mental Benefits</h4>
+                <p>Reduced stress, improved mood, better sleep quality, and increased mental clarity.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="benefit-card">
+                <i class="fas fa-heartbeat" style="font-size: 58px; color: #28a745;"></i>
+                <h4>Health Benefits</h4>
+                <p>Lower risk of chronic diseases, stronger immune system, improved cardiovascular health.</p>
+            </div>
+        </div>
+    </div>
+</section>
+   
+    
+      
+    
+    
+
+<div style="height: 50px;"></div>
+
+<div style="height: 50px;"></div>
+
+       
+  
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Key Components of Fitness Management</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="fitness-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h5 class="fitness-title text-center">Strength Training</h5>
+                        <p class="fitness-text text-center">Build muscle, increase metabolism, and improve overall strength through targeted resistance exercises and weight training programs.</p>
+                        <div class="fitness-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Strength Training" class="fitness-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fitness-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h5 class="fitness-title text-center">Cardiovascular Exercise</h5>
+                        <p class="fitness-text text-center">Improve heart health, endurance, and burn calories with a variety of cardio workouts tailored to your fitness level and goals.</p>
+                        <div class="fitness-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Cardiovascular Exercise" class="fitness-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fitness-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <h5 class="fitness-title text-center">Nutrition Planning</h5>
+                        <p class="fitness-text text-center">Fuel your body with balanced, nutritious meals designed to support your fitness goals, whether it's weight loss, muscle gain, or overall health.</p>
+                        <div class="fitness-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80" alt="Nutrition Planning" class="fitness-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fitness-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h5 class="fitness-title text-center">Group Fitness Classes</h5>
+                        <p class="fitness-text text-center">Enjoy the energy and motivation of group workouts led by expert instructors. Choose from a variety of classes to keep your fitness routine fun and engaging.</p>
+                        <div class="fitness-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2075&q=80" alt="Group Fitness Classes" class="fitness-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fitness-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-spa"></i>
+                            
+                        </div>
+                        <h5 class="fitness-title text-center">Flexibility & Mobility</h5>
+                        <p class="fitness-text text-center">Enhance your range of motion, prevent injuries, and improve overall performance with targeted stretching and mobility exercises.</p>
+                        <div class="fitness-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Flexibility & Mobility" class="fitness-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fitness-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 class="fitness-title text-center">Progress Tracking</h5>
+                        <p class="fitness-text text-center">Monitor your fitness journey with regular assessments, measurements, and goal-setting to ensure continuous improvement and motivation.</p>
+                        <div class="fitness-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1461773518188-b3e86f98242f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Progress Tracking" class="fitness-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+       
+    <section class="personal-training">
+        <div class="container">
+            <h2 class="section-title">Outdoor Activities for Mental Health</h2>
+            <div class="training-content">
+                <div class="training-text">
+                    <h3>Reconnect with Nature for Better Mental Well-being</h3>
+                    <p>Engage in outdoor activities that promote mental health, such as hiking, biking, and nature walks. These activities are designed to help you unwind, reduce stress, and enhance your overall well-being.</p>
+                    <ul class="training-benefits">
+                        <li><i class="fas fa-check-circle"></i> **Group Hiking Sessions**: Explore local trails with friends or community groups. Hiking not only provides physical exercise but also allows you to connect with nature, which can improve mood and reduce anxiety.</li>
+                        <li><i class="fas fa-check-circle"></i> **Mindfulness in Nature**: Practice mindfulness techniques while surrounded by nature. This can include meditation, deep breathing, or simply being present in the moment, which helps to lower stress levels and improve mental clarity.</li>
+                        <li><i class="fas fa-check-circle"></i> **Outdoor Yoga Classes**: Participate in yoga sessions held in parks or gardens. The combination of physical movement, breath control, and the calming environment of nature can enhance relaxation and promote emotional balance.</li>
+                        <li><i class="fas fa-check-circle"></i> **Community Support and Connection**: Join local outdoor activity groups to foster social connections. Engaging with others in a supportive environment can combat feelings of isolation and improve overall mental health.</li>
+                    </ul>
+                    <p>These outdoor activities not only provide physical benefits but also significantly contribute to mental well-being by reducing stress, improving mood, and fostering a sense of community.</p>
+                </div>
+               
+             
+                <div class="training-gallery">
+                    <img src="o.jpg" alt="Outdoor Activity" class="gallery-img main-img">
+                    <div class="gallery-thumbnails">
+                        <img src="m.jpg" alt="Group Hiking" class="thumbnail">
+                        <img src="img 68.jpg" alt="Outdoor Yoga" class="thumbnail">
+                        <img src="img 63.jpg" alt="Nature Walk" class="thumbnail">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+
+          
+                    <section class="group-fitness">
+                        <div class="container">
+                            <h2 class="section-title">Home Workout Routines</h2>
+                            <div class="classes-grid">
+                                <div class="class-card" id="bodyweightCard">
+                                    <img src="81.jpg" alt="Bodyweight Workout" class="class-image">
+                                    <div class="class-content">
+                                        <h3>Bodyweight Workout</h3>
+                                        <p>Utilize your own body weight for strength training with exercises like push-ups, squats, and lunges.</p>
+                                        <button class="btn-book" data-class="Bodyweight Workout" onclick="showArticle('bodyweightArticle')">Get Started</button>
+                                    </div>
+                                </div>
+                                <div class="class-card" id="yogaCard">
+                                    <img src="80.jpg" alt="Yoga at Home" class="class-image">
+                                    <div class="class-content">
+                                        <h3>Yoga at Home</h3>
+                                        <p>Practice yoga in the comfort of your home with guided sessions focusing on flexibility and relaxation.</p>
+                                        <button class="btn-book" data-class="Yoga at Home" onclick="showArticle('yogaArticle')">Get Started</button>
+                                    </div>
+                                </div>
+                                <div class="class-card" id="hiitCard">
+                                    <img src="82.jpg" alt="HIIT at Home" class="class-image">
+                                    <div class="class-content">
+                                        <h3>HIIT at Home</h3>
+                                        <p>Engage in high-intensity interval training with short bursts of intense exercise followed by rest periods.</p>
+                                        <button class="btn-book" data-class="HIIT at Home" onclick="showArticle('hiitArticle')">Get Started</button>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- Hidden Article Sections -->
+                            <div id="bodyweightArticle" class="article" style="display:none;">
+                                <h3>Bodyweight Workout Article</h3>
+                                <p>Bodyweight workouts are a great way to build strength and endurance without the need for equipment. Here are some key points:</p>
+                                <ul>
+                                    <li>Focus on form to prevent injuries.</li>
+                                    <li>Incorporate a variety of exercises for a full-body workout.</li>
+                                    <li>Progress by increasing repetitions or decreasing rest time.</li>
+                                </ul>
+                                <p>Sample Routine: 3 sets of 10 push-ups, 15 squats, and 20 lunges.</p>
+                            <p>Additional Routines:</p>
+                            <ul>
+                                <li>3 sets of 12 bicep curls, 15 tricep dips, and 20 shoulder presses.</li>
+                                <li>3 sets of 10 leg raises, 12 Russian twists, and 15 bicycle crunches.</li>
+                                <li>3 sets of 12 chest presses, 15 rows, and 20 shoulder rotations.</li>
+                                <li>3 sets of 10 calf raises, 12 side lunges, and 15 step-ups.</li>
+                                <li>3 sets of 12 back rows, 15 bicep curls, and 20 tricep extensions.</li>
+                                <li>3 sets of 10 glute bridges, 12 side leg lifts, and 15 wall sits.</li>
+                                <li>3 sets of 12 chest flys, 15 shoulder rotations, and 20 bicep curls.</li>
+                                <li>3 sets of 10 leg curls, 12 calf raises, and 15 ankle rotations.</li>
+                                <li>3 sets of 12 back extensions, 15 shoulder blade squeezes, and 20 chest stretches.</li>
+                                <li>3 sets of 10 hip circles, 12 knee lifts, and 15 ankle rotations.</li>
+                            </ul>
+                            </div>
+                    
+                            <div id="yogaArticle" class="article" style="display:none;">
+                                <h3>Yoga at Home Article</h3>
+                                <p>Yoga is not just about flexibility; it also helps in reducing stress and improving mental clarity. Here are some tips:</p>
+                                <ul>
+                                    <li>Find a quiet space to practice.</li>
+                                    <li>Use a yoga mat for comfort.</li>
+                                    <li>Follow along with online classes for guidance.</li>
+                                </ul>
+                                <p>Sample Routine: 30 minutes of sun salutations followed by seated stretches.</p>
+                            <li>3 sets of 10 downward-facing dog, 12 warrior poses, and 15 tree poses.</li>
+                            <li>3 sets of 12 seated forward bends, 15 seated twists, and 20 seated leg stretches.</li>
+                            <li>3 sets of 10 plank poses, 12 side plank poses, and 15 boat poses.</li>
+                            <li>3 sets of 12 bridge poses, 15 wheel poses, and 20 shoulder stands.</li>
+                            <li>3 sets of 10 child's poses, 12 cat-cow poses, and 15 downward-facing dog poses.</li>
+                            <li>3 sets of 12 warrior flows, 15 triangle poses, and 20 seated forward bends.</li>
+                            <li>3 sets of 10 tree pose variations, 12 eagle poses, and 15 hero poses.</li>
+                            <li>3 sets of 12 seated spinal twists, 15 seated forward bends, and 20 savasana poses.</li>
+                            <li>3 sets of 10 side angle poses, 12 balancing half moon poses, and 15 warrior III poses.</li>
+                            <li>3 sets of 12 pigeon poses, 15 cow face poses, and 20 seated leg stretches.</li>
+                            </div>
+                    
+                            <div id="hiitArticle" class="article" style="display:none;">
+                                <h3>HIIT at Home Article</h3>
+                                <p>High-Intensity Interval Training (HIIT) is an effective way to burn calories in a short amount of time. Here are some benefits:</p>
+                                <ul>
+                                    <li>Boosts metabolism even after the workout.</li>
+                                    <li>Can be done with minimal or no equipment.</li>
+                                    <li>Improves cardiovascular fitness.</li>
+                                </ul>
+                                <p>Sample Routine: 20 seconds of burpees followed by 10 seconds of rest, repeated for 15 minutes.</p>
+                            <li>3 sets of 15 jump squats, 20 mountain climbers, and 25 burpees.</li>
+                            <li>3 sets of 12 plank jacks, 15 squat jumps, and 20 box jumps.</li>
+                            <li>3 sets of 10 sprints in place, 12 high knees, and 15 jumping lunges.</li>
+                            <li>3 sets of 12 bicycle crunches, 15 Russian twists, and 20 leg raises.</li>
+                            <li>3 sets of 10 wall sits, 12 calf raises, and 15 step-ups.</li>
+                            <li>3 sets of 12 tricep dips, 15 bicep curls, and 20 shoulder presses.</li>
+                            <li>3 sets of 10 side plank (each side), 12 hip circles, and 15 ankle rotations.</li>
+                            <li>3 sets of 12 chest presses, 15 rows, and 20 shoulder rotations.</li>
+                            <li>3 sets of 10 glute bridges, 12 side leg lifts, and 15 wall sits.</li>
+                            <li>3 sets of 12 back rows, 15 bicep curls, and 20 tricep extensions.</li>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <style>
+                        .article {
+                            margin-top: 20px;
+                            padding: 15px;
+                            border: 1px solid #ccc;
+                            border-radius: 5px;
+                            background-color: #f9f9f9;
+                        }
+                    </style>
+                    
+                    <script>
+                        function showArticle(articleId) {
+                            // Hide all articles
+                            const articles = document.querySelectorAll('.article');
+                            articles.forEach(article => {
+                                article.style.display = 'none';
+                            });
+                    
+                            // Show the selected article
+                            const selectedArticle = document.getElementById(articleId);
+                            if (selectedArticle) {
+                                selectedArticle.style.display = 'block';
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="breathing-exercises">
+        <div class="container">
+            <h2 class="section-title">Breathing Exercises</h2>
+            <div class="breathing-content" style="display: flex; align-items: center;">
+                <div class="breathing-text" style="flex: 1; padding-right: 20px;">
+                    <h3>Enhance Your Well-being Through Breathing</h3>
+                    <p>Our expert instructors guide you through various breathing techniques that promote relaxation, reduce stress, and improve mental clarity. Whether you're looking to calm your mind or boost your energy, these exercises are essential for your overall wellness.</p>
+                    <ul class="breathing-benefits">
+                        <li><i class="fas fa-check-circle"></i> Stress reduction techniques</li>
+                        <li><i class="fas fa-check-circle"></i> Improved focus and concentration</li>
+                        <li><i class="fas fa-check-circle"></i> Enhanced relaxation and mindfulness</li>
+                        <li><i class="fas fa-check-circle"></i> Techniques for better sleep</li>
+                    </ul>
+                    <a href="meditation guide.html" class="btn-consult">Start Breathing Session</a>
+                </div>
+                <div class="breathing-image" style="flex: 1;">
+                    <img src="84.jpg" alt="Breathing Exercises" style="width: 100%; border-radius: 10px;">
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <section class="daily-stretching">
+        <div class="container">
+            <h2 class="section-title">Daily Stretching and Flexibility</h2>
+            <div class="sgt-content">
+                <div class="sgt-text">
+                    <h3>Enhance Your Flexibility</h3>
+                    <p>Experience the benefits of daily stretching routines designed to improve flexibility, reduce muscle tension, and enhance overall mobility.</p>
+                    <ul class="sgt-benefits">
+                        <li><i class="fas fa-users"></i> Suitable for all fitness levels</li>
+                        <li><i class="fas fa-dumbbell"></i> Guided stretching sessions</li>
+                        <li><i class="fas fa-clock"></i> Short and effective routines</li>
+                        <li><i class="fas fa-hands-helping"></i> Supportive community environment</li>
+                    </ul>
+                    <button class="btn-signup" onclick="showDetails()">try Now</button>
+                </div>
+                <div class="sgt-image-gallery">
+                    <img src="sample2.jpg" alt="Daily Stretching" class="main-image">
+                    <div class="image-grid">
+                        <img src="sample3.jpg" alt="Stretching Group">
+                        <img src="sample4.jpeg" height="180px" alt="Flexibility Exercises">
+                        <img src="78.jpg"  alt="Stretching Routine">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal for Detailed Display -->
+    <div id="detailsModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7); z-index:1000; padding:20px; overflow-y: auto;">
+        <div style="background-color:white; padding:20px; border-radius:5px; max-width:600px; margin: auto; position:relative;">
+            <button onclick="closeDetails()" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:20px; cursor:pointer;">&times;</button>
+            <h2>Daily Stretching and Flexibility</h2>
+            <p>Try our daily stretching sessions to enhance your flexibility and overall well-being. Our expert trainers guide you through effective routines that cater to all fitness levels.</p>
+            <h3>Benefits:</h3>
+            <ul>
+                <li>Improved flexibility and range of motion</li>
+                <li>Reduced muscle tension and soreness</li>
+                <li>Enhanced blood circulation</li>
+                <li>Better posture and alignment</li>
+            </ul>
+            <h3>Sample Stretching Exercises:</h3>
+            <img src="sample.jpg" alt="Stretching Exercise" style="width:100%; border-radius:5px;">
+            <p>Here are some examples of stretching exercises you can expect in our sessions:</p>
+            <ol>
+                <li>Neck Stretch: Slowly tilt your head to the side, bringing your ear towards your shoulder. Hold for 30 seconds and repeat on the other side.</li>
+                <li>Shoulder Rolls: Roll your shoulders forward and backward in a circular motion. Repeat for 10-15 repetitions.</li>
+                <li>Chest Stretch: Place your hands on a wall or door frame and lean forward, stretching your chest. Hold for 30 seconds.</li>
+                <li>Arm Circles: Hold your arms straight out to the sides and make small circles with your hands. Repeat for 5-10 repetitions.</li>
+                <li>Side Stretch: Stand with your feet shoulder-width apart and stretch your arms out to the sides. Lean to one side, keeping your arms straight, and hold for 30 seconds. Repeat on the other side.</li>
+                <li>Hip Flexor Stretch: Kneel on all fours with your hands under your shoulders and your knees under your hips. Bring one knee forward and place your foot flat on the ground in front of the other knee. Lean forward, stretching the front of your hip. Hold for 30 seconds and repeat on the other side.</li>
+                <li>Quad Stretch: Stand with one hand against a wall for balance and lift one leg behind you, keeping your knee straight. Hold for 30 seconds and repeat on the other side.</li>
+                <li>Calf Stretch: Stand facing a wall with one hand on the wall for balance. Step one foot back about a foot and a half, keeping your heel on the ground. Bend your front knee and lean forward, stretching your calf. Hold for 30 seconds and repeat on the other side.</li>
+                <li>Hamstring Stretch: Sit on the floor with your legs straight out in front of you. Lean forward, reaching for your toes, and hold for 30 seconds.</li>
+                <li>Back Stretch: Stand with your feet shoulder-width apart and your hands on your hips. Take a deep breath in and out, and as you exhale, arch your back, looking up towards the ceiling. Hold for a few seconds and repeat.</li>
+            </ol>
+            <img src="sample1.jpg" alt="Stretching Example" style="width:100%; border-radius:5px;">
+            <p>Try this  and feel the difference!</p>
+            
+        </div>
+    </div>
+    
+    <script>
+        function showDetails() {
+            document.getElementById('detailsModal').style.display = 'block';
+        }
+    
+        function closeDetails() {
+            document.getElementById('detailsModal').style.display = 'none';
+        }
+    
+        
+    </script>
+        <section class="fun-fitness-challenges">
+            <div class="container">
+                <h2 class="section-title">Fun Fitness Challenges</h2>
+                <div class="challenges-content" style="display: flex; align-items: center;">
+                    <div class="challenges-text" style="flex: 1; padding-right: 20px;">
+                        <h3>Join the Fun and Get Fit!</h3>
+                        <p>Participate in our exciting fitness challenges designed to motivate you and make fitness enjoyable. Whether you're a beginner or a fitness enthusiast, there's something for everyone!</p>
+                        <ul class="challenges-benefits">
+                            <li><i class="fas fa-trophy"></i> Compete with friends and family</li>
+                            <li><i class="fas fa-calendar-check"></i> Set and achieve personal goals</li>
+                            <li><i class="fas fa-users"></i> Join a supportive community</li>
+                            <li><i class="fas fa-star"></i> Win prizes and recognition</li>
+                        </ul>
+                        <button class="btn-consult" onclick="showActivities()">Join a Challenge</button>
+                    </div>
+                     
+                        <div class="challenges-image-gallery" style="flex: 1;">
+                            <img src=https://images.unsplash.com/photo-1588286840104-8957b019727f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Fitness Challenge" class="main-image">
+                            <div class="image-grid">
+                                <img src="ff1.jpg" alt="Group Challenge">
+                                <img src="ff2.jpg" alt="Challenge Event">
+                                <img src="ff3.jpg" alt="Fitness Fun">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="activitiesModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7); z-index:1000; padding:20px; overflow-y: auto;">
+                <div style="background-color:white; padding:20px; border-radius:10px; max-width:600px; margin: auto; position:relative; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
+                    <button onclick="closeActivities()" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:20px; cursor:pointer; color: #333;">&times;</button>
+                    <h2 style="text-align: center; color: #28bf96;">Fun Fitness Activities</h2>
+                    <ul style="list-style-type: none; padding: 0; margin: 20px 0;">
+                        <li style="margin: 10px 0; font-size: 1.1rem; color: #333;"><i class="fas fa-check-circle" style="color: #28bf96; margin-right: 10px;"></i>Group Hiking</li>
+                        <li style="margin: 10px 0; font-size: 1.1rem; color: #333;"><i class="fas fa-check-circle" style="color: #28bf96; margin-right: 10px;"></i>Outdoor Yoga</li>
+                        <li style="margin: 10px 0; font-size: 1.1rem; color: #333;"><i class="fas fa-check-circle" style="color: #28bf96; margin-right: 10px;"></i>HIIT Challenges</li>
+                        <li style="margin: 10px 0; font-size: 1.1rem; color: #333;"><i class="fas fa-check-circle" style="color: #28bf96; margin-right: 10px;"></i>Dance Fitness Classes</li>
+                        <li style="margin: 10px 0; font-size: 1.1rem; color: #333;"><i class="fas fa-check-circle" style="color: #28bf96; margin-right: 10px;"></i>Team Sports Competitions</li>
+                    </ul>
+                    <button class="btn-join" onclick="thankYouMessage()" style="display: block; width: 100%; background-color: #28bf96; color: #fff; border: none; padding: 12px; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: background-color 0.3s ease; margin-top: 20px;">Join Now</button>
+                </div>
+            </div>
+            </div>
+        </section>
+        
+        <script>
+            function showActivities() {
+                document.getElementById('activitiesModal').style.display = 'block';
+            }
+        
+            function closeActivities() {
+                document.getElementById('activitiesModal').style.display = 'none';
+            }
+        
+            function thankYouMessage() {
+                alert("Thank you for your interest! We will let you know soon!");
+                closeActivities(); // Close the modal after clicking join now
+            }
+        </script>
+    
+                
+         
+    </section>
+
+
+   
+<section class="progress-tracking">
+    <div class="container">
+        <h2 class="section-title">Progress Tracking</h2>
+        <div class="tracking-content">
+            <div class="tracking-text">
+                <h3>Measure Your Success</h3>
+                <p>Stay motivated and achieve your fitness goals faster with our advanced progress tracking tools. Our comprehensive system helps you monitor your improvements, adjust your workouts, and celebrate your milestones.</p>
+                <ul class="tracking-features">
+                    <li><i class="fas fa-chart-line"></i> Real-time performance metrics</li>
+                    <li><i class="fas fa-weight"></i> Body composition analysis</li>
+                    <li><i class="fas fa-heartbeat"></i> Health vitals monitoring</li>
+                    <li><i class="fas fa-mobile-alt"></i> Mobile app integration</li>
+                </ul>
+                <button class="btn-demo" onclick="alert('Will be launched soon!')">Track Progress</button>
+            </div>
+            <div class="tracking-visual">
+                <img src="ft1.jpg" class="dashboard-image">
+                <div class="metric-cards">
+                    <div class="metric-card">
+                        <i class="fas fa-running"></i>
+                        <h4>Activity</h4>
+                        <p>+15% this week</p>
+                    </div>
+                    <div class="metric-card">
+                        <i class="fas fa-fire-alt"></i>
+                        <h4>Calories</h4>
+                        <p>2,500 burned</p>
+                    </div>
+                    <div class="metric-card">
+                        <i class="fas fa-dumbbell"></i>
+                        <h4>Strength</h4>
+                        <p>+5% this month</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sleep-recovery"></section>
+    <div class="container">
+        <h2 class="section-title">Sleep and Recovery</h2>
+        <div class="sleep-content" style="display: flex; align-items: center; gap: 30px;">
+            <div class="sleep-text" style="flex: 1;">
+                <h3>Optimize Your Rest for Better Performance</h3>
+                <p>Quality sleep is essential for recovery, mental clarity, and overall well-being. Our sleep and recovery program focuses on helping you understand the importance of sleep and how to improve your sleep hygiene.</p>
+                <ul class="sleep-benefits">
+                    <li><i class="fas fa-bed"></i> Enhanced muscle recovery</li>
+                    <li><i class="fas fa-brain"></i> Improved cognitive function</li>
+                    <li><i class="fas fa-heartbeat"></i> Better emotional health</li>
+                    <li><i class="fas fa-clock"></i> Increased energy levels</li>
+                </ul>
+                <button class="btn-learn-more" onclick="showSleepTips()">Learn More</button>
+            </div>
+            <div class="sleep-image">
+                <img src="sleep.jpg" alt="Sleep and Recovery" style="width: 100%; border-radius: 10px;">
+            </div>
+        </div>
+    </div>
+    <div id="sleepTipsModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7); z-index:1000; padding:20px; overflow-y: auto;">
+        <div style="background-color:white; padding:20px; border-radius:10px; max-width:600px; margin: auto; position:relative; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
+            <button onclick="closeSleepTips()" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:20px; cursor:pointer; color: #333;">&times;</button>
+            <h2 style="text-align: center; color: #28bf96;">Sleep Tips for Recovery</h2>
+            <ul>
+                <li>Establish a consistent sleep schedule.</li>
+                <li>Create a relaxing bedtime routine.</li>
+                <li>Limit screen time before bed.</li>
+                <li>Keep your sleep environment cool and dark.</li>
+                <li>Avoid caffeine and heavy meals close to bedtime.</li>
+                <li>Avoid alcohol before bed.</li>
+                <li>Exercise regularly, but not too close to bedtime.</li>
+                <li>Limit naps to 30 minutes.</li>
+                <li>Manage stress with relaxation techniques.</li>
+                <li>Use your bed only for sleep and sex.</li>
+                <li>Get plenty of natural light during the day.</li>
+                <li>Avoid long or irregular naps.</li>
+                <li>Consider a sleep aid if necessary, but use with caution.</li>
+                <li>Seek professional help if you have persistent sleep problems.</li>
+                <li>Keep a sleep diary to track your sleep patterns.</li>
+            
+            <img src="sleep2.jpg" alt="Sleep Tip 2" style="width: 100%; margin: 20px 0;">
+                <li>Practice deep breathing exercises before bed.</li>
+                <li>Use white noise or calming music to help you fall asleep.</li>
+                <li>Avoid using electronic devices in bed.</li>
+                <li>Try a warm bath or shower before bed to relax your muscles.</li>
+                <li>Consider using a sleep mask or blackout curtains to block out light.</li>
+                <img src="sleep1.jpg" alt="Sleep Tip 1" style="width: 100%; margin: 20px 0;">
+            </ul>
+        </div>
+    </div>
+</section>
+
+<style>
+    .sleep-recovery {
+        background-color: #f8f9fa; /* Light background for the section */
+        padding: 50px 0; /* Padding for the section */
+    }
+
+    .section-title {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .sleep-content {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .sleep-text {
+        flex: 1;
+    }
+
+    .sleep-text h3 {
+        color: #28bf96; /* Title color */
+    }
+
+    .sleep-benefits {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .sleep-benefits li {
+        margin: 10px 0;
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .sleep-benefits i {
+        color: #28bf96; /* Icon color */
+        margin-right: 10px;
+    }
+
+    .btn-learn-more {
+        background-color: #28bf96; /* Button color */
+        color: #fff; /* Text color */
+        border: none; /* No border */
+        padding: 12px 24px; /* Padding */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 1rem; /* Font size */
+        cursor: pointer; /* Pointer cursor */
+        transition: background-color 0.3s ease; /* Transition effect */
+        margin-top: 20px; /* Margin above the button */
+    }
+
+    .btn-learn-more:hover {
+        background-color: #209677; /* Darker shade on hover */
+    }
+</style>
+
+<script>
+    function showSleepTips() {
+        document.getElementById('sleepTipsModal').style.display = 'block';
+    }
+
+    function closeSleepTips() {
+        document.getElementById('sleepTipsModal').style.display = 'none';
+    }
+</script>
+  
+        
+          <div class="strategies-section">
+            <div class="container">
+              <h2 class="text-center">Effective Strategies for Achieving Fitness Goals</h2>
+              <div class="row">
+                <div class="col-md-6">
+                    <img src="img 55.jpg" alt="Progress Tracking Dashboard" class="flowchart-img" >
+                </div>
+                <div class="col-md-6">
+                  <div class="strategy-steps">
+                    <div class="step">
+                      <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Step 1" class="step-img">
+                      <h5 class="step-title">Set Clear Goals</h5>
+                      <p class="step-text">Define specific, measurable, achievable, relevant, and time-bound (SMART) fitness goals.</p>
+                    </div>
+                    <div class="step">
+                      <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2187&q=80" alt="Step 2" class="step-img">
+                      <h5 class="step-title">Create a Balanced Workout Plan</h5>
+                      <p class="step-text">Incorporate a mix of cardio, strength training, and flexibility exercises into your routine.</p>
+                    </div>
+                    <div class="step">
+                      <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Step 3" class="step-img">
+                      <h5 class="step-title">Maintain a Healthy Diet</h5>
+                      <p class="step-text">Fuel your body with nutritious foods that support your fitness goals and overall health.</p>
+                    </div>
+                    <div class="step">
+                      <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Step 4" class="step-img">
+                      <h5 class="step-title">Stay Consistent</h5>
+                      <p class="step-text">Develop a regular workout schedule and stick to it, even on days when motivation is low.</p>
+                    </div>
+                    <div class="step">
+                      <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Step 5" class="step-img">
+                      <h5 class="step-title">Track Your Progress</h5>
+                      <p class="step-text">Keep a fitness journal or use apps to monitor your workouts, measurements, and achievements.</p>
+                    </div>
+                    <div class="step">
+                      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Step 6" class="step-img">
+                      <h5 class="step-title">Get Proper Rest and Recovery</h5>
+                      <p class="step-text">Allow your body time to recover with adequate sleep and rest days between workouts.</p>
+                    </div>
+                    <div class="step">
+                      <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2220&q=80" alt="Step 7" class="step-img">
+                      <h5 class="step-title">Seek Support and Accountability</h5>
+                      <p class="step-text">Join fitness classes, find a workout buddy, or hire a personal trainer for motivation and guidance.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+    
+    <div class="cta-section">
+      
+        <h2 class="text-center">Take the First Step Towards Your Fitness Goals</h2>
+        <p class="text-center">Get started with our expert trainers, personalized workout plans, and state-of-the-art facilities</p>
+        <div class="text-center">
+          <a href="CONTACT US .html" class="btn btn-primary btn-lg">Get Started Now</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+      
+   
+   

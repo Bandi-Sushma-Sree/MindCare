@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Intelligence Development</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #007bff;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .article-card {
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .article-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+            transition: all 0.3s ease;
+        }
+
+        .article-card:hover::before {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 100%);
+        }
+
+        .article-content {
+            position: relative;
+            padding: 20px;
+            color: white;
+            transform: translateY(50px);
+            transition: all 0.3s ease;
+        }
+
+        .article-card:hover .article-content {
+            transform: translateY(0);
+        }
+
+        .article-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .article-content p {
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .article-card:hover .article-content p {
+            opacity: 1;
+        }
+        .detailed-article {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .detailed-article h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .detailed-article h3 {
+            color: #343a40;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .detailed-article p {
+            color: #6c757d;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .detailed-article ul {
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        .detailed-article img {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">EI Development</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#articles">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container hero-content text-center text-white">
+            <h1 class="display-4 fw-bold mb-4">Unlock Your Emotional Intelligence</h1>
+            <p class="lead mb-5">Enhance your relationships, boost your career, and improve your overall well-being</p>
+            <a href="#contact" class="btn btn-primary btn-lg">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title">About Emotional Intelligence</h2>
+                    <p>Emotional Intelligence (EI) is the ability to recognize, understand, and manage our own emotions, as well as the emotions of others. It plays a crucial role in our personal and professional lives, influencing our decision-making, relationships, and overall success.</p>
+                    <p>Our program is designed to help you develop and enhance your emotional intelligence skills, enabling you to navigate complex social situations, build stronger relationships, and achieve your goals with greater ease.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="img 53.jpg" alt="About Emotional Intelligence" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Key Features of Our Program</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <i class="fas fa-brain feature-icon"></i>
+                        <h3>Self-Awareness</h3>
+                        <p>Develop a deeper understanding of your emotions, strengths, and weaknesses.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <i class="fas fa-heart feature-icon"></i>
+                        <h3>Empathy</h3>
+                        <p>Learn to recognize and understand the emotions of others, improving your relationships.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <i class="fas fa-balance-scale feature-icon"></i>
+                        <h3>Emotional Regulation</h3>
+                        <p>Master techniques to manage and control your emotions in various situations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="articles" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Explore Emotional Intelligence</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="article-card" style="background-image: url('https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80');">
+                        <div class="article-content">
+                            <h3>The Importance of Self-Awareness</h3>
+                            <p>Discover how self-awareness can transform your personal and professional life, leading to better decision-making and stronger relationships.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="article-card" style="background-image: url('image9.jpg');">
+                        <div class="article-content">
+                            <h3>Empathy in the Workplace</h3>
+                            <p>Learn how cultivating empathy can improve team dynamics, increase productivity, and create a more positive work environment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="article-card" style="background-image: url('image11.jpg');">
+                        <div class="article-content">
+                            <h3>Emotional Regulation Techniques</h3>
+                            <p>Explore practical strategies for managing your emotions effectively in high-stress situations and improving your overall well-being.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="benefits" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Benefits of Emotional Intelligence</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Better Relationships">
+                        <div class="card-body">
+                            <h3 class="card-title">Better Relationships</h3>
+                            <p class="card-text">Develop stronger, more meaningful connections with others through improved communication and understanding.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Improved Decision Making">
+                        <div class="card-body">
+                            <h3 class="card-title">Improved Decision Making</h3>
+                            <p class="card-text">Make more balanced and effective decisions by considering both emotional and logical factors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Enhanced Leadership Skills">
+                        <div class="card-body">
+                            <h3 class="card-title">Enhanced Leadership Skills</h3>
+                            <p class="card-text">Become a more effective leader by understanding and managing your team's emotions and motivations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        
+    <section id="detailed-article" class="py-5">
+      <div class="container">
+          <div class="detailed-article">
+              <h2>The Power of Emotional Intelligence: Transforming Your Life and Career</h2>
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Emotional Intelligence in the Workplace" class="img-fluid mb-4">
+              <p>Emotional Intelligence (EI) has become a buzzword in recent years, but its impact on our personal and professional lives is far from being just a trend. In this article, we'll explore the depths of emotional intelligence, its components, and how developing your EI can lead to transformative changes in your life and career.</p>
+
+              <h3>What is Emotional Intelligence?</h3>
+              <p>Emotional Intelligence, first coined by psychologists Peter Salovey and John Mayer, and later popularized by Daniel Goleman, refers to the ability to recognize, understand, and manage our own emotions, as well as the emotions of others. It encompasses a range of skills that are crucial for navigating the complexities of human interactions and personal growth.</p>
+
+              <h3>The Five Components of Emotional Intelligence</h3>
+              <p>According to Daniel Goleman, emotional intelligence consists of five key components:</p>
+              <ul>
+                  <li><strong>Self-awareness:</strong> The ability to recognize and understand your own emotions, strengths, weaknesses, values, and motivations.</li>
+                  <li><strong>Self-regulation:</strong> The capacity to manage and control your emotions, especially in challenging situations.</li>
+                  <li><strong>Motivation:</strong> The drive to pursue goals with energy and persistence, beyond external rewards.</li>
+                  <li><strong>Empathy:</strong> The ability to understand and share the feelings of others.</li>
+                  <li><strong>Social skills:</strong> The proficiency in managing relationships and building networks.</li>
+              </ul>
+
+              <h3>The Impact of Emotional Intelligence on Your Career</h3>
+              <p>Numerous studies have shown that individuals with high emotional intelligence tend to perform better in their careers. Here's how EI can benefit your professional life:</p>
+              <ul>
+                  <li><strong>Better leadership:</strong> Leaders with high EI are more effective at motivating and inspiring their teams.</li>
+                  <li><strong>Improved communication:</strong> Understanding and managing emotions leads to clearer, more effective communication.</li>
+                  <li><strong>Enhanced teamwork:</strong> Empathy and social skills contribute to better collaboration and team dynamics.</li>
+                  <li><strong>Conflict resolution:</strong> EI helps in navigating and resolving conflicts more effectively.</li>
+                  <li><strong>Adaptability:</strong> Those with high EI are better equipped to handle change and uncertainty in the workplace.</li>
+              </ul>
+
+              <h3>Developing Your Emotional Intelligence</h3>
+              <p>The good news is that emotional intelligence can be developed and improved over time. Here are some strategies to enhance your EI:</p>
+              <ol>
+                  <li><strong>Practice self-reflection:</strong> Regularly take time to examine your emotions, reactions, and behaviors.</li>
+                  <li><strong>Seek feedback:</strong> Ask trusted colleagues or friends for honest feedback about your emotional responses and interactions.</li>
+                  <li><strong>Develop active listening skills:</strong> Focus on truly understanding others rather than just waiting for your turn to speak.</li>
+                  <li><strong>Practice empathy:</strong> Try to put yourself in others' shoes and understand their perspectives.</li>
+                  <li><strong>Manage stress:</strong> Develop healthy coping mechanisms for stress, such as meditation or exercise.</li>
+                  <li><strong>Learn conflict resolution skills:</strong> Take courses or read books on effective conflict resolution techniques.</li>
+              </ol>
+
+              <h3>Conclusion</h3>
+              <p>Emotional Intelligence is not just a nice-to-have skill; it's a crucial component of personal and professional success. By developing your EI, you can improve your relationships, enhance your leadership abilities, and navigate the complexities of modern work life with greater ease and effectiveness. Remember, emotional intelligence is a journey, not a destination. Continuous learning and practice are key to harnessing the full power of your emotional intelligence.</p>
+          </div>
+      </div>
+  </section>
+    
+    <section id="ei-resources" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Emotional Intelligence Resources</h2>
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" class="card-img-top" alt="E-books">
+            <div class="card-body">
+                <h3 class="card-title">E-books</h3>
+                <p class="card-text">Download our collection of e-books on various aspects of emotional intelligence.</p>
+                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#ebooksModal">Browse E-books</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" class="card-img-top" alt="Webinars">
+            <div class="card-body">
+                <h3 class="card-title">Webinars</h3>
+                <p class="card-text">Join our live webinars featuring expert speakers on emotional intelligence topics.</p>
+                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#webinarsModal">View Schedule</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Podcasts">
+            <div class="card-body">
+                <h3 class="card-title">Podcasts</h3>
+                <p class="card-text">Listen to our podcasts for insights and tips on developing emotional intelligence.</p>
+                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#podcastsModal">Listen Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="ebooksModal" tabindex="-1" aria-labelledby="ebooksModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ebooksModalLabel">E-books</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Explore our collection of e-books that cover various aspects of emotional intelligence, including practical tips and strategies for personal development.</p>
+                <p><strong>Available Titles:</strong></p>
+                <ul>
+                    <li>Understanding Emotional Intelligence</li>
+                    <li>Building Stronger Relationships</li>
+                    <li>Managing Stress Effectively</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="webinarsModal" tabindex="-1" aria-labelledby="webinarsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="webinarsModalLabel">Webinars</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Join our live webinars featuring expert speakers who will discuss various topics related to emotional intelligence.</p>
+                <p><strong>Upcoming Webinars:</strong></p>
+                <ul>
+                    <li>Emotional Intelligence in the Workplace - March 15</li>
+                    <li>Building Empathy - March 22</li>
+                    <li>Stress Management Techniques - March 29</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="podcastsModal" tabindex="-1" aria-labelledby="podcastsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="podcastsModalLabel">Podcasts</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Listen to our podcasts for insights and tips on developing emotional intelligence.</p>
+                <p><strong>Featured Episodes:</strong></p>
+                <ul>
+                    <li>Understanding Your Emotions</li>
+                    <li>Empathy in Action</li>
+                    <li>Overcoming Anxiety</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+         
+    <section id="contact" class="py-5 bg-primary text-white">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6 mx-auto text-center">
+                  <h2 class="section-title">Get Started Today</h2>
+                  <p class="mb-4">Ready to unlock your emotional intelligence potential? Contact us now to learn more about our program and how we can help you achieve your goals.</p>
+                  <a href="CONTACT US.html" class="btn btn-light btn-lg">Contact Us</a>
+              </div>
+          </div>
+      </div>
+  </section>
+    <footer class="py-4 bg-dark text-white">
+        <div class="container text-center">
+            <p>&copy; 2023 Emotional Intelligence Development. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Responsive Contact Form </title>
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <style>
+      
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: grid;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+        }
+	body {
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+}
+
+        .contact-wrap {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .contact-in {
+            padding: 40px 30px;
+        }
+
+        .contact-in:nth-child(1) {
+            flex: 30%;
+            background: url(../images/1.jpg);
+            color: #fff;
+        }
+
+        .contact-in:nth-child(2) {
+            flex: 45%;
+            background: Aquamarine;
+        }
+
+        .contact-in:nth-child(3) {
+            flex: 25%;
+            padding: 0;
+        }
+
+        .contact-in h1 {
+            font-size: 24px;
+            color: black;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .contact-in h2 {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .contact-in h2 i {
+            font-size: 16px;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            background: pink;
+            color: #000;
+            border-radius: 50px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .contact-in p {
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .contact-in ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-in ul li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+
+        .contact-in ul li a {
+            display: block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            background: #fff;
+            border-radius: 50px;
+        }
+
+        .contact-in ul li a i {
+            font-size: 14px;
+            line-height: 30px;
+            color: #000;
+        }
+
+        .contact-in form {
+            width: 100%;
+        }
+
+        .contact-in-input {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            border: 1px solid black;
+            outline: none;
+            padding-left: 5px;
+            background: transparent;
+            color: black;
+            font-size: 12px;
+            font-weight: 300;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-in-input::placeholder {
+            color: black;
+        }
+
+        .contact-in-textarea {
+            width: 100%;
+            height: 140px;
+            margin-bottom: 20px;
+            border: 1px solid black;
+            outline: none;
+            padding-top: 5px;
+            padding-left: 5px;
+            background: transparent;
+            color: black;
+            font-size: 12px;
+            font-weight: 300;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-in-textarea::placeholder {
+            color: black;
+        }
+
+        .contact-in-btn {
+            width: 100%;
+            height: 40px;
+            border: 1px solid #fff;
+            outline: none;
+            background: blue;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 300;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+        }
+
+        .contact-in iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media only screen and (max-width:480px) {
+            .contact-in:nth-child(1), .contact-in:nth-child(2) {
+                flex: 50%;
+            }
+
+            .contact-in:nth-child(3) {
+                flex: 100%;
+            }
+        }
+
+        @media only screen and (max-width:360px) {
+            .contact-in:nth-child(1), .contact-in:nth-child(2) {
+                flex: 50%;
+            }
+
+            .contact-in:nth-child(3) {
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-wrap">
+        <div class="contact-in">
+            <h1 style="color:coral">Contact Us </h1>
+            
+<h4 style="color:DarkMagenta"> Let's Connect</h1><br>
+            <h2 style="color:DeepPink"><i class="fa fa-phone" aria-hidden="true"></i> Phone</h2>
+            <p style="color:DarkCyan">+91 40 4030 1111
+</p>
+            <h2 style="color:DeepPink"><i class="fa fa-envelope" aria-hidden="true"></i> Email Us</h2>
+            <p style="color:DarkCyan">mindcare@gmail.com</p>
+            <h2 style="color:DeepPink"><i class="fa fa-map-marker" aria-hidden="true"></i> Address</h2>
+            <p style="color:DarkCyan"> SBR towers 3rd Floor, Plot No. 27, Madhapur Village, Hitech City Road, Madhapur, Hyderabad, Telangana 500081
+
+</p>
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="contact-in">
+            <h1>Send a Message</h1>
+            <form id="contactForm">
+                <input type="text" name="fullName" placeholder="Full Name" class="contact-in-input" required>
+                <input type="email" name="email" placeholder="Email" class="contact-in-input" required>
+                <input type="text" name="subject" placeholder="Subject" class="contact-in-input">
+                <textarea name="message" placeholder="Message" class="contact-in-textarea" required></textarea>
+                <input type="submit" value="SUBMIT" class="contact-in-btn">
+            </form>
+            <div id="formResponse" style="margin-top: 10px; font-weight: bold; color: green;"></div>
+        </div>
+        <div class="contact-in">
+            <img src="1.jpg" 
+    width="100%" 
+    height="600px" 
+    >
+
+        </div>
+        <!-- JavaScript for Form Handling -->
+        <script>
+            const form = document.getElementById('contactForm');
+            const formResponse = document.getElementById('formResponse');
+        
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault(); // Prevent default form submission
+        
+                // Gather form data
+                const formData = new FormData(form);
+                const data = {
+                    fullName: formData.get('fullName'),
+                    email: formData.get('email'),
+                    subject: formData.get('subject'),
+                    message: formData.get('message')
+                };
+        
+                try {
+                    // Send POST request to your backend
+                    const response = await fetch('http://localhost:8693/api/contact', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+        
+                    const result = await response.json();
+        
+                    // Display success or error message
+                    if (response.ok) {
+                        formResponse.style.color = 'green';
+                        formResponse.textContent = '✅ Message sent successfully!';
+                        form.reset(); // Clear the form
+                    } else {
+                        formResponse.style.color = 'red';
+                        formResponse.textContent = `❌ ${result.error || 'Something went wrong!'}`;
+                    }
+                } catch (error) {
+                    formResponse.style.color = 'red';
+                    formResponse.textContent = '❌ Failed to connect to the server. Please try again.';
+                    console.error('Error:', error);
+                }
+            });
+        </script>
+        
+            
+            
+        </div>
+        
+    </div>
+</body>
+</html>

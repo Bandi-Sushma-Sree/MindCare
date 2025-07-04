@@ -1,0 +1,2207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition  Management - MindCare</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icons">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+        <title>Login Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Gabarito&family=Inclusive+Sans&family=Inter&family=Montserrat&family=Poppins&family=Raleway&family=Roboto&family=Space+Grotesk&family=Ubuntu&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    transition: all 0.5s linear;
+    font-family: 'Courgette', cursive;
+    font-family: 'Gabarito', sans-serif;
+    font-family: 'Inclusive Sans', sans-serif;
+}
+.background{
+    height: 100vh;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80');
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.navbar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1% 2%;
+            position: relative;
+        }
+
+        .navbar-items {
+            text-align: right;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin-left: 50px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 2px;
+            width: 0;
+            display: flex;
+            justify-content: flex-end;
+           
+            background-color: #2e6476;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+        @media only screen and (max-width: 766px) {
+    .navbar-items {
+        position: absolute;
+        background-color: #2e6476;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0; /* Ensures the navbar is positioned on the right */
+        
+        z-index: 2;
+        transition: all 1s ease-out;
+    }}
+
+
+
+.main{
+    height: 85vh;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    padding-left: 20%;
+}
+.text-box{
+    color:purple;
+    width: 40%;
+    font-weight: bold;
+    font-family: "nunito",sans-serif;
+   
+}
+.text-box h1{
+    padding: 2px;
+    font-size: 60px;
+}
+.text-box p{
+    padding: 1% 0;
+}
+
+.heading{
+    padding: 2% 0;
+    color: #2e6476;
+    font-size: 40px;
+}
+
+.quality{
+    width: 80%;
+    margin: auto;
+    padding-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.box2,.box3{
+    flex-basis: 29%;
+    text-align: center;
+    padding: 2%;
+    margin: 3% 0;
+}
+.box2 h2{
+    padding: 2% 0;
+    font-size: 29px;
+}
+.box2 i{
+    font-size: 3em;
+    padding-bottom: 2%;
+}
+.quality div :nth-child(1) i{
+    color: #30e430;
+}
+.quality div :nth-child(2) i{
+color: red;
+}
+.quality div :nth-child(3) i{
+color: blue;
+}
+.box2:hover{
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    transition: all 0.5s ease-out;
+}
+
+
+
+
+
+    
+/* ____________responsiveness */
+@media only screen and (max-width:995px){
+    .box{
+        width: 40%;
+        height: 69%;
+    }
+    .row1{
+        flex-direction: column;
+    }
+    .left{
+        width: 60%;
+    }
+    .right{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:828px){
+    .text-box h1{
+        font-size: 40px;
+    }
+    .footer-sec {
+        width: 100%;
+    }
+}
+@media only screen and (max-width:766px){
+    .navbar ul li{
+        display: block;
+        padding: 2px 0 34px;
+    }
+    .navbar-items{
+        position: absolute;
+        background-color: #2e6476;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+        transition: all 1s ease-out;
+    }
+    .navbar-items ul{
+        padding: 98px 51px 8px 49px;
+    }
+   
+   
+    .main{
+        flex-direction: column-reverse;
+    }
+    .text-box{
+        width: 80%;
+    }
+    .box input{
+        width: 85%;
+    }
+    .row,.sec{
+        flex-direction: column;
+    }
+    .box3{
+        width: 90%;
+    }
+    .row,.box1{
+        margin-bottom: 7%;
+    }
+    .box1{
+        padding: 4%;
+    }
+}
+@media only screen and (max-width:570px){
+    .box{
+        width: 68%;
+    }
+    .text-box,.right,.left{
+        width: 95%;
+    }
+    .box h1{
+        padding: 0;
+    }
+    .text-box p{
+        font-size: 12px;
+    }
+    .right p{
+        font-size: 14px;
+    }
+}
+    </style>
+</head>
+<body>
+    <section class="background">
+        <nav class="navbar">
+            
+                <a href="#" class="logo"><img src="" alt=""></a>
+                <div class="navbar-items h-class">
+                    <ul class="nav v-class">
+          
+                
+                    <li><a href="MindCare Home.html">HOME</a></li>
+                    <li><a href="MindCare About us.html">ABOUT</a></li>
+                    <li><a href="MindCare Services.html">Services</a></li>
+                    <li><a href="CONTACT US.html">Contact </a></li>
+                    <li><a href="sleep journal.html">Sleep Journal</a></li>
+                    <li><a href="MindCare Login_page.html">login</a></li>
+                   
+                </ul>
+            </div>
+            
+        </nav>
+        <!-- _________main-sec -->
+        <div class="main">
+            <div class="text-box">
+                <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold; font-size: 50px; color: #4CAF50;">Nourish Your Body, Elevate Your Life</h1>
+
+                <p>Embark on a journey to optimal health with our expert nutritional guidance. Our personalized meal plans and dietary advice help you achieve your goals, whether it's weight management, increased energy, or overall wellness.</p>
+                
+                <a href="" class="btn btn1" style="background-color: #4CAF50; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; text-align: right;">Start Your Nutrition Plan Today!</a>
+            </div>
+           
+          </section> 
+          <section class="nutrition-services py-5">
+            <div class="container">
+                <h1 class="section-title text-center mb-5">Our Nutrition Services</h1>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <img src="ess.jpg" alt="Personalized Nutrition Counseling" class="service-image">
+                            <div class="service-content">
+                                <h2>Essential Nutrients for Our Body</h2>
+                                <p>Our body requires a variety of essential nutrients to function properly.  Each nutrient has a specific role in the body.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Meal Planning" class="service-image">
+                            <div class="service-content">
+                                <h2>Customized Meal Planning</h2>
+                                <p>Personalized meal plans designed to meet your nutritional needs and preferences.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-weight"></i>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Weight Management" class="service-image">
+                            <div class="service-content">
+                                <h2>Weight Management Programs</h2>
+                                <p>Comprehensive programs for healthy weight loss or gain through proper nutrition.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-carrot"></i>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Nutrition Workshops" class="service-image">
+                            <div class="service-content">
+                                <h2>Nutrition Workshops</h2>
+                                <p>Educational group sessions on various nutrition topics and healthy cooking techniques.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Medical Nutrition Therapy" class="service-image">
+                            <div class="service-content">
+                                <h2>The Benefits of a Balanced Diet for Reducing Stress and Anxiety</h2>
+                                <p>This section highlights the importance of a balanced diet in managing stress and anxiety levels.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Nutrition Tracking App" class="service-image">
+                            <div class="service-content">
+                                <h2>Dietary Tips</h2>
+                                <p>Get personalized dietary advice tailored to your specific needs and goals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            .services {
+                background-color: #f8f9fa;
+                padding: 80px 0;
+            }
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+            .section-title {
+                text-align: center;
+                font-size: 2.5rem;
+                color: #333;
+                margin-bottom: 50px;
+            }
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+            }
+            .service-card {
+                background-color: #fff;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative;
+            }
+            .service-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+            .service-icon {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                background-color: rgba(255, 255, 255, 0.9);
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                color: #007bff;
+                z-index: 1;
+            }
+            .service-image {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+            .service-content {
+                padding: 20px;
+            }
+            .service-content h2 {
+                font-size: 1.5rem;
+                color: #333;
+                margin-bottom: 10px;
+            }
+            .service-content p {
+                font-size: 1rem;
+                color: #666;
+                line-height: 1.6;
+            }
+        </style>
+          
+          
+          
+    <!-- __________quality -->
+<section class="quality">
+  <h1 class="heading">Why Choose MindCare</h1>
+  <div class="row">
+    <div class="box2">
+      <i class="fas fa-clock"></i>
+      <h2>Accessible Care</h2>
+      <p>Expert support available 24/7 for your mental health needs.</p>
+    </div>
+    <div class="box2">
+      <i class="fas fa-heart"></i>
+      <h2>Compassionate Approach</h2>
+      <p>Personalized care and empathy from our experienced therapists.</p>
+    </div>
+    <div class="box2">
+      <i class="fas fa-chart-line"></i>
+      <h2>Proven Results</h2>
+      <p>Effective treatments and measurable progress for lasting well-being.</p>
+    </div>
+  </div>
+</section>
+
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+   
+    <title>Fitness Management</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #28bf96;
+  --primary-color-dark: #209677;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  text-decoration: none;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
+.header {
+  padding: 0 1rem;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.content h1 span {
+  font-weight: 400;
+}
+
+.content p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  line-height: 1.75rem;
+}
+
+.image {
+  position: relative;
+  text-align: center;
+  isolation: isolate;
+}
+
+.image__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 450px;
+  width: 450px;
+  background-color:;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.image img {
+  width: 100%;
+  max-width: 475px;
+}
+
+.image__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image__content__1 {
+  transform: translate(calc(-50% - 12rem), calc(-50% - 8rem));
+}
+
+.image__content__1 span {
+  padding: 10px 12px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background-color: #defcf4;
+  border-radius: 100%;
+}
+
+.image__content__1 h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.image__content__1 p {
+  color: var(--text-light);
+}
+
+.image__content__2 {
+  transform: translate(calc(-50% + 8rem), calc(-50% + 10rem));
+}
+
+.image__content__2 ul {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.image__content__2 li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: var(--text-light);
+}
+
+.image__content__2 span {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+@media (width < 900px) {
+  .nav__links {
+    display: none;
+  }
+
+  .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  background-image: linear-gradient(to bottom,);
+}
+
+.content {
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.image {
+  flex: 1;
+  padding: 20px;
+}
+
+.image__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+
+}
+:root {
+            --primary-color: #28a745;
+            --secondary-color: #17a2b8;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+        .hero-section {
+          
+            background-image: url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size:auto;
+            background-position: center;
+            color: #fff;
+            padding: 100px 0;
+            position: relative;
+            height:476px;
+            
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
+        }
+        .dark-mode .card {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #218838;
+        }
+        .symptoms-section {
+            background-color: #e9ecef;
+            padding: 50px 0;
+        }
+        .dark-mode .symptoms-section {
+            background-color: #2c3e50;
+        }
+        .symptom-card {
+            text-align: center;
+            padding: 20px;
+        }
+        .symptom-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+  
+       
+    </style>
+  </head>
+  <body>
+    
+   
+
+  <header class="hero-section">
+    <div class="container hero-content">
+        <h1 class="display-4 mb-4">Nutrition: The Key to Unlocking Your Best Self"</h1>
+
+        <p class="lead mb-4">Discover personalized nutrition plans, expert guidance, and evidence-based strategies to fuel your body, boost your energy, and achieve lasting health.</p>
+        
+        <div class="slogans mt-4">
+            <p class="slogan-1">"Eat Smart, Live Strong"</p>
+            <p class="slogan-2">"Your Plate, Your Power"</p>
+            
+        </div>
+      
+
+
+
+      </div>
+  </header>
+  <section class="symptoms-section">
+    <h2 class="section-title text-center">Recognizing Malnutrition: Common Symptoms</h2>
+    <div class="row g-4">
+    <div class="col-md-4">
+    <div class="symptom-card">
+      <i class="fa fa-male" aria-hidden="true" style="font-size: 58px; color: rgb(21, 161, 21);"></i>
+
+    <h4>Physical Symptoms</h4>
+    <p>Fatigue, weakness, weight loss, and poor wound healing.</p>
+    </div>
+    </div>
+    <div class="col-md-4">
+    <div class="symptom-card">
+    <i class="fas fa-brain symptom-icon"></i>
+    <h4>Cognitive Symptoms</h4>
+    <p>Difficulty concentrating, memory loss, confusion, and mood changes.</p>
+    </div>
+    </div>
+    <div class="col-md-4">
+    <div class="symptom-card">
+    <i class="fas fa-heartbeat symptom-icon"></i>
+    <h4>Health-Related Symptoms</h4>
+    <p>Weakened immune system, hair loss, skin problems, and digestive issues.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+   
+    
+      
+    
+    
+</div>
+</body>
+</html>
+<div style="height: 50px;"></div>
+
+<div style="height: 50px;"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Components of Fitness Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .section-title {
+            color: #4CAF50;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: #4CAF50;
+        }
+        .fitness-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .fitness-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(76, 175, 80, 0.2);
+        }
+        .fitness-title {
+            font-weight: bold;
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #4CAF50;
+        }
+        .fitness-text {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        .fitness-img-wrapper {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid #e0e0e0;
+        }
+        .fitness-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .fitness-card:hover .fitness-img {
+            transform: scale(1.1);
+        }
+        .icon-wrapper {
+            font-size: 2.5rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Key Components of Nutrition Management</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="fitness-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h5 class="fitness-title text-center">Meal Planning</h5>
+                        <p class="fitness-text text-center">Create balanced, nutritious meal plans tailored to your dietary needs and preferences, ensuring you meet your nutritional goals consistently.</p>
+                        <div class="fitness-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Meal Planning" class="fitness-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fitness-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h5 class="fitness-title text-center">Calorie Tracking</h5>
+                        <p class="fitness-text text-center">Monitor your daily calorie intake to maintain energy balance, support weight management goals, and ensure proper nutrient consumption.</p>
+                        <div class="fitness-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Calorie Tracking" class="fitness-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fitness-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-carrot"></i>
+                        </div>
+                        <h5 class="fitness-title text-center">Macronutrient Balance</h5>
+                        <p class="fitness-text text-center">Optimize your intake of proteins, carbohydrates, and fats to support your health goals, whether it's muscle gain, weight loss, or overall wellness.</p>
+                        <div class="fitness-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80" alt="Macronutrient Balance" class="fitness-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fitness-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h5 class="fitness-title text-center">Nutrition Education</h5>
+                        <p class="fitness-text text-center">Gain knowledge about nutrition principles, food groups, and healthy eating habits through expert-led workshops and educational resources.</p>
+                        <div class="fitness-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Nutrition Education" class="fitness-img">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="fitness-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 class="fitness-title text-center">Progress Monitoring</h5>
+                        <p class="fitness-text text-center">Track your nutritional progress through regular assessments, body composition measurements, and health markers to ensure you're meeting your dietary goals.</p>
+                        <div class="fitness-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1461773518188-b3e86f98242f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Progress Monitoring" class="fitness-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fitness-card d-flex flex-column align-items-center">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <h5 class="fitness-title text-center">Micronutrient Optimization</h5>
+                        <p class="fitness-text text-center">Ensure you're getting all essential vitamins and minerals through a balanced diet and targeted supplementation when necessary.</p>
+                        <div class="fitness-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1610348725531-843dff563e2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Micronutrient Optimization" class="fitness-img">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section class="nutrition-app-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Essential Nutrients for Our Body</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="app-features">
+                        <div class="feature-item d-flex align-items-center mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-carrot"></i> <!-- Icon representing vitamins -->
+                            </div>
+                            <div class="feature-text">
+                                <h4>Vitamins</h4>
+                                <p>Essential for immune function, energy production, and overall health.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-apple-alt"></i> <!-- Icon representing fruits -->
+                            </div>
+                            <div class="feature-text">
+                                <h3>Minerals</h3>
+                                <p>Important for bone health, muscle function, and metabolic processes.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-fish"></i> <!-- Icon representing protein -->
+                            </div>
+                            <div class="feature-text">
+                                <h3>Proteins</h3>
+                                <p>Crucial for building and repairing tissues, as well as hormone production.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-buttons mt-5">
+                        <a href="minerals.html" class="btn btn-primary btn-lg me-3" id="learnMoreBtn">
+                            <i class="fas fa-book me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="app-screenshot">
+                        <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Essential Nutrients" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    
+    <style>
+    .nutrition-app-section {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    }
+    .nutrition-app-section {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    }
+    
+    .section-title {
+        color: #2c3e50;
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #4CAF50, #45a049);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .feature-icon i {
+        font-size: 1.5rem;
+        color: white;
+    }
+    
+    .feature-item:hover .feature-icon {
+        transform: scale(1.1);
+    }
+    
+    .feature-text h3 {
+        font-size: 1.3rem;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+    }
+    
+    .feature-text p {
+        font-size: 1rem;
+        color: #7f8c8d;
+    }
+    
+    .app-screenshot img {
+        transition: transform 0.3s ease;
+    }
+    
+    .app-screenshot:hover img {
+        transform: translateY(-10px);
+    }
+    
+    .download-btn {
+        transition: all 0.3s ease;
+    }
+    
+    .download-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    @media (max-width: 991px) {
+        .app-screenshot {
+            margin-top: 2rem;
+        }
+    }
+    </style>
+    
+    
+     </body>
+     </html>
+     <section class="weight-management-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Weight Management Programs</h2>
+            <p class="text-center mb-5">Comprehensive programs for healthy weight loss or gain through proper nutrition.</p>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                        <h3>Weight Loss Program</h3>
+                        <p>Personalized plan for healthy and sustainable weight loss.</p>
+                        <button class="btn btn-primary program-details" data-program="weightloss">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3>Weight Gain Program</h3>
+                        <p>Structured approach to gaining weight in a healthy manner.</p>
+                        <button class="btn btn-primary program-details" data-program="weightgain">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Weight Maintenance</h3>
+                        <p>Strategies to maintain your ideal weight long-term.</p>
+                        <button class="btn btn-primary program-details" data-program="maintenance">Learn More</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="programDetails" class="mt-5" style="display: none;">
+                <h3 id="programTitle"></h3>
+                <p id="programDescription"></p>
+                <ul id="programFeatures"></ul>
+                <div class="text-center mt-4">
+                    <a href="weight.html" class="btn btn-success" id="enrollButton">Know More</a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+     
+    <style>
+    .weight-management-section {
+        background-color: #f8f9fa;
+    }
+    
+    .section-title {
+        color: #2c3e50;
+        font-weight: 700;
+    }
+    
+    .program-card {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+    }
+    
+    .program-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .program-icon {
+        font-size: 3rem;
+        color: #4CAF50;
+        margin-bottom: 1rem;
+    }
+    
+    .program-card h3 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+    }
+    
+    .program-card p {
+        color: #7f8c8d;
+        margin-bottom: 1.5rem;
+    }
+    
+    #programDetails {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    #programTitle {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+    }
+    
+    #programDescription {
+        color: #7f8c8d;
+        margin-bottom: 1.5rem;
+    }
+    
+    #programFeatures {
+        color: #7f8c8d;
+        padding-left: 1.5rem;
+    }
+    
+    #enrollButton {
+        transition: all 0.3s ease;
+    }
+    
+    #enrollButton:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const programDetails = {
+                weightloss: {
+                    title: "Weight Loss Program",
+                    description: "Our Weight Loss Program is designed to help you achieve sustainable weight loss through proper nutrition and lifestyle changes.",
+                    features: [
+                        "Personalized meal plans",
+                        "Regular consultations with nutritionists",
+                        "Progress tracking and adjustments",
+                        "Exercise recommendations",
+                        "Behavioral counseling for long-term success"
+                    ]
+                },
+                weightgain: {
+                    title: "Weight Gain Program",
+                    description: "Our Weight Gain Program focuses on helping you gain weight in a healthy manner, emphasizing lean muscle mass gain.",
+                    features: [
+                        "Customized high-calorie meal plans",
+                        "Protein-rich diet strategies",
+                        "Strength training recommendations",
+                        "Supplement guidance if necessary",
+                        "Regular body composition assessments"
+                    ]
+                },
+                maintenance: {
+                    title: "Weight Maintenance Program",
+                    description: "Our Weight Maintenance Program helps you sustain your ideal weight through balanced nutrition and lifestyle habits.",
+                    features: [
+                        "Balanced meal planning",
+                        "Strategies for social eating and travel",
+                        "Stress management techniques",
+                        "Ongoing support and check-ins",
+                        "Adjustments for different life stages"
+                    ]
+                }
+            };
+        
+            const detailButtons = document.querySelectorAll('.program-details');
+            const programDetailsSection = document.getElementById('programDetails');
+            const programTitle = document.getElementById('programTitle');
+            const programDescription = document.getElementById('programDescription');
+            const programFeatures = document.getElementById('programFeatures');
+        
+            detailButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const program = this.getAttribute('data-program');
+                    const details = programDetails[program];
+        
+                    programTitle.textContent = details.title;
+                    programDescription.textContent = details.description;
+                    programFeatures.innerHTML = details.features.map(feature => `<li>${feature}</li>`).join('');
+                    
+                    programDetailsSection.style.display = 'block';
+                    programDetailsSection.scrollIntoView({ behavior: 'smooth' });
+        
+                    // Redirect to weight.html after displaying the details
+                    setTimeout(() => {
+                        window.location.href = 'weight.html';
+                    }, 3000); // Redirects after 3 seconds
+                });
+            });
+        });
+        </script>
+   
+                   
+     
+    </body>
+    </html>
+     
+   
+                     
+    <section class="dietary-tips py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Dietary Tips</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1607962837359-5e7e89f86776?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dietary Tips" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-md-6">
+                    <p class="lead mb-4">Explore essential dietary tips for maintaining a balanced and healthy lifestyle.</p>
+                    <div class="tips-features">
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-carrot"></i>
+                            </div>
+                            <p>Incorporate a variety of fruits and vegetables into your meals.</p>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <p>Practice portion control to manage calorie intake.</p>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <p>Stay hydrated by drinking plenty of water throughout the day.</p>
+                        </div>
+                    </div>
+                    <a href="dietery.html" class="btn btn-primary btn-lg mt-4" id="learnMoreTips">Learn More Tips</a>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+    .nutrition-counseling {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    }
+    
+    .section-title {
+        color: #2c3e50;
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background-color: #4CAF50;
+    }
+    
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #4CAF50, #45a049);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .feature-item:hover .feature-icon {
+        transform: scale(1.1);
+    }
+    
+    .btn-primary {
+        background-color: #4CAF50;
+        border-color: #4CAF50;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+        background-color: #45a049;
+        border-color: #45a049;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .img-fluid {
+        transition: transform 0.3s ease;
+    }
+    
+    .img-fluid:hover {
+        transform: scale(1.05);
+    }
+    
+    @media (max-width: 768px) {
+        .col-md-6 img {
+            margin-bottom: 2rem;
+        }
+    }
+    </style>
+    
+    
+    </html>
+ 
+    <section class="meal-planning-section py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Customized Meal Planning</h2>
+            <p class="text-center lead mb-5">Personalized meal plans designed to meet your nutritional needs and preferences.</p>
+            
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="meal-plan-image">
+                        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Customized Meal Planning" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="meal-plan-features">
+                        <div class="feature-item d-flex align-items-center mb-4">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div>
+                                <h4>Tailored to Your Needs</h4>
+                                <p>Plans customized based on your dietary requirements and health goals.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-4">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-shopping-basket"></i>
+                            </div>
+                            <div>
+                                <h4>Grocery Lists</h4>
+                                <p>Convenient shopping lists to make meal prep easy and efficient.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item d-flex align-items-center">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Regular Updates</h4>
+                                <p>Plans adjusted based on your progress and changing preferences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <button class="btn btn-primary btn-lg" id="createPlanBtn">Create Your Meal Plan</button>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.getElementById('createPlanBtn').addEventListener('click', function() {
+            // Redirect to the meal planning page
+            window.location.href = 's.html'; // Change this to your actual meal planning page URL
+        });
+    </script>
+   
+    <style>
+    .meal-planning-section {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    }
+    
+    .section-title {
+        color: #2c3e50;
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background-color: #4CAF50;
+    }
+    
+    .meal-plan-image img {
+        transition: transform 0.3s ease;
+    }
+    
+    .meal-plan-image:hover img {
+        transform: scale(1.05);
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #4CAF50, #45a049);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .feature-item:hover .feature-icon {
+        transform: rotate(15deg);
+    }
+    
+    .btn-primary {
+        background-color: #4CAF50;
+        border-color: #4CAF50;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+        background-color: #45a049;
+        border-color: #45a049;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    @media (max-width: 991px) {
+        .meal-plan-image {
+            margin-bottom: 2rem;
+        }
+    }
+    </style>
+    
+    </html>
+    
+    <section class="benefits-balanced-diet py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">The Benefits of a Balanced Diet for Reducing Stress and Anxiety</h2>
+            <p class="text-center lead mb-5">Discover how a well-rounded diet can help manage stress and improve mental well-being.</p>
+    
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="benefits-image">
+                        <img src="bd.jpg" alt="Balanced Diet Benefits" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="benefits-features">
+                        <div class="feature-item d-flex align-items-center mb-4">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h4>Improved Mood</h4>
+                                <p>A balanced diet rich in fruits, vegetables, and whole grains can enhance mood and reduce feelings of anxiety.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-4">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div>
+                                <h4>Cognitive Function</h4>
+                                <p>Essential nutrients support brain health, improving focus and reducing stress levels.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item d-flex align-items-center">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div>
+                                <h4>Physical Health</h4>
+                                <p>A balanced diet contributes to overall physical health, which is closely linked to mental well-being.</p>
+                            </div>
+                        </div>
+                    <div class="text-center mt-5">
+                        <a href="balanced.html" class="btn btn-primary">Learn More About Balanced Diets</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+          
+    <style>
+    .medical-nutrition-therapy {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .section-title {
+        color: #2c3e50;
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background-color: #3498db;
+    }
+    
+    .therapy-image img {
+        transition: transform 0.3s ease;
+    }
+    
+    .therapy-image:hover img {
+        transform: scale(1.05);
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .feature-item:hover .feature-icon {
+        transform: rotate(15deg);
+    }
+    
+    .condition-card {
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .condition-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .condition-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .condition-card h5 {
+        padding: 15px;
+        margin: 0;
+        text-align: center;
+        background-color: #3498db;
+        color: #fff;
+    }
+    
+    .btn-primary {
+        background-color: #3498db;
+        border-color: #3498db;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+        background-color: #2980b9;
+        border-color: #2980b9;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    #conditionInfo {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    @media (max-width: 991px) {
+        .therapy-image {
+            margin-bottom: 2rem;
+        }
+    }
+    </style>
+    
+   
+    <section class="nutrition-workshops py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Nutrition Workshops</h2>
+            <p class="text-center lead mb-5">Educational group sessions on various nutrition topics and healthy cooking techniques.</p>
+    
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="workshop-image">
+                        <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Nutrition Workshop" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="workshop-features">
+                        <div class="feature-item d-flex align-items-center mb-4">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4>Interactive Group Sessions</h4>
+                                <p>Learn and share experiences with like-minded individuals.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-4">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div>
+                                <h4>Expert-Led Discussions</h4>
+                                <p>Sessions conducted by registered dietitians and nutrition experts.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item d-flex align-items-center">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div>
+                                <h4>Hands-On Cooking Demos</h4>
+                                <p>Learn practical, healthy cooking techniques you can use at home.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <h3 class="text-center mb-4">Upcoming Workshops</h3>
+            <div class="row" id="workshopList">
+                <!-- Workshop items will be dynamically added here -->
+            </div>
+    
+            <div class="text-center mt-5">
+                <button class="btn btn-primary btn-lg" id="viewAllBtn">View All Workshops</button>
+            </div>
+        </div>
+    </section>
+    
+    <div class="modal fade" id="workshopModal" tabindex="-1" aria-labelledby="workshopModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="workshopModalLabel">Workshop Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 id="modalTitle"></h4>
+                    <p id="modalDate"></p>
+                    <p id="modalDescription"></p>
+                    <h5>What You'll Learn:</h5>
+                    <ul id="modalTopics"></ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="registerBtn">Register Interest</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+    .nutrition-workshops {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .section-title {
+        color: #2c3e50;
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background-color: #e67e22;
+    }
+    
+    .workshop-image img {
+        transition: transform 0.3s ease;
+    }
+    
+    .workshop-image:hover img {
+        transform: scale(1.05);
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #e67e22, #d35400);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .feature-item:hover .feature-icon {
+        transform: rotate(15deg);
+    }
+    
+    .workshop-card {
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .workshop-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .workshop-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .workshop-card-body {
+        padding: 20px;
+    }
+    
+    .workshop-card h5 {
+        color: #e67e22;
+        margin-bottom: 10px;
+    }
+    
+    .btn-primary {
+        background-color: #e67e22;
+        border-color: #e67e22;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+        background-color: #d35400;
+        border-color: #d35400;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    @media (max-width: 991px) {
+        .workshop-image {
+            margin-bottom: 2rem;
+        }
+    }
+    </style>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const workshopList = document.getElementById('workshopList');
+        const viewAllBtn = document.getElementById('viewAllBtn');
+        const workshopModal = new bootstrap.Modal(document.getElementById('workshopModal'));
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDate = document.getElementById('modalDate');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalTopics = document.getElementById('modalTopics');
+        const registerBtn = document.getElementById('registerBtn');
+    
+        const workshops = [
+            {
+                title: "Meal Prep Mastery",
+                date: "June 15, 2023",
+                image: "https://images.unsplash.com/photo-1543362906-acfc16c67564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+                description: "Learn how to efficiently plan and prepare healthy meals for the week.",
+                topics: ["Meal planning strategies", "Time-saving cooking techniques", "Storage and reheating tips"]
+            },
+            {
+                title: "Nutrition for Athletes",
+                date: "July 1, 2023",
+                image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+                description: "Discover the best nutrition practices to enhance athletic performance and recovery.",
+                topics: ["Pre and post-workout nutrition", "Hydration strategies", "Supplements for athletes"]
+            },
+            {
+                title: "Plant-Based Cooking",
+                date: "July 20, 2023",
+                image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+                description: "Explore delicious and nutritious plant-based recipes and cooking techniques.",
+                topics: ["Plant-based protein sources", "Vegan baking", "Nutritional considerations for plant-based diets"]
+            }
+        ];
+    
+        function createWorkshopCard(workshop) {
+            const card = document.createElement('div');
+            card.className = 'col-md-4 mb-4';
+            card.innerHTML = `
+                <div class="workshop-card">
+                    <img src="${workshop.image}" alt="${workshop.title}">
+                    <div class="workshop-card-body">
+                        <h5>${workshop.title}</h5>
+                        <p>${workshop.date}</p>
+                        <button class="btn btn-outline-primary btn-sm view-details">View Details</button>
+                    </div>
+                </div>
+            `;
+            card.querySelector('.view-details').addEventListener('click', () => showWorkshopDetails(workshop));
+            return card;
+        }
+    
+        function showWorkshopDetails(workshop) {
+            modalTitle.textContent = workshop.title;
+            modalDate.textContent = workshop.date;
+            modalDescription.textContent = workshop.description;
+            modalTopics.innerHTML = workshop.topics.map(topic => `<li>${topic}</li>`).join('');
+            workshopModal.show();
+        }
+    
+        function displayWorkshops(limit = workshops.length) {
+            workshopList.innerHTML = '';
+            workshops.slice(0, limit).forEach(workshop => {
+                workshopList.appendChild(createWorkshopCard(workshop));
+            });
+        }
+    
+        displayWorkshops(3); // Initially display 3 workshops
+    
+        viewAllBtn.addEventListener('click', function() {
+            displayWorkshops(); // Display all workshops
+            this.style.display = 'none'; // Hide the "View All" button
+        });
+    
+        registerBtn.addEventListener('click', function() {
+            alert('Thank you for your interest! We will contact you with registration details for this workshop.');
+            workshopModal.hide();
+        });
+    
+        // Add animation to feature items
+        const featureItems = document.querySelectorAll('.feature-item');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        }, { threshold: 0.5 });
+    
+        featureItems.forEach(item => {
+            observer.observe(item);
+        });
+    });
+    </script>
+    <html>
+        <head>
+          <style>
+            .strategies-section {
+              padding: 50px 0;
+            }
+            
+            .flowchart-img {
+              width: 100%;
+              height: 1000px;
+              border-radius: 10px;
+              object-fit: cover;
+            }
+            
+            .strategy-steps {
+              margin-top: 20px;
+            }
+            
+            .step {
+              margin-bottom: 20px;
+            }
+            
+            .step-img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              margin-right: 10px;
+              object-fit: cover;
+            }
+            
+            .step-title {
+              font-weight: bold;
+              color: #4CAF50;
+            }
+            
+            .step-text {
+              font-size: 16px;
+              color: #666;
+            }
+          </style>
+        </head>
+        <body>
+            
+                
+                  <div class="strategies-section">
+                    <div class="container">
+                      <h2 class="text-center">Effective Strategies for Nutrition Management</h2>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <img src="47.jpg" alt="Nutrition Management Chart" class="flowchart-img">
+                        </div>
+                        <div class="col-md-6">
+                          <div class="strategy-steps">
+                            <div class="step">
+                              <img src="i2.jpg" alt="Step 1" class="step-img">
+                              <h5 class="step-title">Set Nutritional Goals</h5>
+                              <p class="step-text">Define specific, measurable, achievable, relevant, and time-bound (SMART) nutritional goals.</p>
+                            </div>
+                            <div class="step">
+                              <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" alt="Step 2" class="step-img">
+                              <h5 class="step-title">Create a Balanced Meal Plan</h5>
+                              <p class="step-text">Incorporate a mix of proteins, carbohydrates, healthy fats, and plenty of fruits and vegetables.</p>
+                            </div>
+                            <div class="step">
+                              <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Step 3" class="step-img">
+                              <h5 class="step-title">Practice Portion Control</h5>
+                              <p class="step-text">Use appropriate serving sizes to manage calorie intake and maintain a healthy weight.</p>
+                            </div>
+                            <div class="step">
+                              <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Step 4" class="step-img">
+                              <h5 class="step-title">Stay Hydrated</h5>
+                              <p class="step-text">Drink plenty of water throughout the day to support overall health and manage appetite.</p>
+                            </div>
+                            <div class="step">
+                              <img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Step 5" class="step-img">
+                              <h5 class="step-title">Track Your Intake</h5>
+                              <p class="step-text">Keep a food diary or use nutrition apps to monitor your daily food and nutrient intake.</p>
+                            </div>
+                            <div class="step">
+                              <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Step 6" class="step-img">
+                              <h5 class="step-title">Meal Prep and Planning</h5>
+                              <p class="step-text">Prepare meals in advance to ensure you have healthy options readily available.</p>
+                            </div>
+                            <div class="step">
+                              <img src="https://images.unsplash.com/photo-1607962837359-5e7e89f86776?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Step 7" class="step-img">
+                              <h5 class="step-title">Seek Professional Guidance</h5>
+                              <p class="step-text">Consult with a registered dietitian for personalized nutrition advice and support.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </body>
+              </html>
+      <!doctype html>
+
+
+    
+      
+
+
+   
+
+      <html>
+
+
+  <head>
+    <style>
+      .cta-section {
+  background-color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-weight: bold;
+  color: #0069d9;
+}
+
+.cta-section p {
+  font-size: 18px;
+  color: #666;
+}
+
+.btn-primary {
+  background-color: #0069d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="cta-section">
+      
+        <h2 class="text-center">Take the First Step Towards Optimal Nutrition</h2>
+        <p class="text-center">Embark on your journey to better health with our expert guidance and personalized meal plans</p>
+        <div class="text-center">
+          <a href="CONTACT US.html" class="btn btn-primary btn-lg">Get Started Now</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+      <html>
+   
+    <script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Symptom card animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        });
+
+        document.querySelectorAll('.symptom-card').forEach((card) => {
+            observer.observe(card);
+        });
+
+        
+       
+
+        // Booking form submission
+        const bookingForm = document.getElementById('bookingForm');
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const date = document.getElementById('date').value;
+            const service = document.getElementById('service').value;
+
+            // Here you would typically send this data to a server
+            // For this example, we'll just log it to the console
+            console.log('Booking submitted:', { name, email, date, service });
+
+            alert('Thank you for booking a consultation. We will contact you shortly to confirm your appointment.');
+            bookingForm.reset();
+        });
+    </script>
+
+</body>
+</html>
